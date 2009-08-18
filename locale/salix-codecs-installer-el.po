@@ -107,7 +107,7 @@ msgstr "Έτοιμο!"
 #: salix-codecs-installer:106
 #, sh-format
 msgid ""
-"Codecs installation was succesfully completed.\\n"
+"Codecs installation was successfully completed.\\n"
 "\\n"
 "Would you like to remove the codecs installer from your system?"
 msgstr ""
