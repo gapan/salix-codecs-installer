@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=Install multimedia codecs
+Name[de]=Installiere Multimedia-Codecs
 Name[el]=Εγκατάσταση codecs πολυμέσων
 Comment=Install codecs required for playing restricted formats
+Comment[de]=Installiere Codecs für patentgeschützte Formate
 Comment[el]=Εγκατάσταση codecs που απαιτούνται για την αναπαραγωγή αρχείων κλειστών format
 Exec=kdesu salix-codecs-installer
 Icon=salix-codecs-installer
