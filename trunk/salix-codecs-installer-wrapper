@@ -1,0 +1,8 @@
+#!/bin/sh
+/usr/libexec/salix-codecs-installer
+retval=$?
+if [ $retval -eq 129 ]; then
+	killall slapt-get 2> /dev/null
+fi
+exit $retval
+

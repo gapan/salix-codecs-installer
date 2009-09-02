@@ -1,0 +1,108 @@
+#!/bin/sh
+#
+# Install restricted multimedia codecs that might pose distribution
+# problems.
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU  General Public License as published by
+# the Free Software Foundation; either version 3 of the License or (at
+# your option) any later version.
+# Please take a look at http://www.gnu.org/copyleft/gpl.htm
+#
+# Written by: George Vlahavas <vlahavas~at~gmail~dot~com>
+
+# Gettext internationalization
+export TEXTDOMAIN="salix-codecs-installer"
+export TEXTDOMAINDIR="/usr/share/locale"
+. gettext.sh
+
+PKGLIST=/usr/share/salix-codecs-installer/pkglist
+
+if [ ! $DISPLAY ]; then
+	echo -e "`eval_gettext 'ERROR: salix-codecs-installer must be executed within a running X session.\n'`"
+	exit 1
+fi
+
+if [ "$UID" != "0" ]; then
+	echo "`eval_gettext 'ERROR: You need to be root to run this'`"
+	exit 1
+fi
+
+if [ ! `which zenity` ]; then
+	echo "`eval_gettext 'ERROR: zenity must be installed and in your PATH to run this'`"
+	exit 1
+fi
+
+if [ ! `which slapt-get` ]; then
+	echo "`eval_gettext 'ERROR: slapt-get must be installed and in your PATH to run this'`"
+	exit 1
+fi
+
+SERVERERROR=0
+
+serverconnecterror()
+{
+	zenity --error \
+	--title "Error connecting to server" \
+	--text "`eval_gettext 'There was an error connecting to at least one of the repositories.\n\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up.'`"
+	SERVERERROR=1
+}
+
+pkgdownloaderror()
+{
+	zenity --error \
+	--title "`eval_gettext 'Error downloading packages'`" \
+	--text "`eval_gettext 'There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again'`"
+	SERVERERROR=1
+}
+
+updatepkgdatabase()
+{
+	echo 0
+	slapt-get -u
+	[ $? -eq 1 ] &&  serverconnecterror
+	echo 100
+}
+
+installcodecs()
+{
+	PKGN=`cat $PKGLIST|sed '/^$/d'|wc -l`
+        INCREMENT=`python -c "print(100/$PKGN)"`
+	BAR=0
+	for i in `seq 1 $PKGN`; do
+		slapt-get --no-dep -y -i `sed -n -e "${i}p" $PKGLIST` \
+		1> /dev/null
+		if [ $? -eq 1 ]; then
+			pkgdownloaderror
+			break
+		fi
+		let BAR+=$INCREMENT
+		echo `python -c "print($BAR-1)"`
+	done
+	echo 100
+}
+
+zenity --question \
+ --title "`eval_gettext 'Install multimedia codecs?'`" \
+ --window-icon=/usr/share/icons/hicolor/48x48/apps/salix-codecs-installer.png \
+ --text "`eval_gettext 'Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n\nWould you like to install these extra multimedia codecs?'`"
+[[ ! $? -eq 0 ]] && exit 0
+
+updatepkgdatabase 2> /dev/null | zenity --progress \
+ --text "`eval_gettext 'Receiving package information...'`" \
+ --title "`eval_gettext 'System preparation'`" \
+ --pulsate --percentage 0 --auto-close --auto-kill
+[ $SERVERERROR -eq 1 ] && exit 1
+
+installcodecs 2> /dev/null | zenity --progress \
+ --text "`eval_gettext 'Downloading and installing packages...'`" \
+ --title "`eval_gettext 'Package installation'`" \
+ --percentage 0 --auto-close --auto-kill
+[ $SERVERERROR -eq 1 ] && exit 1
+
+zenity --question \
+ --title "`eval_gettext 'Done!'`" \
+ --window-icon=/usr/share/icons/hicolor/48x48/apps/salix-codecs-installer.png \
+ --text "`eval_gettext 'Codecs installation was succesfully completed.\n\nWould you like to remove the codecs installer from your system?'`"
+[ $? -eq 0 ] && /sbin/removepkg salix-codecs-installer
+
