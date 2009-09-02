@@ -85,7 +85,7 @@ installcodecs()
 zenity --question \
  --title "`eval_gettext 'Install multimedia codecs?'`" \
  --window-icon=/usr/share/icons/hicolor/48x48/apps/salix-codecs-installer.png \
- --text "`eval_gettext 'Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n\nPlease check the legislation in your country and select to install the codecs only if it legal for you to do so.\n\nWould you like to install these extra multimedia codecs?'`"
+ --text "`eval_gettext 'Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n\nWould you like to install these extra multimedia codecs?'`"
 [[ ! $? -eq 0 ]] && exit 0
 
 updatepkgdatabase 2> /dev/null | zenity --progress \
