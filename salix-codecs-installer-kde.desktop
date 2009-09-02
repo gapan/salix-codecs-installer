@@ -2,9 +2,13 @@
 Name=Install multimedia codecs
 Name[de]=Installiere Multimedia-Codecs
 Name[el]=Εγκατάσταση codecs πολυμέσων
+Name[fr]=Installation des codecs multimédias
+Name[fi]=Asenna multimedia koodekit
 Comment=Install codecs required for playing restricted formats
 Comment[de]=Installiere Codecs für patentgeschützte Formate
 Comment[el]=Εγκατάσταση codecs που απαιτούνται για την αναπαραγωγή αρχείων κλειστών format
+Comment[fr]=installation de codecs requise pour voir les formats sous licences
+Comment[fi]=Asenna rajoitettujen tiedostomuotojen toistamiseen tarvittavat koodekit
 Exec=kdesu salix-codecs-installer
 Icon=salix-codecs-installer
 Terminal=false

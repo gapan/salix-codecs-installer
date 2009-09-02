@@ -71,7 +71,7 @@ msgid ""
 "default in Salix.\\n\\nYou will be able to play files encoded with free "
 "codecs, but you will not be able to play commercial DVDs or listen to mp3 "
 "files without these codecs.\\n\\nPlease check the legislation in your "
-"country and select to install the codecs only if it legal for you to do so."
+"country and select to install the codecs only if it is legal for you to do so."
 "\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
 
