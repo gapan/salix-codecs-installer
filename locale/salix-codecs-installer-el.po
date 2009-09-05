@@ -106,12 +106,6 @@ msgstr "Έτοιμο!"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid ""
-"Codecs installation was successfully completed.\\n"
-"\\n"
-"Would you like to remove the codecs installer from your system?"
-msgstr ""
-"Η εγκατάσταση των (απο)κωδικοποιητών πολυμέσων ολοκληρώθηκε με επιτυχία\\n"
-"\\n"
-"Θέλετε να απεγκατασταθεί η εφαρμογή εγκατάστασης (απο)κωδικοποιητών πολυμέσων από το σύστημα;"
+msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
+msgstr "Η εγκατάσταση των (απο)κωδικοποιητών πολυμέσων ολοκληρώθηκε με επιτυχία\\n\\nΘέλετε να απεγκατασταθεί η εφαρμογή εγκατάστασης (απο)κωδικοποιητών πολυμέσων από το σύστημα;"
 

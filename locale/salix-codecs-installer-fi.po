@@ -104,12 +104,6 @@ msgstr "Valmis!"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid ""
-"Codecs installation was successfully completed.\\n"
-"\\n"
-"Would you like to remove the codecs installer from your system?"
-msgstr ""
-"Koodekkien asennus suoritettu onnistuneesti.\\n"
-"\\n"
-"Haluatko poistaa koodekkien asentajan järjestelmästäsi?"
+msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
+msgstr "Koodekkien asennus suoritettu onnistuneesti.\\n\\nHaluatko poistaa koodekkien asentajan järjestelmästäsi?"
 

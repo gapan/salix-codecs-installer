@@ -1,3 +1,6 @@
+version 0.4
+ * Fixed a bug with the final dialog not showing up translated
+   (apparently poedit doesn't handle that very well)
 version 0.3
  * Added German translation
  * Added French translation
