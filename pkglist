@@ -19,12 +19,13 @@ flac
 fontconfig
 freetype
 gcc
-gcc-g++
 glib2
 gnutls
 gpm
 gst-ffmpeg
 gst-plugins-base
+gst-plugins-bad
+gst-plugins-good
 gst-plugins-ugly
 gst-python
 gstreamer
