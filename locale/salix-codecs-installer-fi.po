@@ -14,34 +14,41 @@ msgstr ""
 
 #: salix-codecs-installer:22
 #, sh-format
-msgid "ERROR: salix-codecs-installer must be executed within a running X session.\\n"
+msgid ""
+"ERROR: salix-codecs-installer must be executed within a running X session.\\n"
 msgstr "VIRHE: salix-codecs-installer täytyy suorittaa X istunnossa.\\n"
 
 #: salix-codecs-installer:27
 #, sh-format
 msgid "ERROR: You need to be root to run this"
-msgstr "VIRHE: Sinun täytyy olla järjestelmän valvoja(root) suorittaaksesi tämän."
+msgstr ""
+"VIRHE: Sinun täytyy olla järjestelmän valvoja(root) suorittaaksesi tämän."
 
 #: salix-codecs-installer:32
 #, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run this"
-msgstr "VIRHE: zenity täytyy olla asennettuna ja sinun polussasi(PATH) suorittaaksesi tämän"
+msgstr ""
+"VIRHE: zenity täytyy olla asennettuna ja sinun polussasi(PATH) "
+"suorittaaksesi tämän"
 
 #: salix-codecs-installer:37
 #, sh-format
 msgid "ERROR: slapt-get must be installed and in your PATH to run this"
-msgstr "VIRHE: slapt-get täytyy olla asennettuna ja sinun polussasi(PATH) suorittaaksesi tämän"
+msgstr ""
+"VIRHE: slapt-get täytyy olla asennettuna ja sinun polussasi(PATH) "
+"suorittaaksesi tämän"
 
 #: salix-codecs-installer:47
 #, sh-format
 msgid ""
 "There was an error connecting to at least one of the repositories.\\n"
-"\\n"
-"Please check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
+"\\nPlease check that you have a working internet connection and that the "
+"repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is "
+"correctly set up."
 msgstr ""
-"Virhe tapahtui yhdistäessä ainakin yhteen pakettivarastoista.\\n"
-"\\n"
-"Ole hyvä ja tarkista että sinulla on toimiva internet-yhteys ja että gslapt pakettivarasto lista (tai /etc/slapt-get/slapt-getrc) on oikein asetettu."
+"Virhe tapahtui yhdistäessä ainakin yhteen pakettivarastoista.\\n\\nOle hyvä "
+"ja tarkista että sinulla on toimiva internet-yhteys ja että gslapt "
+"pakettivarasto lista (tai /etc/slapt-get/slapt-getrc) on oikein asetettu."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -50,8 +57,12 @@ msgstr "Virhe ladattaessa paketteja"
 
 #: salix-codecs-installer:55
 #, sh-format
-msgid "There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again"
-msgstr "Tapahtui virhe ladattaessa pyydettyjä paketteja. Ole hyvä ja tarkista että internet-yhteytesi toimii kunnolla ja yritä uudelleen."
+msgid ""
+"There was an error downloading the required packages. Please make sure that "
+"your internet connection is working properly and try again"
+msgstr ""
+"Tapahtui virhe ladattaessa pyydettyjä paketteja. Ole hyvä ja tarkista että "
+"internet-yhteytesi toimii kunnolla ja yritä uudelleen."
 
 #: salix-codecs-installer:86
 #, sh-format
@@ -61,21 +72,21 @@ msgstr "Asenna multimedia koodekit?"
 #: salix-codecs-installer:88
 #, sh-format
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n"
-"\\n"
-"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n"
-"\\n"
-"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n"
-"\\n"
-"Would you like to install these extra multimedia codecs?"
+"Some multimedia codecs are patent encumbered and pose distribution problems "
+"in certain countries. Therefore, support for all codecs is not included by "
+"default in Salix.\\n\\nYou will be able to play files encoded with free "
+"codecs, but you will not be able to play commercial DVDs or listen to mp3 "
+"files without these codecs.\\n\\nPlease check the legislation in your "
+"country and select to install the codecs only if it is legal for you to do "
+"so.\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
-"Jotkin multimediakoodekeista on patenttisuojattuja ja näin estävät niiden jakelun joissain maissa. Siksi kaikkien koodekkien tuki ei ole sisällytetty oletuksena Salixiin.\\n"
-"\\n"
-"Voit toistaa tiedostoja jotka on koodattu käyttäen vapaita koodekkeja, mutta et voi toistaa kaupallisia DVD:tä tai kuunnella mp3 tiedostoja ilman näitä koodekkeja.\\n"
-"\\n"
-"Ole hyvä ja tarkista lainsäädäntö maassasi ja asenna koodekit ainoastaan jos se on sinulle laillista.\\n"
-"\\n"
-"Haluatko asentaa nämä ylimääräiset multimedia koodekit?"
+"Jotkin multimediakoodekeista on patenttisuojattuja ja näin estävät niiden "
+"jakelun joissain maissa. Siksi kaikkien koodekkien tuki ei ole sisällytetty "
+"oletuksena Salixiin.\\n\\nVoit toistaa tiedostoja jotka on koodattu käyttäen "
+"vapaita koodekkeja, mutta et voi toistaa kaupallisia DVD:tä tai kuunnella "
+"mp3 tiedostoja ilman näitä koodekkeja.\\n\\nOle hyvä ja tarkista "
+"lainsäädäntö maassasi ja asenna koodekit ainoastaan jos se on sinulle "
+"laillista.\\n\\nHaluatko asentaa nämä ylimääräiset multimedia koodekit?"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -103,7 +114,10 @@ msgid "Done!"
 msgstr "Valmis!"
 
 #: salix-codecs-installer:106
-#, sh-format
-msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
-msgstr "Koodekkien asennus suoritettu onnistuneesti.\\n\\nHaluatko poistaa koodekkien asentajan järjestelmästäsi?"
-
+#, fuzzy, sh-format
+msgid ""
+"Codecs installation was successfully completed.\\n\\nWould you like to "
+"remove the codecs installer from your system?"
+msgstr ""
+"Koodekkien asennus suoritettu onnistuneesti.\\n\\nHaluatko poistaa "
+"koodekkien asentajan järjestelmästäsi?"

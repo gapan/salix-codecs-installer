@@ -43,7 +43,7 @@ SERVERERROR=0
 serverconnecterror()
 {
 	zenity --error \
-	--title "Error connecting to server" \
+	--title "`eval_gettext 'Error connecting to server'`" \
 	--text "`eval_gettext 'There was an error connecting to at least one of the repositories.\n\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up.'`"
 	SERVERERROR=1
 }
