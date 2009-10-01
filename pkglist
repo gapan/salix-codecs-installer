@@ -49,6 +49,7 @@ libcdaudio
 libcdio
 libdca
 libdv
+libdvdcss
 libdvdnav
 libdvdread
 libexif
