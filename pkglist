@@ -3,6 +3,8 @@ ORBit2
 a52dec
 aalib
 alsa-lib
+amrnb
+amrwb
 audiofile
 bzip2
 cairo
