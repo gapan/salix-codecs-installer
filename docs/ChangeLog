@@ -1,10 +1,17 @@
+version 0.7
+ * Added amrnb, amrwb and libdvdcss to the package list
+ * Updated French translation
+
+version 0.6
+ * Added gst-plugins-bad and gst-plugins-good to the package list
+
 version 0.4
  * Fixed a bug with the final dialog not showing up translated
    (apparently poedit doesn't handle that very well)
 version 0.3
  * Added German translation
  * Added French translation
- * Added Finnish .deskto file entries
+ * Added Finnish .desktop file entries
  * Fixed a typo in the English text
 
 version 0.2
