@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-17 00:41+0300\n"
+"PO-Revision-Date: 2010-03-12 12:27-0300\n"
+"Last-Translator: Willian Gustavo Veiga <wiltave@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: salix-codecs-installer:22
+#, sh-format
+msgid "ERROR: salix-codecs-installer must be executed within a running X session.\\n"
+msgstr "ERRO: O salix-codecs-installer deve ser executado dentro de uma sessão do X.\\n"
+
+#: salix-codecs-installer:27
+#, sh-format
+msgid "ERROR: You need to be root to run this"
+msgstr "ERRO: Você precisa ser root para executar isto"
+
+#: salix-codecs-installer:32
+#, sh-format
+msgid "ERROR: zenity must be installed and in your PATH to run this"
+msgstr "ERRO: O zenity precisa estar instalado e no seu PATH para executar esta operação"
+
+#: salix-codecs-installer:37
+#, sh-format
+msgid "ERROR: slapt-get must be installed and in your PATH to run this"
+msgstr "ERRO: O slapt-get precisa estar instalado e no seu PATH para executar esta operação"
+
+#: salix-codecs-installer:47
+#, sh-format
+msgid ""
+"There was an error connecting to at least one of the repositories.\\n"
+"\\n"
+"Please check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
+msgstr ""
+"Ocorreu m erro ao conectar em um dos repositórios.\\n"
+"\\n"
+"Por favor verifique se a sua conexão com a internet está funcionando e se a lista de repositórios no gslapt (ou diretamente em /etc/slapt-get/slapt-getrc) está configurada corretamente."
+
+#: salix-codecs-installer:54
+#, sh-format
+msgid "Error downloading packages"
+msgstr "Erro ao fazer o download dos pacotes"
+
+#: salix-codecs-installer:55
+#, sh-format
+msgid "There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again"
+msgstr "Ocorreu um erro ao fazer o download dos pacotes requisitados. Por favor tenha certeza que a sua conexão com a internet está funcionando corretamente e tente novamente"
+
+#: salix-codecs-installer:86
+#, sh-format
+msgid "Install multimedia codecs?"
+msgstr "Instalar os codecs multimídia?"
+
+#: salix-codecs-installer:88
+#, sh-format
+msgid ""
+"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n"
+"\\n"
+"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n"
+"\\n"
+"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n"
+"\\n"
+"Would you like to install these extra multimedia codecs?"
+msgstr ""
+"Alguns codecs multimídia são sobrecarregados de patentes e podem conter problemas de distribuição em determinados países. Entretanto, o suporte para todos os codecs não é incluído por padrão no Salix.\\n"
+"\\n"
+"Você será capaz de executar arquivos codificados com codecs livres, mas não será capaz de executar DVDs comerciais ou escutar arquivos mp3 sem estes codecs.\\n"
+"\\n"
+"Por favor verifique a legislação no seu país e apenas instale os codecs se for legal fazer isso.\\n"
+"\\n"
+"Você gostaria de instalar esses codecs multimídias adicionais?"
+
+#: salix-codecs-installer:92
+#, sh-format
+msgid "Receiving package information..."
+msgstr "Recebendo informações dos pacotes..."
+
+#: salix-codecs-installer:93
+#, sh-format
+msgid "System preparation"
+msgstr "Preparação do sistema"
+
+#: salix-codecs-installer:98
+#, sh-format
+msgid "Downloading and installing packages..."
+msgstr "Fazendo o download e instalando os pacotes..."
+
+#: salix-codecs-installer:99
+#, sh-format
+msgid "Package installation"
+msgstr "Instalação dos pacotes"
+
+#: salix-codecs-installer:104
+#, sh-format
+msgid "Done!"
+msgstr "Concluído!"
+
+#: salix-codecs-installer:106
+#, sh-format
+msgid ""
+"Codecs installation was successfully completed.\\n"
+"\\n"
+"Would you like to remove the codecs installer from your system?"
+msgstr ""
+"Instalação dos codecs concluída com sucesso.\\n"
+"\\n"
+"Você gostaria de remover o instalador de codecs do seu sistema?"
+
