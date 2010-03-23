@@ -13,11 +13,8 @@ msgstr ""
 
 #: salix-codecs-installer:22
 #, sh-format
-msgid ""
-"ERROR: salix-codecs-installer must be executed within a running X session.\\n"
-msgstr ""
-"FEHLER: salix-codecs-installer muss in einer laufenden X-Sitzung gestartet "
-"werden.\\n"
+msgid "ERROR: salix-codecs-installer must be executed within a running X session.\\n"
+msgstr "FEHLER: salix-codecs-installer muss in einer laufenden X-Sitzung gestartet werden.\\n"
 
 #: salix-codecs-installer:27
 #, sh-format
@@ -38,14 +35,12 @@ msgstr "FEHLER: slapt-get muss installiert und in ihrer PATH-Variable sein"
 #, sh-format
 msgid ""
 "There was an error connecting to at least one of the repositories.\\n"
-"\\nPlease check that you have a working internet connection and that the "
-"repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is "
-"correctly set up."
+"\\n"
+"Please check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
 msgstr ""
 "Beim Verbinden zu mindestens einer Paketquelle trat ein Fehler auf.\\n"
-"\\nBitte stellen sie sicher, dass sie eine funktionierende "
-"Internetverbindung haben und dass die Liste der Paketquellen in gslapt (oder "
-"direkt in /etc/slapt-get/slapt-getrc) korrekt ist."
+"\\n"
+"Bitte stellen sie sicher, dass sie eine funktionierende Internetverbindung haben und dass die Liste der Paketquellen in gslapt (oder direkt in /etc/slapt-get/slapt-getrc) korrekt ist."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -54,13 +49,8 @@ msgstr "Fehler beim Paketdownload"
 
 #: salix-codecs-installer:55
 #, sh-format
-msgid ""
-"There was an error downloading the required packages. Please make sure that "
-"your internet connection is working properly and try again"
-msgstr ""
-"Beim Herunterladen der benötigten Pakete trat ein Fehler auf. Bitte stellen "
-"sie sicher, dass die Internetverbindung richtig funktioniert und versuchen "
-"sie es erneut"
+msgid "There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again"
+msgstr "Beim Herunterladen der benötigten Pakete trat ein Fehler auf. Bitte stellen sie sicher, dass die Internetverbindung richtig funktioniert und versuchen sie es erneut"
 
 #: salix-codecs-installer:86
 #, sh-format
@@ -70,22 +60,21 @@ msgstr "Multimedia Codec installieren?"
 #: salix-codecs-installer:88
 #, sh-format
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\\n\\nYou will be able to play files encoded with free "
-"codecs, but you will not be able to play commercial DVDs or listen to mp3 "
-"files without these codecs.\\n\\nPlease check the legislation in your "
-"country and select to install the codecs only if it is legal for you to do "
-"so.\\n\\nWould you like to install these extra multimedia codecs?"
+"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n"
+"\\n"
+"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n"
+"\\n"
+"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n"
+"\\n"
+"Would you like to install these extra multimedia codecs?"
 msgstr ""
-"Einige Multimedia Codecs sind patentgeschützt und stellen ein "
-"Distributionsproblem in bestimmten Ländern dar. Deswegen sind in Salix nicht "
-"alle Codecs vorinstalliert.\\n\\nSo ist es zwar möglich Dateien abzuspielen, "
-"die mit freien Codecs enkodiert sind, aber es ist nicht möglich kommerzielle "
-"DVDs oder mp3 Dateien abzuspielen, wenn die zusätlichen Codecs nicht "
-"installiert sind.\\n\\nBitte überprüfen sie die Rechtslage in ihrem Land und "
-"installieren sie die Codecs nur, wenn die Benutzung legal ist.\\n\\nMöchten "
-"sie die zusätzlichen Codecs installieren?"
+"Einige Multimedia Codecs sind patentgeschützt und stellen ein Distributionsproblem in bestimmten Ländern dar. Deswegen sind in Salix nicht alle Codecs vorinstalliert.\\n"
+"\\n"
+"So ist es zwar möglich Dateien abzuspielen, die mit freien Codecs enkodiert sind, aber es ist nicht möglich kommerzielle DVDs oder mp3 Dateien abzuspielen, wenn die zusätlichen Codecs nicht installiert sind.\\n"
+"\\n"
+"Bitte überprüfen sie die Rechtslage in ihrem Land und installieren sie die Codecs nur, wenn die Benutzung legal ist.\\n"
+"\\n"
+"Möchten sie die zusätzlichen Codecs installieren?"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -113,10 +102,13 @@ msgid "Done!"
 msgstr "Erledigt!"
 
 #: salix-codecs-installer:106
-#, fuzzy, sh-format
+#, sh-format
 msgid ""
-"Codecs installation was successfully completed.\\n\\nWould you like to "
-"remove the codecs installer from your system?"
+"Codecs installation was successfully completed.\\n"
+"\\n"
+"Would you like to remove the codecs installer from your system?"
 msgstr ""
-"Die Codec-Installation wurde erfolgreich abgeschlossen.\\n\\nMöchten sie das "
-"Codec-Installationsprogramm nun von ihrem System entfernen?"
+"Die Codec-Installation wurde erfolgreich abgeschlossen.\\n"
+"\\n"
+"Möchten sie das Codec-Installationsprogramm nun von ihrem System entfernen?"
+
