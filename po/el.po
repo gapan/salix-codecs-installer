@@ -42,8 +42,14 @@ msgstr "Σφάλμα κατά τη σύνδεση με τον εξυπηρετη
 
 #: salix-codecs-installer:47
 #, sh-format
-msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
-msgstr "Υπήρξε ένα σφάλμα κατά τη σύνδεση με τουλάχιστον μια αποθήκη λογισμικού.\\n\\n Παρακαλώ ελέγξτε ότι η σύνδεσή σας με το internet λειτουργεί σωστά και οι αποθήκες λογισμικού είναι σωστά ορισμένες στο gslapt (ή κατευθείαν στο /etc/slapt-get/slapt-getrc)."
+msgid ""
+"There was an error connecting to at least one of the repositories.\\n"
+"\\n"
+"Please check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
+msgstr ""
+"Υπήρξε ένα σφάλμα κατά τη σύνδεση με τουλάχιστον μια αποθήκη λογισμικού.\\n"
+"\\n"
+" Παρακαλώ ελέγξτε ότι η σύνδεσή σας με το internet λειτουργεί σωστά και οι αποθήκες λογισμικού είναι σωστά ορισμένες στο gslapt (ή κατευθείαν στο /etc/slapt-get/slapt-getrc)."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -62,8 +68,22 @@ msgstr "Εγκατάσταση (απο)κωδικοποιητών πολυμέσ
 
 #: salix-codecs-installer:88
 #, sh-format
-msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
-msgstr "Κάποιοι (απο)κωδικοποιητές πολυμέσων ενδέχεται να καταπατούν πατέντες λογισμικού και η διανομή τους δεν επιτρέπεται σε ορισμένα κράτη.\\n\\nΜπορείτε να αναπαράγετε αρχεία πολυμέσων που χρησιμοποιούν ελεύθερους κωδικοποιητές, αλλά δεν είναι δυνατή η αναπαραγωγή εμπορικών DVD και αρχείων mp3 χωρίς αυτούς τους αποκωδικοποιητές.\\n\\nΠαρακαλούμε ελέγξτε τη νομοθεσία στη χώρα σας και επιλέξτε να εγκαταστήσετε τους (απο)κωδικοποιητές μόνο αν αυτό επιτρέπεται από το νόμο.\\n\\nΕπιθυμείτε να εγκατασταθούν αυτοί οι (απο)κωδικοποιητές πολυμέσων;"
+msgid ""
+"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n"
+"\\n"
+"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n"
+"\\n"
+"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n"
+"\\n"
+"Would you like to install these extra multimedia codecs?"
+msgstr ""
+"Κάποιοι (απο)κωδικοποιητές πολυμέσων ενδέχεται να καταπατούν πατέντες λογισμικού και η διανομή τους δεν επιτρέπεται σε ορισμένα κράτη.\\n"
+"\\n"
+"Μπορείτε να αναπαράγετε αρχεία πολυμέσων που χρησιμοποιούν ελεύθερους κωδικοποιητές, αλλά δεν είναι δυνατή η αναπαραγωγή εμπορικών DVD και αρχείων mp3 χωρίς αυτούς τους αποκωδικοποιητές.\\n"
+"\\n"
+"Παρακαλούμε ελέγξτε τη νομοθεσία στη χώρα σας και επιλέξτε να εγκαταστήσετε τους (απο)κωδικοποιητές μόνο αν αυτό επιτρέπεται από το νόμο.\\n"
+"\\n"
+"Επιθυμείτε να εγκατασταθούν αυτοί οι (απο)κωδικοποιητές πολυμέσων;"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -92,15 +112,22 @@ msgstr "Έτοιμο!"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
-msgstr "Η εγκατάσταση των (απο)κωδικοποιητών πολυμέσων ολοκληρώθηκε με επιτυχία\\n\\nΘέλετε να απεγκατασταθεί η εφαρμογή εγκατάστασης (απο)κωδικοποιητών πολυμέσων από το σύστημα;"
+msgid ""
+"Codecs installation was succesfully completed.\\n"
+"\\n"
+"Would you like to remove the codecs installer from your system?"
+msgstr ""
+"Η εγκατάσταση των (απο)κωδικοποιητών πολυμέσων ολοκληρώθηκε με επιτυχία\\n"
+"\\n"
+"Θέλετε να απεγκατασταθεί η εφαρμογή εγκατάστασης (απο)κωδικοποιητών πολυμέσων από το σύστημα;"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
-msgstr "Εγκατάσταση codecs που απαιτούνται για την αναπαραγωγή αρχείων κλειστών format"
+msgstr "Εγκατάσταση αποκωδικοποιητών που απαιτούνται για την αναπαραγωγή αρχείων κλειστών format"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
-msgstr "Εγκατάσταση codecs πολυμέσων"
+msgstr "Εγκατάσταση αποκωδικοποιητών πολυμέσων"
+
