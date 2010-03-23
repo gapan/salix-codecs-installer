@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-17 00:41+0300\n"
+"POT-Creation-Date: 2010-03-23 20:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,6 +35,11 @@ msgstr ""
 #: salix-codecs-installer:37
 #, sh-format
 msgid "ERROR: slapt-get must be installed and in your PATH to run this"
+msgstr ""
+
+#: salix-codecs-installer:46
+#, sh-format
+msgid "Error connecting to server"
 msgstr ""
 
 #: salix-codecs-installer:47
@@ -71,8 +76,8 @@ msgid ""
 "default in Salix.\\n\\nYou will be able to play files encoded with free "
 "codecs, but you will not be able to play commercial DVDs or listen to mp3 "
 "files without these codecs.\\n\\nPlease check the legislation in your "
-"country and select to install the codecs only if it is legal for you to do so."
-"\\n\\nWould you like to install these extra multimedia codecs?"
+"country and select to install the codecs only if it is legal for you to do "
+"so.\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
 
 #: salix-codecs-installer:92
@@ -103,6 +108,16 @@ msgstr ""
 #: salix-codecs-installer:106
 #, sh-format
 msgid ""
-"Codecs installation was successfully completed.\\n\\nWould you like to remove "
+"Codecs installation was succesfully completed.\\n\\nWould you like to remove "
 "the codecs installer from your system?"
+msgstr ""
+
+#: salix-codecs-installer.desktop.in.h:1
+#: salix-codecs-installer-kde.desktop.in.h:1
+msgid "Install codecs required for playing restricted formats"
+msgstr ""
+
+#: salix-codecs-installer.desktop.in.h:2
+#: salix-codecs-installer-kde.desktop.in.h:2
+msgid "Install multimedia codecs"
 msgstr ""

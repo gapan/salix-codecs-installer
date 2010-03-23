@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-17 00:41+0300\n"
+"POT-Creation-Date: 2010-03-23 20:50+0200\n"
 "PO-Revision-Date: 2009-08-18 14:25-0500\n"
 "Last-Translator: markus muttilainen <stillborn.zenwalk@gmail.com>\n"
 "Language-Team: \n"
@@ -37,6 +37,11 @@ msgid "ERROR: slapt-get must be installed and in your PATH to run this"
 msgstr ""
 "VIRHE: slapt-get täytyy olla asennettuna ja sinun polussasi(PATH) "
 "suorittaaksesi tämän"
+
+#: salix-codecs-installer:46
+#, sh-format
+msgid "Error connecting to server"
+msgstr ""
 
 #: salix-codecs-installer:47
 #, sh-format
@@ -116,8 +121,19 @@ msgstr "Valmis!"
 #: salix-codecs-installer:106
 #, fuzzy, sh-format
 msgid ""
-"Codecs installation was successfully completed.\\n\\nWould you like to "
-"remove the codecs installer from your system?"
+"Codecs installation was succesfully completed.\\n\\nWould you like to remove "
+"the codecs installer from your system?"
 msgstr ""
 "Koodekkien asennus suoritettu onnistuneesti.\\n\\nHaluatko poistaa "
 "koodekkien asentajan järjestelmästäsi?"
+
+#: salix-codecs-installer.desktop.in.h:1
+#: salix-codecs-installer-kde.desktop.in.h:1
+msgid "Install codecs required for playing restricted formats"
+msgstr ""
+"Asenna rajoitettujen tiedostomuotojen toistamiseen tarvittavat koodekit"
+
+#: salix-codecs-installer.desktop.in.h:2
+#: salix-codecs-installer-kde.desktop.in.h:2
+msgid "Install multimedia codecs"
+msgstr "Asenna multimedia koodekit"
