@@ -124,10 +124,10 @@ msgstr ""
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
-msgstr "Εγκατάσταση αποκωδικοποιητών που απαιτούνται για την αναπαραγωγή αρχείων κλειστών format"
+msgstr "Εγκατάσταση (απο)κωδικοποιητών που απαιτούνται για την αναπαραγωγή και δημιουργία αρχείων πολυμέσων κλειστής αρχιτεκτονικής"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
-msgstr "Εγκατάσταση αποκωδικοποιητών πολυμέσων"
+msgstr "Εγκατάσταση κωδικοποιητών πολυμέσων"
 
