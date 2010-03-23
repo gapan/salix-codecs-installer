@@ -19,9 +19,9 @@ install -m 644 icons/salix-codecs-installer.svg \
 $DESTDIR/usr/share/icons/hicolor/scalable/apps/
 install -m 644 pkglist $DESTDIR/usr/share/salix-codecs-installer/
 
-for i in `ls locale/*.mo|sed "s|locale/\(.*\).mo|\1|"`; do
+for i in `ls po/*.mo|sed "s|po/\(.*\).mo|\1|"`; do
 	install -d -m 755 $DESTDIR/usr/share/locale/${i}/LC_MESSAGES
-	install -m 644 locale/${i}.mo \
+	install -m 644 po/${i}.mo \
 	$DESTDIR/usr/share/locale/${i}/LC_MESSAGES/salix-codecs-installer.mo
 done
 
