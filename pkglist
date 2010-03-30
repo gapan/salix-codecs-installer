@@ -76,6 +76,7 @@ mjpegtools
 ncurses
 neon
 openssl
+opencore-amr
 pixman
 sdl
 slang
