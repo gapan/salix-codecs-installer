@@ -1,3 +1,9 @@
+version 0.8
+ * Added util-linux-ng and opencore-amre to the package list
+ * Removed e2fsprogs for the list
+ * Added Danish, Spanish, Argentinian Spanish, Italian and Brazilian
+   Portuguese translations
+
 version 0.7
  * Added amrnb, amrwb and libdvdcss to the package list
  * Updated French translation
@@ -8,6 +14,7 @@ version 0.6
 version 0.4
  * Fixed a bug with the final dialog not showing up translated
    (apparently poedit doesn't handle that very well)
+
 version 0.3
  * Added German translation
  * Added French translation
