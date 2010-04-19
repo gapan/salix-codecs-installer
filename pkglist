@@ -12,7 +12,6 @@ cxxlibs
 dbus
 dbus-glib
 dirac
-e2fsprogs
 esound
 expat
 faac
@@ -84,6 +83,7 @@ speex
 svgalib
 taglib
 twolame
+util-linux-ng
 wavpack
 x264
 xvidcore
