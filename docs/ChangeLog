@@ -1,5 +1,8 @@
+version 0.9
+ * Replaced libmpcdec with musepack-tools 
+
 version 0.8
- * Added util-linux-ng and opencore-amre to the package list
+ * Added util-linux-ng and opencore-amr to the package list
  * Removed e2fsprogs for the list
  * Added Danish, Spanish, Argentinian Spanish, Italian and Brazilian
    Portuguese translations
@@ -24,6 +27,6 @@ version 0.3
 version 0.2
  * Added Finnish translation
 
-version 0.1 - 2009/08/16
+version 0.1
  * First release
 

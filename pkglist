@@ -48,6 +48,7 @@ libass
 libcaca
 libcdaudio
 libcdio
+libcuefile
 libdca
 libdv
 libdvdcss
@@ -60,11 +61,11 @@ libid3tag
 libjpeg
 libmad
 libmms
-libmpcdec
 libmpeg2
 libogg
 liboil
 libpng
+libreplaygain
 libshout
 libsoup
 libtheora
@@ -72,6 +73,7 @@ libvorbis
 libxcb
 libxml2
 mjpegtools
+musepack-tools
 ncurses
 neon
 openssl
