@@ -17,6 +17,7 @@ export TEXTDOMAINDIR="/usr/share/locale"
 . gettext.sh
 
 PKGLIST=/usr/share/salix-codecs-installer/pkglist
+ERRORFILE=/tmp/salix-codecs-installer-error
 
 if [ ! $DISPLAY ]; then
 	echo -e "`eval_gettext 'ERROR: salix-codecs-installer must be executed within a running X session.\n'`"
@@ -38,14 +39,14 @@ if [ ! `which slapt-get` ]; then
 	exit 1
 fi
 
-SERVERERROR=0
+rm -f $ERRORFILE
 
 serverconnecterror()
 {
 	zenity --error \
 	--title "`eval_gettext 'Error connecting to server'`" \
 	--text "`eval_gettext 'There was an error connecting to at least one of the repositories.\n\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up.'`"
-	SERVERERROR=1
+	touch $ERRORFILE
 }
 
 pkgdownloaderror()
@@ -53,7 +54,7 @@ pkgdownloaderror()
 	zenity --error \
 	--title "`eval_gettext 'Error downloading packages'`" \
 	--text "`eval_gettext 'There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again'`"
-	SERVERERROR=1
+	touch $ERRORFILE
 }
 
 updatepkgdatabase()
@@ -92,13 +93,13 @@ updatepkgdatabase 2> /dev/null | zenity --progress \
  --text "`eval_gettext 'Receiving package information...'`" \
  --title "`eval_gettext 'System preparation'`" \
  --pulsate --percentage 0 --auto-close --auto-kill
-[ $SERVERERROR -eq 1 ] && exit 1
+[ -f $ERRORFILE ] && exit 1
 
 installcodecs 2> /dev/null | zenity --progress \
  --text "`eval_gettext 'Downloading and installing packages...'`" \
  --title "`eval_gettext 'Package installation'`" \
  --percentage 0 --auto-close --auto-kill
-[ $SERVERERROR -eq 1 ] && exit 1
+[ -f $ERRORFILE ] && exit 1
 
 zenity --question \
  --title "`eval_gettext 'Done!'`" \

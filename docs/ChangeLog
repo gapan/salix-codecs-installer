@@ -1,5 +1,6 @@
 version 0.9
  * Replaced libmpcdec with musepack-tools 
+ * Fixed exiting when encountering a problem
 
 version 0.8
  * Added util-linux-ng and opencore-amr to the package list
