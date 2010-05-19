@@ -2,8 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: ttt\n"
@@ -15,11 +14,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\\n\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\\n\\n\n"
+
 #: salix-codecs-installer:22
 #, sh-format
-msgid ""
-"ERROR: salix-codecs-installer must be executed within a running X session.\\n"
+msgid "ERROR: salix-codecs-installer must be executed within a running X session.\\n"
 msgstr ""
 
 #: salix-codecs-installer:27
@@ -40,15 +39,11 @@ msgstr ""
 #: salix-codecs-installer:46
 #, sh-format
 msgid "Error connecting to server"
-msgstr ""
+msgstr "Помилка зв’язку з сервером"
 
 #: salix-codecs-installer:47
 #, sh-format
-msgid ""
-"There was an error connecting to at least one of the repositories.\\n"
-"\\nPlease check that you have a working internet connection and that the "
-"repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is "
-"correctly set up."
+msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
 msgstr ""
 
 #: salix-codecs-installer:54
@@ -58,26 +53,17 @@ msgstr "Помилка завантаження пакунків"
 
 #: salix-codecs-installer:55
 #, sh-format
-msgid ""
-"There was an error downloading the required packages. Please make sure that "
-"your internet connection is working properly and try again"
+msgid "There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again"
 msgstr ""
 
 #: salix-codecs-installer:86
 #, sh-format
 msgid "Install multimedia codecs?"
-msgstr ""
+msgstr "Встановити мультимедійні кодеки?"
 
 #: salix-codecs-installer:88
 #, sh-format
-msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\\n\\nYou will be able to play files encoded with free "
-"codecs, but you will not be able to play commercial DVDs or listen to mp3 "
-"files without these codecs.\\n\\nPlease check the legislation in your "
-"country and select to install the codecs only if it is legal for you to do "
-"so.\\n\\nWould you like to install these extra multimedia codecs?"
+msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
 
 #: salix-codecs-installer:92
@@ -107,9 +93,7 @@ msgstr ""
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid ""
-"Codecs installation was succesfully completed.\\n\\nWould you like to remove "
-"the codecs installer from your system?"
+msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
 msgstr ""
 
 #: salix-codecs-installer.desktop.in.h:1
