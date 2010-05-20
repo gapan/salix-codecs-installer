@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\\n\\n\\n\\n\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\\n\\n\\n\\n\\n\n"
 
 #: salix-codecs-installer:22
 #, sh-format
@@ -44,7 +44,7 @@ msgstr "Помилка зв’язку з сервером"
 #: salix-codecs-installer:47
 #, sh-format
 msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
-msgstr ""
+msgstr "Трапилася помилка при з’єднанні з якимось з серверів репозитаріїв.\\n\\nБудь ласка, перевірте Ваше з’єднання з мережею і список репозитаріїв gslapt (або безпосередньо в /etc/slapt-get/slapt-getrc)."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -64,7 +64,7 @@ msgstr "Встановити мультимедійні кодеки?"
 #: salix-codecs-installer:88
 #, sh-format
 msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
-msgstr ""
+msgstr "Деякі мультимедійні кодеки мають патент і можуть створити проблему з розповсюдженням у деяких країнах. Тому підтримка всіх кодеків не включена за замовчуванням у Salix.\\n\\nВи зможете відтворювати файли, закодовані за допомогою вільних кодеків, але Ви не зможете програвати комерційні DVD-диски або слухати mp3 файли без цих кодеків.\\n\\nБудь ласка перевірте законодавство у Вашій країні і виберіть встановлення кодеків, тільки якщо маєте законні підстави це зробити.\\n\\nВи бажаєте встановити ці додаткові кодеки мультимедіа?"
 
 #: salix-codecs-installer:92
 #, sh-format
