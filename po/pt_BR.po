@@ -38,7 +38,7 @@ msgstr "ERRO: O slapt-get precisa estar instalado e no seu PATH para executar es
 #: salix-codecs-installer:46
 #, sh-format
 msgid "Error connecting to server"
-msgstr "Falha ao tentar conectar-se ao servidor"
+msgstr "Erro ao conectar-se ao servidor"
 
 #: salix-codecs-installer:47
 #, sh-format
@@ -63,7 +63,7 @@ msgstr "Instalar os codecs multimídia?"
 #: salix-codecs-installer:88
 #, sh-format
 msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
-msgstr "Alguns codecs multimídia são sobrecarregados de patentes e podem conter problemas de distribuição em determinados países. Entretanto, o suporte para todos os codecs não é incluído por padrão no Salix.\\n\\nVocê será capaz de executar arquivos codificados com codecs livres, mas não será capaz de executar DVDs comerciais ou escutar arquivos mp3 sem estes codecs.\\n\\nPor favor verifique a legislação no seu país e apenas instale os codecs se for legal fazer isso.\\n\\nVocê gostaria de instalar esses codecs multimídias adicionais?"
+msgstr "Alguns codecs multimídia são sobrecarregados de patentes e podem conter problemas de distribuição em determinados países. Portanto, o suporte para todos os codecs não é incluído por padrão no Salix.\\n\\nVocê será capaz de executar arquivos codificados com codecs livres, mas não será capaz de executar DVDs comerciais ou escutar arquivos mp3 sem estes codecs.\\n\\nPor favor, verifique a legislação de seu país e instale os codecs se isso for legal.\\n\\nVocê gostaria de instalar esses codecs multimídias adicionais?"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -78,7 +78,7 @@ msgstr "Preparação do sistema"
 #: salix-codecs-installer:98
 #, sh-format
 msgid "Downloading and installing packages..."
-msgstr "Fazendo o download e instalando os pacotes..."
+msgstr "Baixando e instalando os pacotes..."
 
 #: salix-codecs-installer:99
 #, sh-format
@@ -91,7 +91,7 @@ msgid "Done!"
 msgstr "Concluído!"
 
 #: salix-codecs-installer:106
-#, fuzzy, sh-format
+#, sh-format
 msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
 msgstr "Instalação dos codecs concluída com sucesso.\\n\\nVocê gostaria de remover o instalador de codecs do seu sistema?"
 
@@ -102,6 +102,5 @@ msgstr "Instalar codecs necessários para rodar formatos restritos"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
-#, fuzzy
 msgid "Install multimedia codecs"
-msgstr "Instalar os codecs multimídia?"
+msgstr "Instalar codecs multimídia"
