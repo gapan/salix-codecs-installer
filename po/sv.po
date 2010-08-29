@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: salix-codecs-installer\n"
@@ -44,14 +44,8 @@ msgstr "Fel vid anslutning till server"
 
 #: salix-codecs-installer:47
 #, sh-format
-msgid ""
-"There was an error connecting to at least one of the repositories.\\n"
-"\\n"
-"Please check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
-msgstr ""
-"Det uppstod ett fel vid anslutning till minst en av paketförråden.\\n"
-"\\n"
-"Kontrollera att du har en fungerande internet anslutning och paketförråden i gslapt (eller direkt i /etc/slapt-get/slapt-getrc) är korrekt inställt."
+msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
+msgstr "Det uppstod ett fel vid anslutning till minst en av paketförråden.\\n\\nKontrollera att du har en fungerande internet anslutning och paketförråden i gslapt (eller direkt i /etc/slapt-get/slapt-getrc) är korrekt inställt."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -70,15 +64,8 @@ msgstr "Installera multimedia codecs?"
 
 #: salix-codecs-installer:88
 #, sh-format
-msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n"
-"\\n"
-"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n"
-"\\n"
-"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n"
-"\\n"
-"Would you like to install these extra multimedia codecs?"
-msgstr ""
+msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
+msgstr "Vissa multimedia codecs är patent belastade och utgör distributionen problem i vissa länder. Därför ingår inte stöd för alla codecs som standard i Salix. \\ \\n \\ \\nDu kommer att kunna spela upp filer kodade med gratis codec, men du kommer inte kunna spela kommersiella DVD-skivor eller lyssna på mp3-filer utan dessa codecs. \\n \\nKontrollera lagstiftningen i ditt land och välj att installera codec-enheter endast om det är lagligt för dig att göra det. \\n \\nVill du installera dessa extra multimedia codecs?"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -107,22 +94,15 @@ msgstr "Klar!"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid ""
-"Codecs installation was succesfully completed.\\n"
-"\\n"
-"Would you like to remove the codecs installer from your system?"
-msgstr ""
-"Installationen av codecs lyckades.\\n"
-"\\n"
-"Vill du ta bort codecs installeraren från ditt system?"
+msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
+msgstr "Installationen av codecs lyckades.\\n\\nVill du ta bort codecs installeraren från ditt system?"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
-msgstr ""
+msgstr "Installera codecs som krävs för att spela licensierade format"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
 msgstr "Installera multimedia codecs"
-
