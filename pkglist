@@ -8,7 +8,6 @@ amrwb
 audiofile
 bzip2
 cairo
-cxxlibs
 dbus
 dbus-glib
 dirac
@@ -70,6 +69,7 @@ libshout
 libsoup
 libtheora
 libvorbis
+libvpx
 libxcb
 libxml2
 mjpegtools
