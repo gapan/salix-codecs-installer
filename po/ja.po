@@ -1,16 +1,21 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: tsuren <hydrangea_and_snail@hotmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2011-01-08 23:00+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Japanese\n"
-"X-Poedit-Country: JAPAN\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: salix-codecs-installer:22
 #, sh-format
@@ -39,14 +44,8 @@ msgstr "エラー：サーバーにコネクトできません。"
 
 #: salix-codecs-installer:47
 #, sh-format
-msgid ""
-"There was an error connecting to at least one of the repositories.\\n"
-"\\n"
-"Please check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
-msgstr ""
-"指定されているレポジトリーにコネクトすることができません。\\n"
-"\\n"
-"インターネットがちゃんとつながっているか、そしてgslapt(又は、/etc/slapt-get/slapt-getrc）にリストされているレポジトリーのリストに間違いがないか確認をしてください。"
+msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
+msgstr "指定されているレポジトリーにコネクトすることができません。\\n\\nインターネットがちゃんとつながっているか、そしてgslapt(又は、/etc/slapt-get/slapt-getrc）にリストされているレポジトリーのリストに間違いがないか確認をしてください。"
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -65,22 +64,8 @@ msgstr "ムルチメディアのコデックをインストールしますか"
 
 #: salix-codecs-installer:88
 #, sh-format
-msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n"
-"\\n"
-"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n"
-"\\n"
-"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n"
-"\\n"
-"Would you like to install these extra multimedia codecs?"
-msgstr ""
-"いくつかのムルチメディア・コデックは、パテントからくる規制の関係でSalixにデフォですべてインストールされていません。\\n"
-"\\n"
-"フリーなコデックをつかってエンコードされたファイルは、再生することができますが、市販のDVD、mp3ファイルなどは、これらのコデック無しでは再生することはできません。\\n"
-"\\n"
-"これらのコデックをインストールする前に、あなたの国では、使用しても法律上問題がないかどうかチェックしてください。\\n"
-"\\n"
-"これらの追加コデックをインストールしますか。"
+msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
+msgstr "いくつかのムルチメディア・コデックは、パテントからくる規制の関係でSalixにデフォですべてインストールされていません。\\n\\nフリーなコデックをつかってエンコードされたファイルは、再生することができますが、市販のDVD、mp3ファイルなどは、これらのコデック無しでは再生することはできません。\\n\\nこれらのコデックをインストールする前に、あなたの国では、使用しても法律上問題がないかどうかチェックしてください。\\n\\nこれらの追加コデックをインストールしますか。"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -109,14 +94,8 @@ msgstr "終了"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid ""
-"Codecs installation was succesfully completed.\\n"
-"\\n"
-"Would you like to remove the codecs installer from your system?"
-msgstr ""
-"コデックのインストールが終了しました。\\n"
-"\\n"
-"コデック・インストーラーをシステムからアンインストールしますか"
+msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
+msgstr "コデックのインストールが終了しました。\\n\\nコデック・インストーラーをシステムからアンインストールしますか"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
@@ -127,4 +106,3 @@ msgstr "規制されたフォーマットを再生するためのコデックを
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
 msgstr "マルチメディア・コデックをインストールする"
-

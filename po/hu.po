@@ -2,18 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: salix-codecs-installer\n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
-"PO-Revision-Date: 2010-07-20 22:19+0100\n"
-"Last-Translator: Peter Polonkai <polesz@nedudu.hu>\n"
-"Language-Team: Nedudu Team <nedudu@nedudu.hu>\n"
+"PO-Revision-Date: 2011-01-08 23:00+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: salix-codecs-installer:22
 #, sh-format
@@ -42,14 +44,8 @@ msgstr "Hiba a szerverhez való kapcsolódáskor"
 
 #: salix-codecs-installer:47
 #, sh-format
-msgid ""
-"There was an error connecting to at least one of the repositories.\\n"
-"\\n"
-"Please check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
-msgstr ""
-"Hiba történt legalább az egyik csomagtárolóhoz való csatlakozáskor.\\n"
-"\\n"
-" Ellenőrizze, hogy internet kapcsolat megfelelően működik-e, és a csomagtárolók listája a gslapt  (elérhető /etc/slapt-get/slapt-getrc) programban megfelelően be van-e állítva."
+msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
+msgstr "Hiba történt legalább az egyik csomagtárolóhoz való csatlakozáskor.\\n\\n Ellenőrizze, hogy internet kapcsolat megfelelően működik-e, és a csomagtárolók listája a gslapt  (elérhető /etc/slapt-get/slapt-getrc) programban megfelelően be van-e állítva."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -68,22 +64,8 @@ msgstr "Multimédia kodekek telepítése?"
 
 #: salix-codecs-installer:88
 #, sh-format
-msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n"
-"\\n"
-"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n"
-"\\n"
-"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n"
-"\\n"
-"Would you like to install these extra multimedia codecs?"
-msgstr ""
-"Néhány multimédia kodeket szabadalom terhel, és ez miatt nem érhető el egyes országokban. Ezért nem minden formátum támogatott alapértelmezés szerint a Salix-ban.\\n"
-"\\n"
-"Ön képes lejátszani tartalmakat az ingyenes kodekek használatával, de nem lehetséges a kereskedelmi DVD-k vagy az mp3 fájlok lejátszása ezen kodekek nélkül.\\n"
-"\\n"
-"Ha az ön országában a jogszabályok megengedik akkor telepítheti ezeket a kodekeket legálisan.\\n"
-"\\n"
-"Szeretné telepíteni az extra multimédiás kodekeket?"
+msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
+msgstr "Néhány multimédia kodeket szabadalom terhel, és ez miatt nem érhető el egyes országokban. Ezért nem minden formátum támogatott alapértelmezés szerint a Salix-ban.\\n\\nÖn képes lejátszani tartalmakat az ingyenes kodekek használatával, de nem lehetséges a kereskedelmi DVD-k vagy az mp3 fájlok lejátszása ezen kodekek nélkül.\\n\\nHa az ön országában a jogszabályok megengedik akkor telepítheti ezeket a kodekeket legálisan.\\n\\nSzeretné telepíteni az extra multimédiás kodekeket?"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -112,14 +94,8 @@ msgstr "Kész!"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid ""
-"Codecs installation was succesfully completed.\\n"
-"\\n"
-"Would you like to remove the codecs installer from your system?"
-msgstr ""
-"Kodekek telepítése sikeresen megtörtént.\\n"
-"\\n"
-"El szeretné távolítani a kodek telepítőt a rendszerből?"
+msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
+msgstr "Kodekek telepítése sikeresen megtörtént.\\n\\nEl szeretné távolítani a kodek telepítőt a rendszerből?"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
@@ -130,4 +106,3 @@ msgstr "Kodekek telepítése a korlátozott formátumok lejátszásához"
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
 msgstr "Multimédia kodekek telepítése"
-
