@@ -5,15 +5,17 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
-"PO-Revision-Date: 2010-03-12 12:27-0300\n"
-"Last-Translator: Willian Gustavo Veiga <wiltave@gmail.com>\n"
+"PO-Revision-Date: 2011-02-13 09:58+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 
 #: salix-codecs-installer:22
 #, sh-format
