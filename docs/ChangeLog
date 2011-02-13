@@ -1,3 +1,13 @@
+version 0.9.3
+ * Added schroedinger
+ * Updated translations
+
+version 0.9.2
+ * Added libvpx
+
+version 0.9.1
+ * Updated translations
+
 version 0.9
  * Replaced libmpcdec with musepack-tools 
  * Fixed exiting when encountering a problem
