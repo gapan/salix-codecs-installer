@@ -8,6 +8,7 @@ amrwb
 audiofile
 bzip2
 cairo
+cxxlibs
 dbus
 dbus-glib
 dirac
