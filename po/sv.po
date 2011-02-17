@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
-"PO-Revision-Date: 2011-02-13 09:59+0000\n"
+"PO-Revision-Date: 2011-02-17 20:57+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,9 @@ msgstr ""
 
 #: salix-codecs-installer:22
 #, sh-format
-msgid "ERROR: salix-codecs-installer must be executed within a running X session.\\n"
+msgid ""
+"ERROR: salix-codecs-installer must be executed within a running X "
+"session.\\n"
 msgstr "FEL: salix-codecs-installer måste startas med en körande X session.\\n"
 
 #: salix-codecs-installer:27
@@ -44,7 +46,11 @@ msgstr "Fel vid anslutning till server"
 
 #: salix-codecs-installer:47
 #, sh-format
-msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
+msgid ""
+"There was an error connecting to at least one of the "
+"repositories.\\n\\nPlease check that you have a working internet "
+"connection and that the repository list in gslapt (or directly in /etc"
+"/slapt-get/slapt-getrc) is correctly set up."
 msgstr ""
 "Det uppstod ett fel vid anslutning till minst en av paketförråden.\n"
 "\n"
@@ -57,8 +63,12 @@ msgstr "Fel vid nerladdning av paket"
 
 #: salix-codecs-installer:55
 #, sh-format
-msgid "There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again"
-msgstr "Det uppstod ett fel vid nerladdning av paket. Var vänlig kontrollera att din internetanslutning fungerar och försök igen."
+msgid ""
+"There was an error downloading the required packages. Please make sure "
+"that your internet connection is working properly and try again"
+msgstr ""
+"Det uppstod ett fel vid nerladdning av paket. Var vänlig kontrollera "
+"att din internetanslutning fungerar och försök igen."
 
 #: salix-codecs-installer:86
 #, sh-format
@@ -67,7 +77,15 @@ msgstr "Installera multimedia codecs?"
 
 #: salix-codecs-installer:88
 #, sh-format
-msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
+msgid ""
+"Some multimedia codecs are patent encumbered and pose distribution "
+"problems in certain countries. Therefore, support for all codecs is not"
+" included by default in Salix.\\n\\nYou will be able to play files "
+"encoded with free codecs, but you will not be able to play commercial "
+"DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the "
+"legislation in your country and select to install the codecs only if it"
+" is legal for you to do so.\\n\\nWould you like to install these extra "
+"multimedia codecs?"
 msgstr ""
 "Vissa multimedia codecs är patent belastade och utgör distributions problem i vissa länder. Därför ingår inte stöd för alla codecs som standard i Salix.\n"
 "\n"
@@ -104,7 +122,9 @@ msgstr "Klar!"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
+msgid ""
+"Codecs installation was succesfully completed.\\n\\nWould you like to "
+"remove the codecs installer from your system?"
 msgstr ""
 "Installationen av codecs lyckades.\n"
 "\n"

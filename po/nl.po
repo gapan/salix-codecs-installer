@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
-"PO-Revision-Date: 2011-02-13 09:58+0000\n"
+"PO-Revision-Date: 2011-02-17 20:57+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: Dutch <>\n"
 "MIME-Version: 1.0\n"
@@ -19,8 +19,12 @@ msgstr ""
 
 #: salix-codecs-installer:22
 #, sh-format
-msgid "ERROR: salix-codecs-installer must be executed within a running X session.\\n"
-msgstr "FOUT: salix-codecs-installer moet worde gestart binnen een werkende X sessie.\\n"
+msgid ""
+"ERROR: salix-codecs-installer must be executed within a running X "
+"session.\\n"
+msgstr ""
+"FOUT: salix-codecs-installer moet worde gestart binnen een werkende X "
+"sessie.\\n"
 
 #: salix-codecs-installer:27
 #, sh-format
@@ -30,12 +34,16 @@ msgstr "FOUT: U moet root zijn om dit uit te voeren"
 #: salix-codecs-installer:32
 #, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run this"
-msgstr "FOUT: zenity moet worden geinstalleerd en in uw PATH om dit uit te voeren"
+msgstr ""
+"FOUT: zenity moet worden geinstalleerd en in uw PATH om dit uit te "
+"voeren"
 
 #: salix-codecs-installer:37
 #, sh-format
 msgid "ERROR: slapt-get must be installed and in your PATH to run this"
-msgstr "FOUT: slapt-get moet worden geinstalleerd en in uw PATH om dit uit te voeren"
+msgstr ""
+"FOUT: slapt-get moet worden geinstalleerd en in uw PATH om dit uit te "
+"voeren"
 
 #: salix-codecs-installer:46
 #, sh-format
@@ -44,8 +52,16 @@ msgstr "Fout bij connectie maken naar de server"
 
 #: salix-codecs-installer:47
 #, sh-format
-msgid "There was an error connecting to at least one of the repositories.\\n\\nPlease check that you have a working internet connection and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-getrc) is correctly set up."
-msgstr "Er is een fout opgetreden bij een connectie naar een van de repositories.\\n\\nControleer alstublieft of u een werkende internet connectie heeft en dat de repository lijst in gslapt (of direct in /etc/slapt-get/slapt-getrc) correct is ingesteld."
+msgid ""
+"There was an error connecting to at least one of the "
+"repositories.\\n\\nPlease check that you have a working internet "
+"connection and that the repository list in gslapt (or directly in /etc"
+"/slapt-get/slapt-getrc) is correctly set up."
+msgstr ""
+"Er is een fout opgetreden bij een connectie naar een van de "
+"repositories.\\n\\nControleer alstublieft of u een werkende internet "
+"connectie heeft en dat de repository lijst in gslapt (of direct in "
+"/etc/slapt-get/slapt-getrc) correct is ingesteld."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -54,8 +70,13 @@ msgstr "Fout in het downloaden van pakketten"
 
 #: salix-codecs-installer:55
 #, sh-format
-msgid "There was an error downloading the required packages. Please make sure that your internet connection is working properly and try again"
-msgstr "Er is een fout opgetreden bij het downloaden van de vereiste pakketten. Controleer alstublieft of u een werkende internet connectie heeft en probeer opnieuw."
+msgid ""
+"There was an error downloading the required packages. Please make sure "
+"that your internet connection is working properly and try again"
+msgstr ""
+"Er is een fout opgetreden bij het downloaden van de vereiste "
+"pakketten. Controleer alstublieft of u een werkende internet connectie"
+" heeft en probeer opnieuw."
 
 #: salix-codecs-installer:86
 #, sh-format
@@ -64,8 +85,22 @@ msgstr "Installeer multimedia codecs?"
 
 #: salix-codecs-installer:88
 #, sh-format
-msgid "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\\n\\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\\n\\nWould you like to install these extra multimedia codecs?"
-msgstr "Sommige multmedia codecs zijn beladen onder het octrooirecht en geven distributieproblemen in bepaalde landen. Zodoende is ondersteuning voor alle codecs niet standaard aanwezig in Salix.\\n\\nHet is mogelijk om bestanden welke zijn ge-encodeerd met vrije codecs af te spelen, maar het is niet mogelijk om commerciële DVDs of MP3 bestanden af te spelen zonder gelicentieerde codecs.\\n\\nControleer "
+msgid ""
+"Some multimedia codecs are patent encumbered and pose distribution "
+"problems in certain countries. Therefore, support for all codecs is not"
+" included by default in Salix.\\n\\nYou will be able to play files "
+"encoded with free codecs, but you will not be able to play commercial "
+"DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the "
+"legislation in your country and select to install the codecs only if it"
+" is legal for you to do so.\\n\\nWould you like to install these extra "
+"multimedia codecs?"
+msgstr ""
+"Sommige multmedia codecs zijn beladen onder het octrooirecht en geven "
+"distributieproblemen in bepaalde landen. Zodoende is ondersteuning "
+"voor alle codecs niet standaard aanwezig in Salix.\\n\\nHet is mogelijk "
+"om bestanden welke zijn ge-encodeerd met vrije codecs af te spelen, "
+"maar het is niet mogelijk om commerciële DVDs of MP3 bestanden af te "
+"spelen zonder gelicentieerde codecs.\\n\\nControleer "
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -94,8 +129,12 @@ msgstr "Gereed!"
 
 #: salix-codecs-installer:106
 #, sh-format
-msgid "Codecs installation was succesfully completed.\\n\\nWould you like to remove the codecs installer from your system?"
-msgstr "De installatie van de codecs is geslaagd.\\n\\nWilt u het codecs installatieprogramma van uw systeem verwijderen?"
+msgid ""
+"Codecs installation was succesfully completed.\\n\\nWould you like to "
+"remove the codecs installer from your system?"
+msgstr ""
+"De installatie van de codecs is geslaagd.\\n\\nWilt u het codecs "
+"installatieprogramma van uw systeem verwijderen?"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
