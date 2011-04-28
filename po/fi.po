@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
-"PO-Revision-Date: 2011-02-17 20:58+0000\n"
+"PO-Revision-Date: 2011-03-22 15:46+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,8 +28,7 @@ msgstr "VIRHE: salix-codecs-installer täytyy suorittaa X istunnossa.\\n"
 #, sh-format
 msgid "ERROR: You need to be root to run this"
 msgstr ""
-"VIRHE: Sinun täytyy olla järjestelmän valvoja(root) suorittaaksesi "
-"tämän."
+"VIRHE: Sinun täytyy olla järjestelmän valvoja(root) suorittaaksesi tämän."
 
 #: salix-codecs-installer:32
 #, sh-format
@@ -54,14 +53,13 @@ msgstr "Yhteyden muodostaminen serveriin epäonnistui"
 #, sh-format
 msgid ""
 "There was an error connecting to at least one of the "
-"repositories.\\n\\nPlease check that you have a working internet "
-"connection and that the repository list in gslapt (or directly in /etc"
-"/slapt-get/slapt-getrc) is correctly set up."
+"repositories.\\n\\nPlease check that you have a working internet connection "
+"and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-"
+"getrc) is correctly set up."
 msgstr ""
-"Virhe tapahtui yhdistäessä ainakin yhteen pakettivarastoista.\\n\\nOle "
-"hyvä ja tarkista että sinulla on toimiva internet-yhteys ja että "
-"gslapt pakettivarasto lista (tai /etc/slapt-get/slapt-getrc) on oikein"
-" asetettu."
+"Virhe tapahtui yhdistäessä ainakin yhteen pakettivarastoista.\\n\\nOle hyvä "
+"ja tarkista että sinulla on toimiva internet-yhteys ja että gslapt "
+"pakettivarasto lista (tai /etc/slapt-get/slapt-getrc) on oikein asetettu."
 
 #: salix-codecs-installer:54
 #, sh-format
@@ -71,11 +69,11 @@ msgstr "Virhe ladattaessa paketteja"
 #: salix-codecs-installer:55
 #, sh-format
 msgid ""
-"There was an error downloading the required packages. Please make sure "
-"that your internet connection is working properly and try again"
+"There was an error downloading the required packages. Please make sure that "
+"your internet connection is working properly and try again"
 msgstr ""
-"Tapahtui virhe ladattaessa pyydettyjä paketteja. Ole hyvä ja tarkista "
-"että internet-yhteytesi toimii kunnolla ja yritä uudelleen."
+"Tapahtui virhe ladattaessa pyydettyjä paketteja. Ole hyvä ja tarkista että "
+"internet-yhteytesi toimii kunnolla ja yritä uudelleen."
 
 #: salix-codecs-installer:86
 #, sh-format
@@ -85,23 +83,21 @@ msgstr "Asenna multimedia koodekit?"
 #: salix-codecs-installer:88
 #, sh-format
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution "
-"problems in certain countries. Therefore, support for all codecs is not"
-" included by default in Salix.\\n\\nYou will be able to play files "
-"encoded with free codecs, but you will not be able to play commercial "
-"DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the "
-"legislation in your country and select to install the codecs only if it"
-" is legal for you to do so.\\n\\nWould you like to install these extra "
-"multimedia codecs?"
+"Some multimedia codecs are patent encumbered and pose distribution problems "
+"in certain countries. Therefore, support for all codecs is not included by "
+"default in Salix.\\n\\nYou will be able to play files encoded with free "
+"codecs, but you will not be able to play commercial DVDs or listen to mp3 "
+"files without these codecs.\\n\\nPlease check the legislation in your "
+"country and select to install the codecs only if it is legal for you to do "
+"so.\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
-"Jotkin multimediakoodekeista on patenttisuojattuja ja näin estävät "
-"niiden jakelun joissain maissa. Siksi kaikkien koodekkien tuki ei ole "
-"sisällytetty oletuksena Salixiin.\\n\\nVoit toistaa tiedostoja jotka on "
-"koodattu käyttäen vapaita koodekkeja, mutta et voi toistaa kaupallisia"
-" DVD:tä tai kuunnella mp3 tiedostoja ilman näitä koodekkeja.\\n\\nOle "
-"hyvä ja tarkista lainsäädäntö maassasi ja asenna koodekit ainoastaan "
-"jos se on sinulle laillista.\\n\\nHaluatko asentaa nämä ylimääräiset "
-"multimedia koodekit?"
+"Jotkin multimediakoodekeista on patenttisuojattuja ja näin estävät niiden "
+"jakelun joissain maissa. Siksi kaikkien koodekkien tuki ei ole sisällytetty "
+"oletuksena Salixiin.\\n\\nVoit toistaa tiedostoja jotka on koodattu käyttäen"
+" vapaita koodekkeja, mutta et voi toistaa kaupallisia DVD:tä tai kuunnella "
+"mp3 tiedostoja ilman näitä koodekkeja.\\n\\nOle hyvä ja tarkista "
+"lainsäädäntö maassasi ja asenna koodekit ainoastaan jos se on sinulle "
+"laillista.\\n\\nHaluatko asentaa nämä ylimääräiset multimedia koodekit?"
 
 #: salix-codecs-installer:92
 #, sh-format
@@ -131,8 +127,8 @@ msgstr "Valmis!"
 #: salix-codecs-installer:106
 #, sh-format
 msgid ""
-"Codecs installation was succesfully completed.\\n\\nWould you like to "
-"remove the codecs installer from your system?"
+"Codecs installation was succesfully completed.\\n\\nWould you like to remove"
+" the codecs installer from your system?"
 msgstr ""
 "Koodekkien asennus suoritettu onnistuneesti.\\n\\nHaluatko poistaa "
 "koodekkien asentaja tietokoneesta?"
@@ -141,8 +137,7 @@ msgstr ""
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
 msgstr ""
-"Asenna rajoitettujen tiedostomuotojen toistamiseen tarvittavat "
-"koodekit"
+"Asenna rajoitettujen tiedostomuotojen toistamiseen tarvittavat koodekit"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2

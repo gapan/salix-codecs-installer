@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
-"PO-Revision-Date: 2011-02-17 20:58+0000\n"
+"PO-Revision-Date: 2011-03-22 15:46+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: Polish <None>\n"
 "MIME-Version: 1.0\n"
@@ -48,9 +48,9 @@ msgstr ""
 #, sh-format
 msgid ""
 "There was an error connecting to at least one of the "
-"repositories.\\n\\nPlease check that you have a working internet "
-"connection and that the repository list in gslapt (or directly in /etc"
-"/slapt-get/slapt-getrc) is correctly set up."
+"repositories.\\n\\nPlease check that you have a working internet connection "
+"and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-"
+"getrc) is correctly set up."
 msgstr ""
 
 #: salix-codecs-installer:54
@@ -61,8 +61,8 @@ msgstr ""
 #: salix-codecs-installer:55
 #, sh-format
 msgid ""
-"There was an error downloading the required packages. Please make sure "
-"that your internet connection is working properly and try again"
+"There was an error downloading the required packages. Please make sure that "
+"your internet connection is working properly and try again"
 msgstr ""
 
 #: salix-codecs-installer:86
@@ -73,14 +73,13 @@ msgstr ""
 #: salix-codecs-installer:88
 #, sh-format
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution "
-"problems in certain countries. Therefore, support for all codecs is not"
-" included by default in Salix.\\n\\nYou will be able to play files "
-"encoded with free codecs, but you will not be able to play commercial "
-"DVDs or listen to mp3 files without these codecs.\\n\\nPlease check the "
-"legislation in your country and select to install the codecs only if it"
-" is legal for you to do so.\\n\\nWould you like to install these extra "
-"multimedia codecs?"
+"Some multimedia codecs are patent encumbered and pose distribution problems "
+"in certain countries. Therefore, support for all codecs is not included by "
+"default in Salix.\\n\\nYou will be able to play files encoded with free "
+"codecs, but you will not be able to play commercial DVDs or listen to mp3 "
+"files without these codecs.\\n\\nPlease check the legislation in your "
+"country and select to install the codecs only if it is legal for you to do "
+"so.\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
 
 #: salix-codecs-installer:92
@@ -111,8 +110,8 @@ msgstr "Zrobione!"
 #: salix-codecs-installer:106
 #, sh-format
 msgid ""
-"Codecs installation was succesfully completed.\\n\\nWould you like to "
-"remove the codecs installer from your system?"
+"Codecs installation was succesfully completed.\\n\\nWould you like to remove"
+" the codecs installer from your system?"
 msgstr ""
 
 #: salix-codecs-installer.desktop.in.h:1

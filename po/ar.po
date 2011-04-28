@@ -9,46 +9,40 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-23 20:59+0200\n"
 "PO-Revision-Date: 2011-03-22 15:46+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Last-Translator: cobraJoker <cobra.the.joker@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
 
 #: salix-codecs-installer:22
 #, sh-format
 msgid ""
 "ERROR: salix-codecs-installer must be executed within a running X "
 "session.\\n"
-msgstr ""
-"ERRO: O salix-codecs-installer deve ser executado dentro de uma sessão do "
-"X.\\n"
+msgstr "خطأ : يجب تشغيل الsalix-codecs-installer في وجود السيرفر X"
 
 #: salix-codecs-installer:27
 #, sh-format
 msgid "ERROR: You need to be root to run this"
-msgstr "ERRO: Você precisa ser root para executar isto"
+msgstr "خطأ : يجب أن يكون root لتشغيل هذا"
 
 #: salix-codecs-installer:32
 #, sh-format
 msgid "ERROR: zenity must be installed and in your PATH to run this"
-msgstr ""
-"ERRO: O zenity precisa estar instalado e no seu PATH para executar esta "
-"operação"
+msgstr "خطأ : يجب تثبيت zenity و ال PATH لتشغيل هذا "
 
 #: salix-codecs-installer:37
 #, sh-format
 msgid "ERROR: slapt-get must be installed and in your PATH to run this"
-msgstr ""
-"ERRO: O slapt-get precisa estar instalado e no seu PATH para executar esta "
-"operação"
+msgstr "خطأ : يجب تثبيت slapt-get و ال PATH لتشغيل هذا "
 
 #: salix-codecs-installer:46
 #, sh-format
 msgid "Error connecting to server"
-msgstr "Erro ao conectar-se ao servidor"
+msgstr "خطأ أثناء  الاتصال بخادم"
 
 #: salix-codecs-installer:47
 #, sh-format
@@ -58,15 +52,14 @@ msgid ""
 "and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-"
 "getrc) is correctly set up."
 msgstr ""
-"Ocorreu m erro ao conectar em um dos repositórios.\\n\\nPor favor verifique "
-"se a sua conexão com a internet está funcionando e se a lista de "
-"repositórios no gslapt (ou diretamente em /etc/slapt-get/slapt-getrc) está "
-"configurada corretamente."
+"كان هناك خطأ في الاتصال بواحد على الأقل من المستودعات. \\ ن \\ n تأكد من أن "
+"لديك اتصال بالإنترنت العمل والتي تم تعيينها بشكل صحيح في قائمة المخزون "
+"gslapt (أو مباشرة في / الخ / slapt بين الحصول على / slapt - getrc) بالتسجيل."
 
 #: salix-codecs-installer:54
 #, sh-format
 msgid "Error downloading packages"
-msgstr "Erro ao fazer o download dos pacotes"
+msgstr "خطأ أثناء تحميل الحزم "
 
 #: salix-codecs-installer:55
 #, sh-format
@@ -74,14 +67,13 @@ msgid ""
 "There was an error downloading the required packages. Please make sure that "
 "your internet connection is working properly and try again"
 msgstr ""
-"Ocorreu um erro ao fazer o download dos pacotes requisitados. Por favor "
-"tenha certeza que a sua conexão com a internet está funcionando corretamente"
-" e tente novamente"
+"كان هناك خطأ أثناء تحميل  الحزم المطلوبة. الرجاء التأكد من أن اتصال إنترنت "
+"يعمل بشكل صحيح وحاول مرة أخرى"
 
 #: salix-codecs-installer:86
 #, sh-format
 msgid "Install multimedia codecs?"
-msgstr "Instalar os codecs multimídia?"
+msgstr "تثبيت برامج ترميز الوسائط المتعددة؟"
 
 #: salix-codecs-installer:88
 #, sh-format
@@ -94,38 +86,36 @@ msgid ""
 "country and select to install the codecs only if it is legal for you to do "
 "so.\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
-"Alguns codecs multimídia são sobrecarregados de patentes e podem conter "
-"problemas de distribuição em determinados países. Portanto, o suporte para "
-"todos os codecs não é incluído por padrão no Salix.\\n\\nVocê será capaz de "
-"executar arquivos codificados com codecs livres, mas não será capaz de "
-"executar DVDs comerciais ou escutar arquivos mp3 sem estes codecs.\\n\\nPor "
-"favor, verifique a legislação de seu país e instale os codecs se isso for "
-"legal.\\n\\nVocê gostaria de instalar esses codecs multimídias adicionais?"
+"بعض برامج الترميز الوسائط المتعددة هي البراءة المرهونة ، وتطرح مشاكل التوزيع في بعض البلدان. ولذلك ، لا يتم تضمين الدعم لجميع برامج الترميز افتراضيا في صفصاف. \\ ن \n"
+" أنت  سوف يكون قادرا على اللعب مع ترميز الملفات المشفرة مجانا ، ولكنك لن تكون قادرة على لعب دي في دي التجارية أو الاستماع إلى ملفات MP3 بدون هذه الترميز. \\ ن \n"
+"  مراجعة التشريعات في بلدكم ، وحدد لتثبيت برامج الترميز إلا إذا كان لك القانونية للقيام بذلك. \n"
+" \n"
+"  كنت ترغب في تثبيت هذه اضافية الوسائط المتعددة الترميز؟"
 
 #: salix-codecs-installer:92
 #, sh-format
 msgid "Receiving package information..."
-msgstr "Recebendo informações dos pacotes..."
+msgstr "تلقي معلومات عن الحزمة ..."
 
 #: salix-codecs-installer:93
 #, sh-format
 msgid "System preparation"
-msgstr "Preparação do sistema"
+msgstr "إعداد نظام"
 
 #: salix-codecs-installer:98
 #, sh-format
 msgid "Downloading and installing packages..."
-msgstr "Baixando e instalando os pacotes..."
+msgstr "تحميل وتثبيت الحزم..."
 
 #: salix-codecs-installer:99
 #, sh-format
 msgid "Package installation"
-msgstr "Instalação dos pacotes"
+msgstr "تثبيت الحزم "
 
 #: salix-codecs-installer:104
 #, sh-format
 msgid "Done!"
-msgstr "Concluído!"
+msgstr "تم !"
 
 #: salix-codecs-installer:106
 #, sh-format
@@ -133,15 +123,16 @@ msgid ""
 "Codecs installation was succesfully completed.\\n\\nWould you like to remove"
 " the codecs installer from your system?"
 msgstr ""
-"Instalação dos codecs concluída com sucesso.\\n\\nVocê gostaria de remover o"
-" instalador de codecs do seu sistema?"
+"تم بنجاح تركيب الترميز. \n"
+" \n"
+"  هل ترغب في إزالة مثبت الترميز من النظام الخاص بك؟"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
-msgstr "Instalar codecs necessários para rodar formatos restritos"
+msgstr "تثبيت برامج الترميز المطلوبة لتشغيل صيغ مقيدة"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
-msgstr "Instalar codecs multimídia"
+msgstr "تثبيت برامج ترميز الوسائط المتعددة"
