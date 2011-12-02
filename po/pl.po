@@ -25,7 +25,7 @@ msgid ""
 "ERROR: salix-codecs-installer must be executed within a running X "
 "session.\\n"
 msgstr ""
-"BŁĄD: salix-codecs-installer musi być wykonane w ramach sesji X Window\n"
+"BŁĄD: salix-codecs-installer musi być wykonane w ramach sesji X Window\\n"
 
 #: salix-codecs-installer:27
 #, sh-format
@@ -55,8 +55,8 @@ msgid ""
 "and that the repository list in gslapt (or directly in /etc/slapt-get/slapt-"
 "getrc) is correctly set up."
 msgstr ""
-"Wystąpił błąd podczas łączenia się z co najmniej jednym z repozytoriów. \n"
-"\n"
+"Wystąpił błąd podczas łączenia się z co najmniej jednym z repozytoriów. \\n"
+"\\n"
 "Proszę sprawdzić, czy połączenie internetowe działa i że na liście repozytoriów w gslapt (lub bezpośrednio w /etc/slapt-get/slapt-getrc) jest prawidłowo ustawiony."
 
 #: salix-codecs-installer:54
@@ -89,12 +89,12 @@ msgid ""
 "country and select to install the codecs only if it is legal for you to do "
 "so.\\n\\nWould you like to install these extra multimedia codecs?"
 msgstr ""
-"Niektóre kodeki są obciążone przez patent i mogą stwarzać problemy dystrybucji w niektórych krajach. Dlatego też wsparcie dla wszystkich kodeków nie jest domyślnie w Salix. \n"
-"\n"
-"Będziesz mógł odtwarzać pliki zakodowane z pomocą darmowych kodeków, ale nie będziesz mógł zgrać komercyjnych płyt DVD lub słuchać plików mp3 bez tych kodeków. \n"
-"\n"
+"Niektóre kodeki są obciążone przez patent i mogą stwarzać problemy dystrybucji w niektórych krajach. Dlatego też wsparcie dla wszystkich kodeków nie jest domyślnie w Salix. \\n"
+"\\n"
+"Będziesz mógł odtwarzać pliki zakodowane z pomocą darmowych kodeków, ale nie będziesz mógł zgrać komercyjnych płyt DVD lub słuchać plików mp3 bez tych kodeków. \\n"
+"\\n"
 "Proszę sprawdzić przepisy w danym kraju i wybierz opcję instalacji kodeków tylko wtedy, gdy jest to legalne.\n"
-"\n"
+"\\n"
 "Czy chcesz zainstalować te dodatkowe kodeki?"
 
 #: salix-codecs-installer:92
@@ -128,8 +128,8 @@ msgid ""
 "Codecs installation was succesfully completed.\\n\\nWould you like to remove"
 " the codecs installer from your system?"
 msgstr ""
-"Instalacji kodeków została zakończona pomyślnie. \n"
-"\n"
+"Instalacji kodeków została zakończona pomyślnie. \\n"
+"\\n"
 "Czy chcesz usunąć instalator kodeków z systemu?"
 
 #: salix-codecs-installer.desktop.in.h:1
