@@ -627,6 +627,7 @@ class SalixCodecsInstaller:
 		gtk.gdk.threads_leave()
 		cmd = ['/sbin/spkg', '-d', 'salix-codecs-installer']
 		process = subprocess.Popen(cmd)
+		process.wait()
 		gtk.main_quit()
 
 	def on_messagedialog_delete_event(self, widget, event):
