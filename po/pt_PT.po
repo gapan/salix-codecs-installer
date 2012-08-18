@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011.
+# hugo carvalho <hugokarvalho@gmail.com>, 2012.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2011-12-19 11:57+0000\n"
+"PO-Revision-Date: 2012-07-24 14:36+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: src/salix-codecs-installer.glade:7
@@ -23,175 +24,144 @@ msgid "Install multimedia codecs?"
 msgstr "Instalar codecs multimédia?"
 
 #: src/salix-codecs-installer.glade:38
-#, fuzzy
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\n"
+"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n"
 "\n"
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or listen to mp3 files without these codecs.\n"
+"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n"
 "\n"
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so.\n"
+"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
-msgstr ""
-"Alguns codecs multimédia estão sobrecarregados de patentes e colocam "
-"problemas de distribuição em alguns países. Portanto, o apoio a todos os "
-"codecs não está incluído por padrão no Salix.\\n\\nVocê será capaz de "
-"reproduzir ficheiros codificados com codecs livres, mas você não será capaz "
-"de reproduzir DVDs comerciais ou ouvir ficheiros de mp3 sem esses codecs\\n"
-"\\nConsulte a legislação do seu país e selecione para instalar os codecs só "
-"se for legal para você fazê-lo.\\n\\nGostaria de instalar esses codecs "
-"multimédia extra?"
+"Click Next to update the package cache and receive a list of packages about to be installed."
+msgstr "Alguns codecs multimédia estão  encobertas com patentes  e causam problemas de distribuição em alguns países. Portanto, o apoio para todos os codecs não está incluído por padrão no Salix.\n\nVocê será capaz de reproduzir ficheiros codificados com codecs livres, mas você não será capaz de reproduzir DVDs comerciais ou ouvir arquivos de mp3 sem estes codecs.\n\nVerifique a legislação do seu país e selecione para instalar os codecs só se for legal para você fazê-lo.\n\nClique em Avançar para atualizar a cache de pacotes e receber uma lista de pacotes que vão ser instalados."
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr ""
+msgstr "Progresso total"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
 #: src/salix-codecs-installer.glade:574
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #: src/salix-codecs-installer.glade:210
-#, fuzzy
 msgid ""
-"There was an error connecting to one of the repositories. Make sure you have "
-"a working internet connection and the right sources specified in /etc/slapt-"
-"get/slapt-getrc."
-msgstr ""
-"Ocorreu um erro ao conectar-se a pelo menos um dos repositórios.\\n\\nPor "
-"favor verifique se você tem uma conexão com a internet e que a lista de "
-"repositórios no gslapt (ou diretamente no /etc/slapt-get/slapt-getrc) está "
-"configurada corretamente."
+"There was an error connecting to one of the repositories. Make sure you have"
+" a working internet connection and the right sources specified in /etc"
+"/slapt-get/slapt-getrc."
+msgstr "Ocorreu um erro ao conectar-se a um dos repositórios. Verifique se você tem uma conexão com a internet e as fontes correctas especificadas em /etc/slapt-get/slapt-getrc."
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
-msgstr ""
+msgstr "Lista de pacotes para instalar"
 
 #: src/salix-codecs-installer.glade:292
 msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr ""
+msgstr "Estes são os pacotes que estão prestes a ser instalados. Por favor, verifique a legislação do seu país e selecione para instalar apenas os que estão autorizados."
 
 #: src/salix-codecs-installer.glade:440
-#, fuzzy
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr ""
-"Ocorreu um erro ao transferir os pacotes necessários. Por favor, certifique-"
-"se que sua conexão de internet está funcionando corretamente e tente "
-"novamente"
+msgstr "Houve um erro ao instalar um dos pacotes. Por favor, verifique se há espaço disponível no disco rígido e que é montado com permissões de gravação e tente novamente."
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
-msgstr ""
+msgstr "Nada para instalar"
 
 #: src/salix-codecs-installer.glade:469
 msgid "All codec packages are already installed."
-msgstr ""
+msgstr "Todos os pacotes de codecs já estão instalados."
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr ""
+msgstr "Parece que você não tem as permissões para gravar os ficheiros do repositório."
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr ""
+msgstr "Erro na verificação de checksum repositório. Você poderia estar a usar um repositório comprometido. Por favor, verifique suas fontes de pacotes."
 
 #: src/salix-codecs-installer.glade:582
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr ""
+msgstr "Erro na verificação de checksum do pacote. Isto é provavelmente devido a um mau download. Por favor, verifique sua conexão de internet."
 
 #: src/salix-codecs-installer.glade:606
 msgid "Done!"
 msgstr "Feito!"
 
 #: src/salix-codecs-installer.glade:613
-#, fuzzy
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
-msgstr ""
-"Instalação de codecs foi concluída com êxito.\\n\\nGostaria de remover o "
-"instalador de codecs do seu sistema?"
+msgstr "A instalação dos codecs foi instalada com sucesso. Gostaria de remover o instalador de codecs do seu sistema?"
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
-msgstr ""
+msgstr "Taxa de Download:"
 
 #: src/salix-codecs-installer:234
-#, fuzzy
 msgid "Reading package lists..."
-msgstr "A receber as informações do pacote ..."
+msgstr "Lendo listas de pacotes..."
 
 #: src/salix-codecs-installer:263
-#, fuzzy
 msgid "Retrieving package data..."
-msgstr "A receber as informações do pacote ..."
+msgstr "Recuperando dados do pacote..."
 
 #: src/salix-codecs-installer:281
-#, fuzzy
 msgid "Retrieving patch list..."
-msgstr "A receber as informações do pacote ..."
+msgstr "Recuperando lista de patch..."
 
 #: src/salix-codecs-installer:299
 msgid "Retrieving checksum list..."
-msgstr ""
+msgstr "Recuperando lista de verificação..."
 
 #: src/salix-codecs-installer:316
 msgid "Retrieving checksum signature..."
-msgstr ""
+msgstr "Recuperando assinatura de verificação..."
 
 #: src/salix-codecs-installer:325
 msgid "Verifying checksum signature..."
-msgstr ""
+msgstr "Verificando assinatura de verificação..."
 
 #: src/salix-codecs-installer:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr ""
+msgstr "Recuperando ChangeLog.txt..."
 
 #: src/salix-codecs-installer:432
 msgid "Updating local package cache"
-msgstr ""
+msgstr "Atualização da cache local de pacotes"
 
 #: src/salix-codecs-installer:504
-#, fuzzy
 msgid "Downloading packages"
-msgstr "Erro ao transferir pacotes"
+msgstr "Baixando pacotes"
 
 #: src/salix-codecs-installer:559
-#, fuzzy
 msgid "Installing packages"
-msgstr "Transferindo e instalando pacotes..."
+msgstr "Instalando pacotes"
 
 #: src/salix-codecs-installer:689
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 #: src/salix-codecs-installer:691
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: src/salix-codecs-installer:693
 msgid "Version"
-msgstr ""
+msgstr "Versão"
 
 #: src/salix-codecs-installer:695
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
@@ -202,28 +172,3 @@ msgstr "Instalar codecs necessários para tocar formatos restritos"
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
 msgstr "Instalar codecs multimédia"
-
-#~ msgid ""
-#~ "ERROR: salix-codecs-installer must be executed within a running X session."
-#~ "\\n"
-#~ msgstr ""
-#~ "ERRO: salix-codecs-installer deve ser executado numa sessão X em execução."
-#~ "\\n\n"
-
-#~ msgid "ERROR: You need to be root to run this"
-#~ msgstr "ERRO: Você precisa ser root para executar isto"
-
-#~ msgid "ERROR: zenity must be installed and in your PATH to run this"
-#~ msgstr "ERRO: zenity deve estar instalado na sua PATH para executar isto"
-
-#~ msgid "ERROR: slapt-get must be installed and in your PATH to run this"
-#~ msgstr "ERRO: slapt-get deve estar instalado na sua PATH para executar isto"
-
-#~ msgid "Error connecting to server"
-#~ msgstr "Erro ao conectar com o servidor"
-
-#~ msgid "System preparation"
-#~ msgstr "Preparação do sistema"
-
-#~ msgid "Package installation"
-#~ msgstr "Instalação de pacotes"
