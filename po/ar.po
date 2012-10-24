@@ -1,198 +1,167 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# cobraJoker <cobra.the.joker@gmail.com>, 2011.
+# mohammad <malham1@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2011-03-22 15:46+0000\n"
-"Last-Translator: cobraJoker <cobra.the.joker@gmail.com>\n"
+"PO-Revision-Date: 2012-05-25 21:02+0000\n"
+"Last-Translator: mohammad alhargan <malham1@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: src/salix-codecs-installer.glade:7
 msgid "Install multimedia codecs?"
-msgstr "تثبيت برامج ترميز الوسائط المتعددة؟"
+msgstr "تثبيت ترميز الوسائط المتعددة؟"
 
 #: src/salix-codecs-installer.glade:38
-#, fuzzy
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\n"
+"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n"
 "\n"
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or listen to mp3 files without these codecs.\n"
+"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n"
 "\n"
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so.\n"
+"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
-msgstr ""
-"بعض برامج الترميز الوسائط المتعددة هي البراءة المرهونة ، وتطرح مشاكل التوزيع "
-"في بعض البلدان. ولذلك ، لا يتم تضمين الدعم لجميع برامج الترميز افتراضيا في "
-"صفصاف. \\ ن \n"
-" أنت  سوف يكون قادرا على اللعب مع ترميز الملفات المشفرة مجانا ، ولكنك لن "
-"تكون قادرة على لعب دي في دي التجارية أو الاستماع إلى ملفات MP3 بدون هذه "
-"الترميز. \\ ن \n"
-"  مراجعة التشريعات في بلدكم ، وحدد لتثبيت برامج الترميز إلا إذا كان لك "
-"القانونية للقيام بذلك. \n"
-" \n"
-"  كنت ترغب في تثبيت هذه اضافية الوسائط المتعددة الترميز؟"
+"Click Next to update the package cache and receive a list of packages about to be installed."
+msgstr "بعض ملفات ترميز الوسائط المتعددة تخضع لبراءات وحقوق نشر وتنتج مشاكل توزيع في بعض البلدان. ولذلك، دعم ترميز جميع ملفات الوسائط غير مضمنة بشكل افتراضي في سلاك.\n\nستكون قادراً على عرض الملفات المشفرة ذات الترميز الحر، ولن تكون قدراً على قراءة Dvd التجارية أو الاستماع إلى ملفات mp3 بدون هذه الترميز.\n\nالرجاء التحقق من التشريع لديكم وحدد هذا الخيار لتثبيت الترميز فقط إذا كانت قانونية لكي تتمكن من القيام بذلك.\n\nانقر فوق التالي لتحديث ذاكرة التخزين المؤقت للحزم وتتلقى قائمة بالحزم بحيث يتم تثبيتها."
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr ""
+msgstr "التقدم الكلي"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
 #: src/salix-codecs-installer.glade:574
 msgid "Error"
-msgstr ""
+msgstr "خطأ"
 
 #: src/salix-codecs-installer.glade:210
-#, fuzzy
 msgid ""
-"There was an error connecting to one of the repositories. Make sure you have "
-"a working internet connection and the right sources specified in /etc/slapt-"
-"get/slapt-getrc."
-msgstr ""
-"كان هناك خطأ في الاتصال بواحد على الأقل من المستودعات. \\ ن \\ n تأكد من أن "
-"لديك اتصال بالإنترنت العمل والتي تم تعيينها بشكل صحيح في قائمة المخزون "
-"gslapt (أو مباشرة في / الخ / slapt بين الحصول على / slapt - getrc) بالتسجيل."
+"There was an error connecting to one of the repositories. Make sure you have"
+" a working internet connection and the right sources specified in /etc"
+"/slapt-get/slapt-getrc."
+msgstr "حدث خطأ أثناء الاتصال بأحد المستودعات. تأكد من اتصال الإنترنت وأن المصادر صحيحة في المسار /etc/slapt-get/slapt-getrc."
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
-msgstr ""
+msgstr "قائمة الحزم المطلوب تثبيتها"
 
 #: src/salix-codecs-installer.glade:292
 msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr ""
+msgstr "هذه الحزم التي سيتم تثبيتها. الرجاء التحقق من تشريعات بلدكم وحدد خيارات التثبيت التي يسمح لك بتثبيتها فقط."
 
 #: src/salix-codecs-installer.glade:440
-#, fuzzy
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr ""
-"كان هناك خطأ أثناء تحميل  الحزم المطلوبة. الرجاء التأكد من أن اتصال إنترنت "
-"يعمل بشكل صحيح وحاول مرة أخرى"
+msgstr "حدث خطأ أثناء تثبيت إحدى الحزم. من فضلك، تأكد أن هناك مساحة كافية في القرص الثابت الموصل وأن له أذونات الكتابة اللازمة ثم حاول مرة أخرى."
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
-msgstr ""
+msgstr "لا توجد عناصر لإزالة تثبيتها"
 
 #: src/salix-codecs-installer.glade:469
 msgid "All codec packages are already installed."
-msgstr ""
+msgstr "كافة ترميز الحزم مثبتة بالفعل."
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr ""
+msgstr "يبدو أنه ليس لديك أذونات لكتابة ملفات المستودع."
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr ""
+msgstr "خطأ عند التحقق من المجموع الاختباري للمستودع. قد يكون ناتج من استخدام مستودع تالف. الرجاء التحقق من مصادر الحزمة."
 
 #: src/salix-codecs-installer.glade:582
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr ""
+msgstr "خطأ عند التحقق من المجموع الاختباري للحزم. قد يكون ناتج عن تحميل سيئ. الرجاء التحقق من اتصال الإنترنت."
 
 #: src/salix-codecs-installer.glade:606
 msgid "Done!"
-msgstr "تم !"
+msgstr "تم!"
 
 #: src/salix-codecs-installer.glade:613
-#, fuzzy
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
-msgstr ""
-"تم بنجاح تركيب الترميز. \n"
-" \n"
-"  هل ترغب في إزالة مثبت الترميز من النظام الخاص بك؟"
+msgstr "تم تثبيت الترميز بنجاح. هل تريد إزالة مثبت الترميز من النظام؟"
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
-msgstr ""
+msgstr "معدل التحميل:"
 
 #: src/salix-codecs-installer:234
-#, fuzzy
 msgid "Reading package lists..."
-msgstr "تلقي معلومات عن الحزمة ..."
+msgstr "قراءة قائمة الحزم..."
 
 #: src/salix-codecs-installer:263
-#, fuzzy
 msgid "Retrieving package data..."
-msgstr "تلقي معلومات عن الحزمة ..."
+msgstr "استرداد بيانات الحزم..."
 
 #: src/salix-codecs-installer:281
-#, fuzzy
 msgid "Retrieving patch list..."
-msgstr "تلقي معلومات عن الحزمة ..."
+msgstr "استرداد قائمة التصحيح..."
 
 #: src/salix-codecs-installer:299
 msgid "Retrieving checksum list..."
-msgstr ""
+msgstr "استرداد قائمة المجموع الاختباري..."
 
 #: src/salix-codecs-installer:316
 msgid "Retrieving checksum signature..."
-msgstr ""
+msgstr "استرداد توقيع المجموع الاختباري..."
 
 #: src/salix-codecs-installer:325
 msgid "Verifying checksum signature..."
-msgstr ""
+msgstr "التحقق من توقيع المجموع الاختباري..."
 
 #: src/salix-codecs-installer:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr ""
+msgstr "استرداد ChangeLog.txt..."
 
 #: src/salix-codecs-installer:432
 msgid "Updating local package cache"
-msgstr ""
+msgstr "تحديث ذاكرة التخزين للحزم المحلية"
 
 #: src/salix-codecs-installer:504
-#, fuzzy
 msgid "Downloading packages"
-msgstr "خطأ أثناء تحميل الحزم "
+msgstr "تنزيل الحزم"
 
 #: src/salix-codecs-installer:559
-#, fuzzy
 msgid "Installing packages"
-msgstr "تحميل وتثبيت الحزم..."
+msgstr "تثبيت الحزم"
 
 #: src/salix-codecs-installer:689
 msgid "Install"
-msgstr ""
+msgstr "تثبيت"
 
 #: src/salix-codecs-installer:691
 msgid "Name"
-msgstr ""
+msgstr "اسم"
 
 #: src/salix-codecs-installer:693
 msgid "Version"
-msgstr ""
+msgstr "الإصدار"
 
 #: src/salix-codecs-installer:695
 msgid "Description"
-msgstr ""
+msgstr "الوصف"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
@@ -203,26 +172,3 @@ msgstr "تثبيت برامج الترميز المطلوبة لتشغيل صي�
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
 msgstr "تثبيت برامج ترميز الوسائط المتعددة"
-
-#~ msgid ""
-#~ "ERROR: salix-codecs-installer must be executed within a running X session."
-#~ "\\n"
-#~ msgstr "خطأ : يجب تشغيل الsalix-codecs-installer في وجود السيرفر X"
-
-#~ msgid "ERROR: You need to be root to run this"
-#~ msgstr "خطأ : يجب أن يكون root لتشغيل هذا"
-
-#~ msgid "ERROR: zenity must be installed and in your PATH to run this"
-#~ msgstr "خطأ : يجب تثبيت zenity و ال PATH لتشغيل هذا "
-
-#~ msgid "ERROR: slapt-get must be installed and in your PATH to run this"
-#~ msgstr "خطأ : يجب تثبيت slapt-get و ال PATH لتشغيل هذا "
-
-#~ msgid "Error connecting to server"
-#~ msgstr "خطأ أثناء  الاتصال بخادم"
-
-#~ msgid "System preparation"
-#~ msgstr "إعداد نظام"
-
-#~ msgid "Package installation"
-#~ msgstr "تثبيت الحزم "

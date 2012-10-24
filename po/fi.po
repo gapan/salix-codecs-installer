@@ -1,49 +1,37 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# gapan <vlahavas@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2011-03-22 15:46+0000\n"
+"PO-Revision-Date: 2012-05-08 20:40+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/salix-codecs-installer.glade:7
 msgid "Install multimedia codecs?"
 msgstr "Asenna multimedia koodekit?"
 
 #: src/salix-codecs-installer.glade:38
-#, fuzzy
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\n"
+"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n"
 "\n"
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or listen to mp3 files without these codecs.\n"
+"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n"
 "\n"
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so.\n"
+"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
+"Click Next to update the package cache and receive a list of packages about to be installed."
 msgstr ""
-"Jotkin multimediakoodekeista on patenttisuojattuja ja näin estävät niiden "
-"jakelun joissain maissa. Siksi kaikkien koodekkien tuki ei ole sisällytetty "
-"oletuksena Salixiin.\\n\\nVoit toistaa tiedostoja jotka on koodattu käyttäen "
-"vapaita koodekkeja, mutta et voi toistaa kaupallisia DVD:tä tai kuunnella "
-"mp3 tiedostoja ilman näitä koodekkeja.\\n\\nOle hyvä ja tarkista "
-"lainsäädäntö maassasi ja asenna koodekit ainoastaan jos se on sinulle "
-"laillista.\\n\\nHaluatko asentaa nämä ylimääräiset multimedia koodekit?"
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
@@ -56,15 +44,11 @@ msgid "Error"
 msgstr ""
 
 #: src/salix-codecs-installer.glade:210
-#, fuzzy
 msgid ""
-"There was an error connecting to one of the repositories. Make sure you have "
-"a working internet connection and the right sources specified in /etc/slapt-"
-"get/slapt-getrc."
+"There was an error connecting to one of the repositories. Make sure you have"
+" a working internet connection and the right sources specified in /etc"
+"/slapt-get/slapt-getrc."
 msgstr ""
-"Virhe tapahtui yhdistäessä ainakin yhteen pakettivarastoista.\\n\\nOle hyvä "
-"ja tarkista että sinulla on toimiva internet-yhteys ja että gslapt "
-"pakettivarasto lista (tai /etc/slapt-get/slapt-getrc) on oikein asetettu."
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
@@ -78,14 +62,11 @@ msgid ""
 msgstr ""
 
 #: src/salix-codecs-installer.glade:440
-#, fuzzy
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
 msgstr ""
-"Tapahtui virhe ladattaessa pyydettyjä paketteja. Ole hyvä ja tarkista että "
-"internet-yhteytesi toimii kunnolla ja yritä uudelleen."
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
@@ -116,32 +97,26 @@ msgid "Done!"
 msgstr "Valmis!"
 
 #: src/salix-codecs-installer.glade:613
-#, fuzzy
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
 msgstr ""
-"Koodekkien asennus suoritettu onnistuneesti.\\n\\nHaluatko poistaa "
-"koodekkien asentaja tietokoneesta?"
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
 msgstr ""
 
 #: src/salix-codecs-installer:234
-#, fuzzy
 msgid "Reading package lists..."
-msgstr "Vastaanotan paketti tietoja..."
+msgstr ""
 
 #: src/salix-codecs-installer:263
-#, fuzzy
 msgid "Retrieving package data..."
-msgstr "Vastaanotan paketti tietoja..."
+msgstr ""
 
 #: src/salix-codecs-installer:281
-#, fuzzy
 msgid "Retrieving patch list..."
-msgstr "Vastaanotan paketti tietoja..."
+msgstr ""
 
 #: src/salix-codecs-installer:299
 msgid "Retrieving checksum list..."
@@ -164,14 +139,12 @@ msgid "Updating local package cache"
 msgstr ""
 
 #: src/salix-codecs-installer:504
-#, fuzzy
 msgid "Downloading packages"
-msgstr "Virhe ladattaessa paketteja"
+msgstr ""
 
 #: src/salix-codecs-installer:559
-#, fuzzy
 msgid "Installing packages"
-msgstr "Tallentamassa ja asentamassa paketteja..."
+msgstr ""
 
 #: src/salix-codecs-installer:689
 msgid "Install"
@@ -192,38 +165,9 @@ msgstr ""
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
-msgstr ""
-"Asenna rajoitettujen tiedostomuotojen toistamiseen tarvittavat koodekit"
+msgstr "Asenna rajoitettujen tiedostomuotojen toistamiseen tarvittavat koodekit"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
 msgstr "Asenna multimedia koodekit"
-
-#~ msgid ""
-#~ "ERROR: salix-codecs-installer must be executed within a running X session."
-#~ "\\n"
-#~ msgstr "VIRHE: salix-codecs-installer täytyy suorittaa X istunnossa.\\n"
-
-#~ msgid "ERROR: You need to be root to run this"
-#~ msgstr ""
-#~ "VIRHE: Sinun täytyy olla järjestelmän valvoja(root) suorittaaksesi tämän."
-
-#~ msgid "ERROR: zenity must be installed and in your PATH to run this"
-#~ msgstr ""
-#~ "VIRHE: zenity täytyy olla asennettuna ja sinun polussasi(PATH) "
-#~ "suorittaaksesi tämän"
-
-#~ msgid "ERROR: slapt-get must be installed and in your PATH to run this"
-#~ msgstr ""
-#~ "VIRHE: slapt-get täytyy olla asennettuna ja sinun polussasi(PATH) "
-#~ "suorittaaksesi tämän"
-
-#~ msgid "Error connecting to server"
-#~ msgstr "Yhteyden muodostaminen serveriin epäonnistui"
-
-#~ msgid "System preparation"
-#~ msgstr "Järjestelmän valmistelu"
-
-#~ msgid "Package installation"
-#~ msgstr "Paketin asennus"

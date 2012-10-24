@@ -1,48 +1,37 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# gapan <vlahavas@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2011-03-22 15:46+0000\n"
+"PO-Revision-Date: 2012-05-08 20:40+0000\n"
 "Last-Translator: gapan <vlahavas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/salix-codecs-installer.glade:7
 msgid "Install multimedia codecs?"
 msgstr "ムルチメディアのコデックをインストールしますか"
 
 #: src/salix-codecs-installer.glade:38
-#, fuzzy
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\n"
+"Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n"
 "\n"
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or listen to mp3 files without these codecs.\n"
+"You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n"
 "\n"
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so.\n"
+"Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
+"Click Next to update the package cache and receive a list of packages about to be installed."
 msgstr ""
-"いくつかのムルチメディア・コデックは、パテントからくる規制の関係でSalixにデ"
-"フォですべてインストールされていません。\\n\\nフリーなコデックをつかってエン"
-"コードされたファイルは、再生することができますが、市販のDVD、mp3ファイルなど"
-"は、これらのコデック無しでは再生することはできません。\\n\\nこれらのコデック"
-"をインストールする前に、あなたの国では、使用しても法律上問題がないかどうか"
-"チェックしてください。\\n\\nこれらの追加コデックをインストールしますか。"
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
@@ -52,18 +41,14 @@ msgstr ""
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
 #: src/salix-codecs-installer.glade:574
 msgid "Error"
-msgstr ""
+msgstr "エラー"
 
 #: src/salix-codecs-installer.glade:210
-#, fuzzy
 msgid ""
-"There was an error connecting to one of the repositories. Make sure you have "
-"a working internet connection and the right sources specified in /etc/slapt-"
-"get/slapt-getrc."
+"There was an error connecting to one of the repositories. Make sure you have"
+" a working internet connection and the right sources specified in /etc"
+"/slapt-get/slapt-getrc."
 msgstr ""
-"指定されているレポジトリーにコネクトすることができません。\\n\\nインターネッ"
-"トがちゃんとつながっているか、そしてgslapt(又は、/etc/slapt-get/slapt-getrc）"
-"にリストされているレポジトリーのリストに間違いがないか確認をしてください。"
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
@@ -77,14 +62,11 @@ msgid ""
 msgstr ""
 
 #: src/salix-codecs-installer.glade:440
-#, fuzzy
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
 msgstr ""
-"必要なパッケージをダウンロードすることができませんでした。インターネットがき"
-"ちんとつながっているか確認してください。"
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
@@ -115,32 +97,26 @@ msgid "Done!"
 msgstr "終了"
 
 #: src/salix-codecs-installer.glade:613
-#, fuzzy
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
 msgstr ""
-"コデックのインストールが終了しました。\\n\\nコデック・インストーラーをシステ"
-"ムからアンインストールしますか"
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
 msgstr ""
 
 #: src/salix-codecs-installer:234
-#, fuzzy
 msgid "Reading package lists..."
-msgstr "パッケージの情報を集めています。"
+msgstr ""
 
 #: src/salix-codecs-installer:263
-#, fuzzy
 msgid "Retrieving package data..."
-msgstr "パッケージの情報を集めています。"
+msgstr ""
 
 #: src/salix-codecs-installer:281
-#, fuzzy
 msgid "Retrieving patch list..."
-msgstr "パッケージの情報を集めています。"
+msgstr ""
 
 #: src/salix-codecs-installer:299
 msgid "Retrieving checksum list..."
@@ -163,30 +139,28 @@ msgid "Updating local package cache"
 msgstr ""
 
 #: src/salix-codecs-installer:504
-#, fuzzy
 msgid "Downloading packages"
-msgstr "パッケージをダウンロードすることができません。"
+msgstr ""
 
 #: src/salix-codecs-installer:559
-#, fuzzy
 msgid "Installing packages"
-msgstr "パッケージをダウンロードし、インストールしています。"
+msgstr ""
 
 #: src/salix-codecs-installer:689
 msgid "Install"
-msgstr ""
+msgstr "インストール"
 
 #: src/salix-codecs-installer:691
 msgid "Name"
-msgstr ""
+msgstr "名"
 
 #: src/salix-codecs-installer:693
 msgid "Version"
-msgstr ""
+msgstr "バージョン"
 
 #: src/salix-codecs-installer:695
 msgid "Description"
-msgstr ""
+msgstr "概要"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
@@ -197,31 +171,3 @@ msgstr "規制されたフォーマットを再生するためのコデックを
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
 msgstr "マルチメディア・コデックをインストールする"
-
-#~ msgid ""
-#~ "ERROR: salix-codecs-installer must be executed within a running X session."
-#~ "\\n"
-#~ msgstr ""
-#~ "エラー：Salix-codecs-installerは、Xセッション中に作動させてください。"
-
-#~ msgid "ERROR: You need to be root to run this"
-#~ msgstr "エラー：ルートユーザである必要があります。"
-
-#~ msgid "ERROR: zenity must be installed and in your PATH to run this"
-#~ msgstr ""
-#~ "エラー：zenityが、インストされていてパス設定が正しくなされている必要があり"
-#~ "ます。"
-
-#~ msgid "ERROR: slapt-get must be installed and in your PATH to run this"
-#~ msgstr ""
-#~ "エラー：slapt-getが、インストされていてパス設定が正しくなされている必要が"
-#~ "あります。"
-
-#~ msgid "Error connecting to server"
-#~ msgstr "エラー：サーバーにコネクトできません。"
-
-#~ msgid "System preparation"
-#~ msgstr "システムの用意をしています。"
-
-#~ msgid "Package installation"
-#~ msgstr "パッケージをインストールしています。"
