@@ -3,21 +3,22 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <erenlinux@gmail.com>, 2011.
-# Rıza Aksoy <aksoy.rza@gmail.com>, 2012.
+# eren <erenlinux@gmail.com>, 2011
+# ismail <ismaildemiral@gmail.com>, 2012
+# Rıza Aksoy <aksoy.rza@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2012-05-16 13:24+0000\n"
-"Last-Translator: Rıza Aksoy <aksoy.rza@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-11-26 14:21+0000\n"
+"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
+"Language-Team: Turkish (http://www.transifex.com/projects/p/salix/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/salix-codecs-installer.glade:7
 msgid "Install multimedia codecs?"
@@ -60,7 +61,7 @@ msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr ""
+msgstr "Yüklenecek paketler bunlardır. Lütfen, ülkenizdeki mevcut yasaları göz önünde bulundurarak sadece izin verilen paketleri seçiniz. "
 
 #: src/salix-codecs-installer.glade:440
 msgid ""

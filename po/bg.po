@@ -3,25 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Gambit <gambit73@gmail.com>, 2012
-# gapan <vlahavas@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2013-11-26 14:21+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/salix/language/nl/)\n"
+"PO-Revision-Date: 2011-01-08 22:52+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Bulgarian (http://www.transifex.com/projects/p/salix/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
+"Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/salix-codecs-installer.glade:7
 msgid "Install multimedia codecs?"
-msgstr "Installeer multimedia codecs?"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:38
 msgid ""
@@ -32,143 +30,143 @@ msgid ""
 "Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
 "Click Next to update the package cache and receive a list of packages about to be installed."
-msgstr "Sommige multimedia codecs zijn gepatenteerd en dit kan in bepaalde landen distributieproblemen opleveren. Zodoende is ondersteuning voor alle codecs niet standaard in Salix.\n\nU kunt bestanden welke met gratis codecs zijn ge-encodeerd afspelen, maar u kunt geen commerciële DVD afspelen of naar MP3 bestanden luisteren zonder deze codecs.\n\nControleer de legaliteit in uw land en alleen wanneer het legaal is, selecteer dan de optie om de codecs te installeren.\n\nKlik op Volgende om de pakketcache te 'updaten' en om een lijst van pakketten te ontvangen welk geinstalleerd gaan worden."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr "Totale voortgang"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
 #: src/salix-codecs-installer.glade:574
 msgid "Error"
-msgstr "Fout"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:210
 msgid ""
 "There was an error connecting to one of the repositories. Make sure you have"
 " a working internet connection and the right sources specified in /etc"
 "/slapt-get/slapt-getrc."
-msgstr "Er is een fout opgetreden bij het verbinden naar een van de 'repositories'. Conttoleer of u een werkende internetverbinding heeft en de goede 'sources' gespecificeerd in /etc/slapt-get/slapt-getrc."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
-msgstr "Lijst van te installeren pakketten "
+msgstr ""
 
 #: src/salix-codecs-installer.glade:292
 msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr "Dit zijn de pakketten welke geinstalleerd gaan worden. Controleer de legaliteit van uw land en selecteer uitsluitend degenen welke toegestaan zijn."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:440
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr "Er is een fout opgetreden bij het installeren van een van de pakketten. Controleer of er genoeg ruimte is op uw harde schijf en dat het ge-mount is met schrijfrechten en probeer het vervolgens nogmaals."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
-msgstr "Niets te installeren"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:469
 msgid "All codec packages are already installed."
-msgstr "Alle codec pakketten zijn reeds geinstalleerd."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr "het blijkt dat u niet de goede rechten heeft om de 'repository' bestanden te wijzigen."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr "Fout bij het controleren van de 'repository checksum'. Het is mogelijk dat u een gehackte repository gebruikt. Controleer uw pakket 'sources'."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:582
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr "Fout bij het controleren van de pakket 'checksum'. Dit is mogelijk als gevolg van een foutieve download. Controleer uw internetverbinding."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:606
 msgid "Done!"
-msgstr "Gereed!"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:613
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
-msgstr "De codecs installatie was succesvol. Wilt u de codecs 'installer' verwijderen van uw systeem?"
+msgstr ""
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
-msgstr "Downloadsnelheid:"
+msgstr ""
 
 #: src/salix-codecs-installer:234
 msgid "Reading package lists..."
-msgstr "Pakketlijst lezen..."
+msgstr ""
 
 #: src/salix-codecs-installer:263
 msgid "Retrieving package data..."
-msgstr "Pakketdata ontvangen.."
+msgstr ""
 
 #: src/salix-codecs-installer:281
 msgid "Retrieving patch list..."
-msgstr "Patchlijst ontvangen..."
+msgstr ""
 
 #: src/salix-codecs-installer:299
 msgid "Retrieving checksum list..."
-msgstr "'Checksum' lijst ontvangen..."
+msgstr ""
 
 #: src/salix-codecs-installer:316
 msgid "Retrieving checksum signature..."
-msgstr "'Checksum' handtekening ontvangen..."
+msgstr ""
 
 #: src/salix-codecs-installer:325
 msgid "Verifying checksum signature..."
-msgstr "'Checksum' handtekening controleren..."
+msgstr ""
 
 #: src/salix-codecs-installer:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr "Changelog.txt ontvangen..."
+msgstr ""
 
 #: src/salix-codecs-installer:432
 msgid "Updating local package cache"
-msgstr "Lokale pakketcache 'updaten'."
+msgstr ""
 
 #: src/salix-codecs-installer:504
 msgid "Downloading packages"
-msgstr "Pakketten downloaden"
+msgstr ""
 
 #: src/salix-codecs-installer:559
 msgid "Installing packages"
-msgstr "Pakketten installeren"
+msgstr ""
 
 #: src/salix-codecs-installer:689
 msgid "Install"
-msgstr "Installeren"
+msgstr ""
 
 #: src/salix-codecs-installer:691
 msgid "Name"
-msgstr "Naam"
+msgstr ""
 
 #: src/salix-codecs-installer:693
 msgid "Version"
-msgstr "Versie"
+msgstr ""
 
 #: src/salix-codecs-installer:695
 msgid "Description"
-msgstr "Beschrijving"
+msgstr ""
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
-msgstr "Installeer de codecs nodig om gelicentieerde formaten af te spelen"
+msgstr ""
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
-msgstr "Installeer multimedia codecs"
+msgstr ""

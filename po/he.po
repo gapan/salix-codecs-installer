@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# GenghisKhan <genghiskhan@gmx.ca>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2011-01-08 22:52+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2013-11-26 14:21+0000\n"
+"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
+"Language-Team: Hebrew (http://www.transifex.com/projects/p/salix/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +20,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:7
 msgid "Install multimedia codecs?"
-msgstr ""
+msgstr "להתקין קודקים של מולטימדיה?"
 
 #: src/salix-codecs-installer.glade:38
 msgid ""
@@ -34,13 +35,13 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr ""
+msgstr "התקדמות כללית"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
 #: src/salix-codecs-installer.glade:574
 msgid "Error"
-msgstr ""
+msgstr "שגיאה"
 
 #: src/salix-codecs-installer.glade:210
 msgid ""
@@ -51,7 +52,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
-msgstr ""
+msgstr "רשימה של חבילות להתקנה"
 
 #: src/salix-codecs-installer.glade:292
 msgid ""
@@ -69,11 +70,11 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
-msgstr ""
+msgstr "אין מה להתקין"
 
 #: src/salix-codecs-installer.glade:469
 msgid "All codec packages are already installed."
-msgstr ""
+msgstr "כל חבילות קודק כבר מותקנות."
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
@@ -93,7 +94,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:606
 msgid "Done!"
-msgstr ""
+msgstr "סוים!"
 
 #: src/salix-codecs-installer.glade:613
 msgid ""
@@ -103,63 +104,63 @@ msgstr ""
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
-msgstr ""
+msgstr "שיעור הורדה:"
 
 #: src/salix-codecs-installer:234
 msgid "Reading package lists..."
-msgstr ""
+msgstr "קורא כעת רשימות חבילה..."
 
 #: src/salix-codecs-installer:263
 msgid "Retrieving package data..."
-msgstr ""
+msgstr "מאחזר כעת נתוני חבילה..."
 
 #: src/salix-codecs-installer:281
 msgid "Retrieving patch list..."
-msgstr ""
+msgstr "מאחזר כעת רשימת טלאי..."
 
 #: src/salix-codecs-installer:299
 msgid "Retrieving checksum list..."
-msgstr ""
+msgstr "מאחזר כעת רשימת סכום ביקורת..."
 
 #: src/salix-codecs-installer:316
 msgid "Retrieving checksum signature..."
-msgstr ""
+msgstr "מאחזר כעת חתימת סכום ביקורת..."
 
 #: src/salix-codecs-installer:325
 msgid "Verifying checksum signature..."
-msgstr ""
+msgstr "מאמת כעת חתימת סכום ביקורת..."
 
 #: src/salix-codecs-installer:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr ""
+msgstr "מאחזר כעת את ChangeLog.txt..."
 
 #: src/salix-codecs-installer:432
 msgid "Updating local package cache"
-msgstr ""
+msgstr "מעדכן כעת מטמון חבילה מקומי"
 
 #: src/salix-codecs-installer:504
 msgid "Downloading packages"
-msgstr ""
+msgstr "מוריד כעת חבילות"
 
 #: src/salix-codecs-installer:559
 msgid "Installing packages"
-msgstr ""
+msgstr "מתקין כעת חבילות"
 
 #: src/salix-codecs-installer:689
 msgid "Install"
-msgstr ""
+msgstr "התקן"
 
 #: src/salix-codecs-installer:691
 msgid "Name"
-msgstr ""
+msgstr "שם"
 
 #: src/salix-codecs-installer:693
 msgid "Version"
-msgstr ""
+msgstr "גרסא"
 
 #: src/salix-codecs-installer:695
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
@@ -169,4 +170,4 @@ msgstr ""
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
-msgstr ""
+msgstr "התקנת קודקים של מולטימדיה"

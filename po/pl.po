@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# gapan <vlahavas@gmail.com>, 2011.
-#   <sgasior1@gmail.com>, 2011.
+# 13K <trzynastak@o2.pl>, 2013
+# gapan <vlahavas@gmail.com>, 2011
+# ink3 <sgasior1@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2012-05-08 20:40+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"PO-Revision-Date: 2013-12-04 21:50+0000\n"
+"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/salix/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +37,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr ""
+msgstr "Całkowity postęp"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
@@ -53,7 +54,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
-msgstr ""
+msgstr "Lista pakietów do zaistalowania"
 
 #: src/salix-codecs-installer.glade:292
 msgid ""
@@ -71,11 +72,11 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
-msgstr ""
+msgstr "Nic do zanstalowania"
 
 #: src/salix-codecs-installer.glade:469
 msgid "All codec packages are already installed."
-msgstr ""
+msgstr "Wszystkie paczki kodeków zostały zainstalowane."
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
@@ -101,27 +102,27 @@ msgstr "Zrobione!"
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
-msgstr ""
+msgstr "Instalacji kodeków została zakończona pomyślnie. \\n\\nCzy chcesz usunąć instalator kodeków z systemu?"
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
-msgstr ""
+msgstr "Prędkość pobierania:"
 
 #: src/salix-codecs-installer:234
 msgid "Reading package lists..."
-msgstr ""
+msgstr "Czytanie listy pakietów..."
 
 #: src/salix-codecs-installer:263
 msgid "Retrieving package data..."
-msgstr ""
+msgstr "Pobieranie danych pakietów..."
 
 #: src/salix-codecs-installer:281
 msgid "Retrieving patch list..."
-msgstr ""
+msgstr "Pobieranie listy poprawek..."
 
 #: src/salix-codecs-installer:299
 msgid "Retrieving checksum list..."
-msgstr ""
+msgstr "Pobieranie listy sum kontrolnych..."
 
 #: src/salix-codecs-installer:316
 msgid "Retrieving checksum signature..."
@@ -129,7 +130,7 @@ msgstr ""
 
 #: src/salix-codecs-installer:325
 msgid "Verifying checksum signature..."
-msgstr ""
+msgstr "Pobieranie listy sum kontrolnych..."
 
 #: src/salix-codecs-installer:335
 msgid "Retrieving ChangeLog.txt..."
@@ -141,11 +142,11 @@ msgstr ""
 
 #: src/salix-codecs-installer:504
 msgid "Downloading packages"
-msgstr ""
+msgstr "Pobieranie pakietów"
 
 #: src/salix-codecs-installer:559
 msgid "Installing packages"
-msgstr ""
+msgstr "Instalacja pakietów"
 
 #: src/salix-codecs-installer:689
 msgid "Install"

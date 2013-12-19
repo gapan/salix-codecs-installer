@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# gapan <vlahavas@gmail.com>, 2011.
-# Thorsten  <thenktor@gmx.de>, 2012.
+# gapan <vlahavas@gmail.com>, 2011
+# Thorsten <thenktor@posteo.de>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2012-05-09 16:26+0000\n"
-"Last-Translator: Thorsten <thenktor@gmx.de>\n"
+"PO-Revision-Date: 2013-11-26 14:21+0000\n"
+"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
 "Language-Team: German (http://www.transifex.com/projects/p/salix/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

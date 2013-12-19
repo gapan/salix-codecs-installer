@@ -3,24 +3,25 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-#   <alexd@garrit.freeserve.co.uk>, 2011, 2012.
+# Garratrans112 <alexd@garrit.freeserve.co.uk>, 2013
+# Garratrans112 <alexd@garrit.freeserve.co.uk>, 2011, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/apps/trac/salix/\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-08 23:07+0300\n"
-"PO-Revision-Date: 2012-06-27 16:23+0000\n"
+"PO-Revision-Date: 2013-11-26 14:21+0000\n"
 "Last-Translator: Garratrans112 <alexd@garrit.freeserve.co.uk>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Gaelic, Scottish (http://www.transifex.com/projects/p/salix/language/gd/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: gd\n"
-"Plural-Forms: nplurals=3; plural=n < 2 ? 0 : n == 2 ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : (n > 2 && n < 20) ? 2 : 3;\n"
 
 #: src/salix-codecs-installer.glade:7
 msgid "Install multimedia codecs?"
-msgstr ""
+msgstr "Stàlaich codec-ean ioma-mheadhanan?"
 
 #: src/salix-codecs-installer.glade:38
 msgid ""
@@ -35,7 +36,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr ""
+msgstr "Suim an adhartais"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
@@ -52,7 +53,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:258
 msgid "List of packages to install"
-msgstr ""
+msgstr "Liosta na pacaidean a stàladh"
 
 #: src/salix-codecs-installer.glade:292
 msgid ""
@@ -70,11 +71,11 @@ msgstr ""
 
 #: src/salix-codecs-installer.glade:464
 msgid "Nothing to install"
-msgstr ""
+msgstr "Neoni a stàladh"
 
 #: src/salix-codecs-installer.glade:469
 msgid "All codec packages are already installed."
-msgstr ""
+msgstr "Tha na pacaidean còdaichean stàlaicte mar thà"
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
@@ -104,11 +105,11 @@ msgstr ""
 
 #: src/salix-codecs-installer:50
 msgid "Download rate:"
-msgstr ""
+msgstr "Ìre luchdadh a-nuas"
 
 #: src/salix-codecs-installer:234
 msgid "Reading package lists..."
-msgstr ""
+msgstr "A' leughadh liostaichean nam pacaidean..."
 
 #: src/salix-codecs-installer:263
 msgid "Retrieving package data..."
@@ -132,7 +133,7 @@ msgstr ""
 
 #: src/salix-codecs-installer:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr ""
+msgstr "Faighinn air ais ChangeLog.txt..."
 
 #: src/salix-codecs-installer:432
 msgid "Updating local package cache"
@@ -140,7 +141,7 @@ msgstr ""
 
 #: src/salix-codecs-installer:504
 msgid "Downloading packages"
-msgstr ""
+msgstr "Luchdadh a-nuas pacaidean"
 
 #: src/salix-codecs-installer:559
 msgid "Installing packages"
@@ -160,14 +161,14 @@ msgstr "Tionndaidh"
 
 #: src/salix-codecs-installer:695
 msgid "Description"
-msgstr ""
+msgstr "Dealbh-chunntas"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install codecs required for playing restricted formats"
-msgstr ""
+msgstr "Stàlaich codec-ean riatanach airson cluich fòrmatan cuibhrichte"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install multimedia codecs"
-msgstr ""
+msgstr "Stàlaich codec-ean ioma-mheadhanan"
