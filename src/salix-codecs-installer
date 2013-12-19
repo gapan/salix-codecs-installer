@@ -354,7 +354,12 @@ class SalixCodecsInstaller:
 		return pkgs
 
 	def pkglist(self):
-		pkgs = ['gstreamer', 'gst-plugins-base', 'gst-plugins-good', 'gst-plugins-bad', 'gst-plugins-ugly', 'gst-python', 'gst-ffmpeg', 'libdvdcss']
+		pkgs = ['gstreamer', 'gst-plugins-base', 'gst-plugins-good',
+				'gst-plugins-bad', 'gst-plugins-ugly', 'gst-python',
+				'gst-ffmpeg',
+				'gstreamer1', 'gst-plugins-base1', 'gst-plugins-good1',
+				'gst-plugins-bad1', 'gst-plugins-ugly1', 'gst-lavc',
+				'libdvdcss']
 		deps = []
 		for pkg in pkgs:
 			for i in self.pkg_deps_and_sugs(pkg):
