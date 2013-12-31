@@ -358,7 +358,7 @@ class SalixCodecsInstaller:
 				'gst-plugins-bad', 'gst-plugins-ugly', 'gst-python',
 				'gst-ffmpeg',
 				'gstreamer1', 'gst-plugins-base1', 'gst-plugins-good1',
-				'gst-plugins-bad1', 'gst-plugins-ugly1', 'gst-lavc',
+				'gst-plugins-bad1', 'gst-plugins-ugly1', 'gst-libav',
 				'libdvdcss', 'flash-plugin']
 		deps = []
 		for pkg in pkgs:
