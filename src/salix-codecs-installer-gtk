@@ -1,0 +1,723 @@
+#!/usr/bin/env python
+
+import gtk
+import os
+import sys
+import subprocess
+import errno
+import hashlib
+import threading
+import gzip
+import urllib2
+import urlgrabber
+import urlgrabber.progress as urlp
+from simpleconfig import SimpleConfig
+
+#Initializing the gtk's thread engine
+gtk.gdk.threads_init()
+
+# Internationalization
+import locale
+import gettext
+import gtk.glade
+
+gettext.bindtextdomain("salix-codecs-installer", "/usr/share/locale")
+gettext.textdomain("salix-codecs-installer")
+gettext.install("salix-codecs-installer", "/usr/share/locale", unicode=1)
+gtk.glade.bindtextdomain("salix-codecs-installer", "/usr/share/locale")
+gtk.glade.textdomain("salix-codecs-installer")
+
+spkg='/sbin/spkg'
+
+canceltask = False
+
+def threaded(f):
+	def wrapper(*args):
+		t = threading.Thread(target=f, args=args)
+		t.start()
+	return wrapper
+
+class DownloadMeter(urlp.BaseMeter):
+	def __init__(self, fo=sys.stderr):
+		urlp.BaseMeter.__init__(self)
+		self.fo = fo
+
+	def _do_update(self, amount_read, now=None):
+		if not canceltask:
+			rate = urlp.format_number(self.re.average_rate())
+			frac = self.re.fraction_read()
+			app.progressbar_repo.set_fraction(frac)
+			app.label_repo_rate.set_text(_('Download rate:')+' '+rate+'B/s')
+		else:
+			raise KeyboardInterrupt
+
+class SalixCodecsInstaller:
+	c = SimpleConfig('/etc/slapt-get/slapt-getrc')
+	working_dir = c.get('WORKINGDIR')
+	sources = c.get_all('SOURCE')
+
+	def __get_head(self, url):
+		u = urllib2.urlopen(url)
+		head = u.headers['last-modified']
+		return 'Last-Modified: '+head
+	
+	def __local_head(self, working_dir, url):
+		fname = self.__mangled_url(url)
+		try:
+			f = open(working_dir+'/'+fname+'.head')
+			return f.read().replace('\n', '')
+		except IOError:
+			return None
+
+	def __store_head(self, working_dir, filename, head):
+		f = open(working_dir+'/'+filename, 'w')
+		f.write(head)
+		f.close()
+	
+	def __mangled_url(self, url):
+		mangled = '.'+url.replace('/', '#')
+		return mangled
+
+	def __unmangled_url(self, repo):
+		working_dir = self.working_dir
+		if not working_dir.endswith('/'):
+			working_dir = working_dir+'/'
+		unmangled = repo.replace('#', '/').partition(working_dir+'.')[2]
+		return unmangled
+
+	def create_dir(self, dir):
+		try:
+			os.makedirs(dir)
+		except OSError as exc:
+			if exc.errno == errno.EEXIST:
+				pass
+			else:
+				raise
+
+	def download_repofile(self, working_dir, url):
+		new = self.__get_head(url)
+		local = self.__local_head(working_dir, url)
+		murl = self.__mangled_url(url)
+		if new == local:
+			# file is already there
+			self.progressbar_repo.set_fraction(1)
+		else:
+			urlgrabber.urlgrab(url, filename=working_dir+'/'+murl, progress_obj=meter)
+			self.__store_head(working_dir, murl+'.head', new)
+	
+	def get_sources(self):
+		sources = []
+		for i in self.sources:
+			if i.rstrip(' ').upper().endswith(':DEFAULT'):
+				priority = 0
+				url = i.rpartition(':')[0]
+			elif i.rstrip(' ').upper().endswith(':OFFICIAL'):
+				priority = 2
+				url = i.rpartition(':')[0]
+			elif i.rstrip(' ').upper().endswith(':PREFERRED'):
+				priority = 4
+				url = i.rpartition(':')[0]
+			elif i.rstrip(' ').upper().endswith(':CUSTOM'):
+				priority = 6
+				url = i.rpartition(':')[0]
+			else:
+				priority = 0
+				url = i
+			sources.append([url, priority])
+		return sources
+
+	def url_exists(self, url):
+		try:
+			u = urllib2.urlopen(url)
+			return True
+		except urllib2.HTTPError, urllib2.URLError:
+			return False
+
+	def verify_checksum(self, working_dir, file):
+		cmd = 'gpg --verify '+working_dir+'/'+file+'.asc '+working_dir+'/'+file
+		retval = subprocess.call(cmd, shell=True)
+		if retval == 0:
+			# successful verification
+			return True
+		elif retval == 2:
+			# no gpg key found
+			return True
+		elif retval == 512:
+			# no gpg key found (different error code?)
+			return True
+		else:
+			return False
+
+	def write_package_data_file(self, pkgtxt_file, mirror, priority, checksums_list):
+		working_dir = self.working_dir
+		f = open(working_dir+'/package_data', 'a')
+		has_mirror_line = False
+		is_extra = False
+		pkgname = ''
+		for line in pkgtxt_file:
+			if line.startswith('PACKAGE NAME'):
+				pkgname = line.partition('PACKAGE NAME:')[2].strip()
+				has_mirror_line = False
+				is_extra = False
+				f.write(line)
+			elif line.startswith('PACKAGE MIRROR'):
+				has_mirror_line = True
+				if line.rpartition('\n')[0].rstrip('/').endswith('extra'):
+					is_extra = True
+				f.write(line)
+			elif line.startswith('PACKAGE LOCATION'):
+				if has_mirror_line is not True:
+					f.write('PACKAGE MIRROR:  '+mirror+'\n')
+				f.write('PACKAGE PRIORITY:  '+str(priority)+'\n')
+				if is_extra:
+					location = './'+line.partition('PACKAGE LOCATION:')[2].lstrip(' ').partition('/extra/')[2]
+					f.write('PACKAGE LOCATION:  '+location)
+				else:
+					f.write(line)
+			elif line.startswith('PACKAGE SUGGESTS'):
+				f.write(line)
+				for sum in checksums_list:
+					if sum[1] == pkgname:
+						f.write('PACKAGE MD5SUM:  '+sum[0]+'\n')
+						break
+			else:
+				f.write(line)
+		f.close()
+
+	def create_package_data(self, repos):
+		working_dir = self.working_dir
+		# Make sure the package_data file is empty
+		f = open(working_dir+'/package_data', 'w')
+		f.close()
+		for i in repos:
+			pkgtxtpath = i[0]
+			priority = i[1]
+			patchespath = i[2]
+			checksumspath = i[3]
+			# Read all checksums in a list
+			checksums_list = []
+			if checksumspath.endswith('.gz'):
+				f = gzip.open(checksumspath, 'rb')
+				checksums_file = f.readlines()
+				f.close()
+			else:
+				f = open(checksumspath)
+				checksums_file = f.readlines()
+			for line in checksums_file:
+				line = line.rpartition('\n')[0]
+				checksum = line.partition('  ')[0]
+				pkgname = line.partition('  ')[2].rpartition('/')[2]
+				checksums_list.append([checksum, pkgname])
+			mirror = self.__unmangled_url(pkgtxtpath).rpartition('/')[0]+'/'
+			# Read PACKAGES.TXT files and add the info to the package_data file
+			if pkgtxtpath.endswith('.gz'):
+				f = gzip.open(pkgtxtpath, 'rb')
+				pkgtxt_file = f.readlines()
+				f.close()
+			else:
+				f = open(pkgtxtpath)
+				pkgtxt_file = f.readlines()
+				f.close(i)
+			self.write_package_data_file(pkgtxt_file, mirror, priority, checksums_list)
+			# Read PACKAGES.TXT from patches dir
+			if patchespath is not None:
+				if patchespath.endswith('.gz'):
+					f = gzip.open(patchespath, 'rb')
+					pkgtxt_file = f.readlines()
+					f.close()
+				else:
+					f = open(patchespath)
+					pkgtxt_file = f.readlines()
+					f.close(i)
+				self.write_package_data_file(pkgtxt_file, mirror, priority+1, checksums_list)
+		self.progressbar_repo_total.set_fraction(1)
+		self.label_repo_desc.set_text(_('Reading package lists...'))
+
+	def download_repo_info(self):
+		global canceltask
+		sources = self.get_sources()
+		working_dir = self.working_dir
+		allrepos = []
+		# There are 6 different files to (try to) download for every repo + one final step
+		# for reading the package lists into the package_data file
+		steps = len(sources)*6.0+1
+		step = 0
+		
+		for repo in sources:
+			if not canceltask:
+				repo_files = []
+				self.label_repo_rate.set_text('')
+				repo_url = repo[0]
+				if not repo_url.endswith('/'):
+					repo_url = repo_url+'/'
+				repo_priority = repo[1]
+				self.label_repo_name.set_text(repo_url)
+				# Retrieve package data
+				if self.url_exists(repo_url+'PACKAGES.TXT.gz'):
+					url = repo_url+'PACKAGES.TXT.gz'
+				elif self.url_exists(repo_url+'PACKAGES.TXT'):
+					url = repo_url+'PACKAGES.TXT'
+				else:
+					self.dialog_update.hide()
+					self.messagedialog_sources_error.show()
+				self.label_repo_desc.set_text(_('Retrieving package data...'))
+				self.download_repofile(working_dir, url)
+				fullpath = working_dir+'/'+self.__mangled_url(url)
+				repo_files.append(fullpath)
+				repo_files.append(repo_priority)
+				step += 1
+				self.progressbar_repo_total.set_fraction(step/steps)
+				self.progressbar_repo.set_fraction(1)
+			if not canceltask:
+				# Retrieve patch list
+				patches = False
+				if self.url_exists(repo_url+'patches/PACKAGES.TXT.gz'):
+					url = repo_url+'patches/PACKAGES.TXT.gz'
+					patches = True
+				elif self.url_exists(repo_url+'patches/PACKAGES.TXT'):
+					url = repo_url+'patches/PACKAGES.TXT'
+					patches = True
+				if patches == True:
+					self.label_repo_desc.set_text(_('Retrieving patch list...'))
+					self.download_repofile(working_dir, url)
+					fullpath = working_dir+'/'+self.__mangled_url(url)
+					repo_files.append(fullpath)
+					self.progressbar_repo.set_fraction(1)
+				else:
+					repo_files.append(None)
+				step += 1
+				self.progressbar_repo_total.set_fraction(step/steps)
+			if not canceltask:
+				# Retrieve checksum list
+				if self.url_exists(repo_url+'CHECKSUMS.md5.gz'):
+					url = repo_url+'CHECKSUMS.md5.gz'
+				elif self.url_exists(repo_url+'CHECKSUMS.md5'):
+					url = repo_url+'CHECKSUMS.md5'
+				else:
+					self.dialog_update.hide()
+					self.messagedialog_sources_error.show()
+				self.label_repo_desc.set_text(_('Retrieving checksum list...'))
+				self.download_repofile(working_dir, url)
+				fullpath = working_dir+'/'+self.__mangled_url(url)
+				repo_files.append(fullpath)
+				step += 1
+				self.progressbar_repo_total.set_fraction(step/steps)
+				self.progressbar_repo.set_fraction(1)
+			if not canceltask:
+				# Retrieve checksum signature
+				checksumsig = False
+				if self.url_exists(repo_url+'CHECKSUMS.md5.gz.asc'):
+					url = repo_url+'CHECKSUMS.md5.gz.asc'
+					checksumsig = True
+				elif self.url_exists(repo_url+'CHECKSUMS.md5.asc'):
+					url = repo_url+'CHECKSUMS.md5.asc'
+					checksumsig = True
+				if checksumsig == True:
+					self.label_repo_desc.set_text(_('Retrieving checksum signature...'))
+					self.download_repofile(working_dir, url)
+					self.progressbar_repo.set_fraction(1)
+				step += 1
+				self.progressbar_repo_total.set_fraction(step/steps)
+			if not canceltask:
+				# Verify checksum
+				if checksumsig == True:
+					checksum = self.__mangled_url(url.rpartition('.asc')[0])
+					self.label_repo_desc.set_text(_('Verifying checksum signature...'))
+					if not self.verify_checksum(working_dir, checksum):
+						self.dialog_update.hide()
+						self.messagedialog_repo_checksum.show()
+				step += 1
+				self.progressbar_repo_total.set_fraction(step/steps)
+			if not canceltask:
+				# Retrieve ChangeLog.txt
+				if self.url_exists(repo_url+'ChangeLog.txt'):
+					url = repo_url+'ChangeLog.txt'
+					self.label_repo_desc.set_text(_('Retrieving ChangeLog.txt...'))
+					self.download_repofile(working_dir, url)
+					self.progressbar_repo.set_fraction(1)
+				step += 1
+			if not canceltask:
+				self.progressbar_repo_total.set_fraction(step/steps)
+				allrepos.append(repo_files)
+		return allrepos
+
+	def pkg_deps_and_sugs(self, pkgname):
+		cmd = ['LANG=C /usr/sbin/slapt-get --show '+pkgname+'|grep "^Package Required:\|^Package Suggests:"']
+		process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+		output = process.communicate()[0]
+		pkgs = []
+		for line in output.split('\n'):
+			if line.startswith('Package'):
+				for i in line.rpartition('Package Required:')[2].rpartition('Package Suggests:')[2].lstrip(' ').rstrip(' ').replace(' ', ',').replace('|', ' ').split(','):
+					if i is not '':
+						pkgs.append(i)
+		return pkgs
+
+	def pkglist(self):
+		pkgs = ['gstreamer', 'gst-plugins-base', 'gst-plugins-good',
+				'gst-plugins-bad', 'gst-plugins-ugly', 'gst-python',
+				'gst-ffmpeg',
+				'gstreamer1', 'gst-plugins-base1', 'gst-plugins-good1',
+				'gst-plugins-bad1', 'gst-plugins-ugly1', 'gst-libav',
+				'libdvdcss', 'flash-plugin']
+		deps = []
+		for pkg in pkgs:
+			for i in self.pkg_deps_and_sugs(pkg):
+				deps.append(i)
+		for i in pkgs:
+			deps.append(i)
+		return set(deps)
+
+	def pkg_uris(self, pkglist):
+		pkgstr = ' '.join(pkglist)
+		cmd = ['/usr/sbin/slapt-get --print-uris -s -i '+pkgstr+'|grep "^http:\|^ftp:\|^file:"']
+		process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+		output = process.communicate()[0].split()
+		return output
+
+	def pkg_detailed_list(self, uris):
+		working_dir = self.working_dir
+		f = open(working_dir+'/package_data')
+		package_data = f.readlines()
+		f.close()
+		uri_list = []
+		for i in uris:
+			pkgname = i.rpartition('/')[2]
+			uri_list.append([pkgname, i])
+		pkgfilename = ''
+		pkgname = ''
+		pkgver = ''
+		pkgname_match = False
+		location = ''
+		location_found = False
+		md5sum = ''
+		md5sum_found = False
+		description = ''
+		description_found = False
+		detailed_list = []
+		for line in package_data:
+			if line.startswith('PACKAGE NAME'):
+				pkgfilename = line.partition('PACKAGE NAME:')[2].strip()
+				for i in uri_list:
+					if pkgfilename == i[0]:
+						pkgname = pkgfilename.rpartition('-')[0].rpartition('-')[0].rpartition('-')[0]
+						pkgver = pkgfilename.partition(pkgname)[2].lstrip('-').rpartition('.')[0]
+						uri = i[1]
+						pkgname_match = True
+						location_found = False
+			elif line.startswith('PACKAGE LOCATION'):
+				location = line.partition('PACKAGE LOCATION:')[2].strip()
+				location_found = True
+			elif line.startswith('PACKAGE MD5SUM'):
+				md5sum = line.partition('PACKAGE MD5SUM:')[2].strip()
+				md5sum_found = True
+			elif line.startswith(pkgname+':'):
+				if description_found is False:
+					description = line.partition(pkgname+': ')[2].rstrip('\n')
+					description_found = True
+			if (pkgname_match is True) and (location_found is True) and (md5sum_found is True) and (description_found is True):
+				detailed_list.append([pkgname, pkgver, pkgfilename, uri, location, md5sum, description])
+				pkgname = ''
+				pkgver = ''
+				pkgname_match = False
+				location = ''
+				location_found = False
+				md5sum = ''
+				md5sum_found = False
+				description = ''
+				description_found = False
+		return sorted(detailed_list)
+
+	@threaded
+	def on_button_infowindow_yes_clicked(self, widget):
+		try:
+			gtk.gdk.threads_enter()
+			self.infowindow.hide()
+			self.dialog_update.show()
+			self.dialog_update.set_title(_('Updating local package cache'))
+			gtk.gdk.threads_leave()
+			repos = self.download_repo_info()
+			self.create_package_data(repos)
+			pkglist = self.pkglist()
+			uris = self.pkg_uris(pkglist)
+			to_be_installed = self.pkg_detailed_list(uris)
+			if len(to_be_installed) == 0:
+				gtk.gdk.threads_enter()
+				self.dialog_update.hide()
+				self.messagedialog_nopkgs.show()
+				gtk.gdk.threads_leave()
+			else:
+				gtk.gdk.threads_enter()
+				self.dialog_update.hide()
+				self.dialog_pkglist.show()
+				gtk.gdk.threads_leave()
+				for i in to_be_installed:
+					# Passing checkbox state (True), changed state (False), pkgname, pkgver, pkgfilename,
+					# uri, location, md5sum, descrption
+					self.liststore_pkglist.append([True, False, i[0], i[1], i[2], i[3], i[4], i[5], i[6]])
+		except KeyboardInterrupt:
+			self.dialog_update.hide()
+		except IOError:
+			self.dialog_update.hide()
+			self.messagedialog_dir_error.show()
+	
+	def on_button_infowindow_no_clicked(self, widget):
+		gtk.main_quit()
+
+	@threaded
+	def on_button_update_cancel_clicked(self, widget):
+		global canceltask
+		canceltask = True
+		gtk.gdk.threads_enter()
+		self.dialog_update.hide()
+		gtk.main_quit()
+		gtk.gdk.threads_leave()
+
+	@threaded
+	def on_dialog_update_delete_event(self, widget, event):
+		global canceltask
+		canceltask = True
+		gtk.gdk.threads_enter()
+		self.dialog_update.hide()
+		gtk.main_quit()
+		gtk.gdk.threads_leave()
+
+	def md5sum_check(self, filename, md5sum):
+		md5 = hashlib.md5()
+		f = open(filename, 'rb')
+		while True:
+			data = f.read(8192)
+			if not data:
+				break
+			md5.update(data)
+		f.close()
+		local_md5 = md5.hexdigest()
+		if local_md5 == md5sum:
+			return True
+		else:
+			return False
+
+	@threaded
+	def on_button_dlg_pkglist_exec_clicked(self, widget):
+		try:
+			working_dir = self.working_dir
+			gtk.gdk.threads_enter()
+			self.dialog_pkglist.hide()
+			self.dialog_update.show()
+			self.progressbar_repo_total.set_fraction(0)
+			self.progressbar_repo.set_fraction(0)
+			self.dialog_update.set_title(_('Downloading packages'))
+			gtk.gdk.threads_leave()
+			steps = 0
+			step = 0.0
+			# count how many packages are to be downloaded/installed
+			for i in self.liststore_pkglist:
+				enabled = i[0]
+				if enabled:
+					steps += 1
+			# *2 because we download the md5sum too
+			steps = steps*2
+			# download packages
+			for i in self.liststore_pkglist:
+				if not canceltask:
+					enabled = i[0]
+					pkgname = i[2]
+					pkgver = i[3]
+					pkgfilename = i[4]
+					uri = i[5]
+					location = i[6]
+					md5sum = i[7]
+					pkgdesc = i[8]
+					if enabled:
+						destdir = working_dir+'/'+location
+						dest = destdir+'/'+pkgfilename
+						self.create_dir(destdir)
+						if os.path.isfile(dest):
+							if self.md5sum_check(dest, md5sum):
+								download = False
+							else:
+								download = True
+						else:
+							download = True
+						gtk.gdk.threads_enter()
+						self.label_repo_desc.set_text(pkgfilename)
+						self.label_repo_name.set_text(pkgdesc)
+						self.progressbar_repo_total.set_fraction(step/steps)
+						self.progressbar_repo.set_fraction(0)
+						gtk.gdk.threads_leave()
+						if download:
+							urlgrabber.urlgrab(uri, filename=dest, progress_obj=meter)
+							if not self.md5sum_check(dest, md5sum):
+								#FIXME
+								#check if this actually works right
+								#I'll need to make a temp repo with a bad pkg md5sum
+								gtk.gdk.threads_enter()
+								self.dialog_update.hide()
+								self.messagedialog_pkg_checksum.show()
+								gtk.gdk.threads_leave()
+						step += 1
+			gtk.gdk.threads_enter()
+			self.progressbar_repo_total.set_fraction(1)
+			# install packages
+			self.progressbar_repo_total.set_fraction(0)
+			self.progressbar_repo.hide()
+			self.dialog_update.set_title(_('Installing packages'))
+			gtk.gdk.threads_leave()
+			success = True
+			for i in self.liststore_pkglist:
+				if not canceltask:
+					enabled = i[0]
+					pkgname = i[2]
+					pkgver = i[3]
+					pkgfilename = i[4]
+					location = i[6]
+					pkgdesc = i[8]
+					if enabled:
+						gtk.gdk.threads_enter()
+						self.label_repo_desc.set_text(pkgfilename)
+						self.label_repo_name.set_text(pkgdesc)
+						self.progressbar_repo_total.set_fraction(step/steps)
+						gtk.gdk.threads_leave()
+						pkg = working_dir+'/'+location+'/'+pkgfilename
+						retval = subprocess.call([spkg, '-u', '--install-new', pkg])
+						if retval is not 0:
+							success = False
+							gtk.gdk.threads_enter()
+							self.dialog_update.hide()
+							self.messagedialog_pkginstall_error.show()
+							gtk.gdk.threads_leave()
+							break
+					step +=1
+			if success:
+				self.dialog_update.hide()
+				self.messagedialog_uninstall.show()				
+			else:
+				#FIXME
+				#check if this actually pops up as it's supposed to, after
+				#a package has been downloaded succesfully, but spkg can't
+				#install it for some reason
+				self.dialog_update.hide()
+				self.messagedialog_pkginstall_error.show()
+		except KeyboardInterrupt:
+			self.dialog_update.hide()
+		except OSError:
+			self.dialog_update.hide()
+			self.messagedialog_dir_error.show()
+		except IOError:
+			self.dialog_update.hide()
+			self.messagedialog_dir_error.show()
+			
+	def on_button_dlg_pkglist_cancel_clicked(self, widget):
+		gtk.main_quit()
+
+	def on_dialog_pkglist_delete_event(self, widget, event):
+		gtk.main_quit()
+
+	def on_checkbox_toggled(self, widget, data=None):
+		selectedpkg = self.treeview_pkglist.get_selection()
+		self.liststore_pkglist, iter = selectedpkg.get_selected()
+		selectedpkgname = self.liststore_pkglist.get_value(iter, 2)
+		for i in self.liststore_pkglist:
+			if i[2] == selectedpkgname:
+				i[1] = True
+				if i[0] == True:
+					i[0] = False
+				else:
+					i[0] = True
+
+	@threaded
+	def on_button_uninstall_clicked(self, widget):
+		gtk.gdk.threads_enter()
+		self.messagedialog_uninstall.hide()
+		gtk.gdk.threads_leave()
+		cmd = ['/sbin/spkg', '-d', 'salix-codecs-installer']
+		process = subprocess.Popen(cmd)
+		process.wait()
+		gtk.main_quit()
+
+	def on_messagedialog_delete_event(self, widget, event):
+		gtk.main_quit()
+
+	def on_messagedialog_response(self, widget, event):
+		gtk.main_quit()
+
+	def on_messagedialog_dir_error_response(self, widget, event):
+		gtk.main_quit()
+	
+	def gtk_main_quit(self, widget, data=None):
+		gtk.main_quit()
+
+	def __init__(self):
+		builder = gtk.Builder()
+		if os.path.exists('salix-codecs-installer.glade'):
+			builder.add_from_file('salix-codecs-installer.glade')
+		elif os.path.exists('/usr/share/salix-codecs-installer/salix-codecs-installer.glade'):
+			builder.add_from_file('/usr/share/salix-codecs-installer/salix-codecs-installer.glade')
+		self.window = builder.get_object('salix-codecs-installer')
+
+		#
+		# Info window
+		#
+		self.infowindow = builder.get_object('infowindow')
+		self.button_infowindow_yes = builder.get_object('button_infowindow_yes')
+		self.button_infowindow_no = builder.get_object('button_infowindow_no')
+		self.button_infowindow_yes.set_flags(gtk.CAN_DEFAULT)
+		self.infowindow.set_default(self.button_infowindow_yes)
+
+		#
+		# Update package cache dialog
+		#
+		self.dialog_update = builder.get_object('dialog_update')
+		self.button_update_cancel = builder.get_object('button_update_cancel')
+		self.progressbar_repo_total = builder.get_object('progressbar_repo_total')
+		self.progressbar_repo = builder.get_object('progressbar_repo')
+		self.label_repo_rate = builder.get_object('label_repo_rate')
+		self.label_repo_desc = builder.get_object('label_repo_desc')
+		self.label_repo_name = builder.get_object('label_repo_name')
+		
+		# Error dialogs
+		self.messagedialog_sources_error = builder.get_object('messagedialog_sources_error')
+		self.messagedialog_pkginstall_error = builder.get_object('messagedialog_pkginstall_error')
+		self.messagedialog_dir_error = builder.get_object('messagedialog_dir_error')
+		self.messagedialog_repo_checksum = builder.get_object('messagedialog_repo_checksum')
+		self.messagedialog_pkg_checksum = builder.get_object('messagedialog_pkg_checksum')
+		
+		#
+		# Package list dialog
+		#
+		self.dialog_pkglist = builder.get_object('dialog_pkglist')
+		self.treeview_pkglist = builder.get_object('treeview_pkglist')
+		self.liststore_pkglist = builder.get_object('liststore_pkglist')
+		self.button_dlg_pkglist_exec = builder.get_object('button_dlg_pkglist_cancel')
+		self.button_dlg_pkglist_cancel = builder.get_object('button_dlg_pkglist_cancel')
+		self.button_dlg_pkglist_exec.set_flags(gtk.CAN_DEFAULT)
+		self.treeviewcolumn_checkbox = builder.get_object('treeviewcolumn_checkbox')
+		self.treeviewcolumn_checkbox.set_title(_('Install'))
+		self.treeviewcolumn_pkgname = builder.get_object('treeviewcolumn_pkgname')
+		self.treeviewcolumn_pkgname.set_title(_('Name'))
+		self.treeviewcolumn_pkgver = builder.get_object('treeviewcolumn_pkgver')
+		self.treeviewcolumn_pkgver.set_title(_('Version'))
+		self.treeviewcolumn_pkgdesc = builder.get_object('treeviewcolumn_pkgdesc')
+		self.treeviewcolumn_pkgdesc.set_title(_('Description'))
+
+		#
+		# Remove package dialog
+		#
+		self.messagedialog_uninstall = builder.get_object('messagedialog_uninstall')
+
+
+		#
+		# All packages are already installed dialog
+		#
+		self.messagedialog_nopkgs = builder.get_object('messagedialog_nopkgs')
+
+		builder.connect_signals(self)
+
+		self.create_dir(self.working_dir)
+
+
+if __name__ == "__main__":
+	app = SalixCodecsInstaller()
+	meter = DownloadMeter()
+	app.infowindow.show()
+	gtk.main()

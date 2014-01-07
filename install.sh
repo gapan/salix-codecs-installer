@@ -4,6 +4,7 @@ install -d -m 755 $DESTDIR/usr/sbin
 install -d -m 755 $DESTDIR/usr/share/applications
 install -d -m 755 $DESTDIR/usr/share/salix-codecs-installer
 install -m 755 src/salix-codecs-installer $DESTDIR/usr/sbin/
+install -m 755 src/salix-codecs-installer-gtk $DESTDIR/usr/sbin/
 install -m 644 src/salix-codecs-installer.glade $DESTDIR/usr/share/salix-codecs-installer/
 install -m 644 salix-codecs-installer.desktop $DESTDIR/usr/share/applications/
 install -m 644 salix-codecs-installer-kde.desktop $DESTDIR/usr/share/applications/

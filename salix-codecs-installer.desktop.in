@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=Install multimedia codecs
 _Comment=Install codecs required for playing restricted formats
-Exec=gksu salix-codecs-installer
+Exec=gksu salix-codecs-installer-gtk
 Icon=salix-codecs-installer
 Terminal=false
 Type=Application

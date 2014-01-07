@@ -9,6 +9,12 @@ xgettext --from-code=utf-8 \
 	-j \
 	-L Python \
 	-o po/salix-codecs-installer.pot \
+	src/salix-codecs-installer-gtk
+
+xgettext --from-code=utf-8 \
+	-j \
+	-L shell \
+	-o po/salix-codecs-installer.pot \
 	src/salix-codecs-installer
 
 intltool-extract --type="gettext/ini" salix-codecs-installer.desktop.in
