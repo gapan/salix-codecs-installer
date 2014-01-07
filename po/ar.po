@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-08 23:07+0300\n"
+"POT-Creation-Date: 2014-01-08 00:39+0200\n"
 "PO-Revision-Date: 2013-11-26 14:21+0000\n"
 "Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
 "Language-Team: Arabic (http://www.transifex.com/projects/p/salix/language/ar/)\n"
@@ -19,11 +19,13 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: src/salix-codecs-installer.glade:7
+#: src/salix-codecs-installer.glade:7 src/salix-codecs-installer:33
+#, sh-format
 msgid "Install multimedia codecs?"
 msgstr "تثبيت ترميز الوسائط المتعددة؟"
 
-#: src/salix-codecs-installer.glade:38
+#: src/salix-codecs-installer.glade:38 src/salix-codecs-installer:26
+#, sh-format
 msgid ""
 "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n"
 "\n"
@@ -51,11 +53,13 @@ msgid ""
 "/slapt-get/slapt-getrc."
 msgstr "حدث خطأ أثناء الاتصال بأحد المستودعات. تأكد من اتصال الإنترنت وأن المصادر صحيحة في المسار /etc/slapt-get/slapt-getrc."
 
-#: src/salix-codecs-installer.glade:258
+#: src/salix-codecs-installer.glade:258 src/salix-codecs-installer:121
+#, sh-format
 msgid "List of packages to install"
 msgstr "قائمة الحزم المطلوب تثبيتها"
 
-#: src/salix-codecs-installer.glade:292
+#: src/salix-codecs-installer.glade:292 src/salix-codecs-installer:120
+#, sh-format
 msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
@@ -69,11 +73,13 @@ msgid ""
 "write permissions and try again."
 msgstr "حدث خطأ أثناء تثبيت إحدى الحزم. من فضلك، تأكد أن هناك مساحة كافية في القرص الثابت الموصل وأن له أذونات الكتابة اللازمة ثم حاول مرة أخرى."
 
-#: src/salix-codecs-installer.glade:464
+#: src/salix-codecs-installer.glade:464 src/salix-codecs-installer:97
+#, sh-format
 msgid "Nothing to install"
 msgstr "لا توجد عناصر لإزالة تثبيتها"
 
-#: src/salix-codecs-installer.glade:469
+#: src/salix-codecs-installer.glade:469 src/salix-codecs-installer:96
+#, sh-format
 msgid "All codec packages are already installed."
 msgstr "كافة ترميز الحزم مثبتة بالفعل."
 
@@ -93,82 +99,84 @@ msgid ""
 "Please, check your internet connection."
 msgstr "خطأ عند التحقق من المجموع الاختباري للحزم. قد يكون ناتج عن تحميل سيئ. الرجاء التحقق من اتصال الإنترنت."
 
-#: src/salix-codecs-installer.glade:606
+#: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
+#, sh-format
 msgid "Done!"
 msgstr "تم!"
 
-#: src/salix-codecs-installer.glade:613
+#: src/salix-codecs-installer.glade:613 src/salix-codecs-installer:150
+#, sh-format
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
 msgstr "تم تثبيت الترميز بنجاح. هل تريد إزالة مثبت الترميز من النظام؟"
 
-#: src/salix-codecs-installer:50
+#: src/salix-codecs-installer-gtk:50
 msgid "Download rate:"
 msgstr "معدل التحميل:"
 
-#: src/salix-codecs-installer:234
+#: src/salix-codecs-installer-gtk:234
 msgid "Reading package lists..."
 msgstr "قراءة قائمة الحزم..."
 
-#: src/salix-codecs-installer:263
+#: src/salix-codecs-installer-gtk:263
 msgid "Retrieving package data..."
 msgstr "استرداد بيانات الحزم..."
 
-#: src/salix-codecs-installer:281
+#: src/salix-codecs-installer-gtk:281
 msgid "Retrieving patch list..."
 msgstr "استرداد قائمة التصحيح..."
 
-#: src/salix-codecs-installer:299
+#: src/salix-codecs-installer-gtk:299
 msgid "Retrieving checksum list..."
 msgstr "استرداد قائمة المجموع الاختباري..."
 
-#: src/salix-codecs-installer:316
+#: src/salix-codecs-installer-gtk:316
 msgid "Retrieving checksum signature..."
 msgstr "استرداد توقيع المجموع الاختباري..."
 
-#: src/salix-codecs-installer:325
+#: src/salix-codecs-installer-gtk:325
 msgid "Verifying checksum signature..."
 msgstr "التحقق من توقيع المجموع الاختباري..."
 
-#: src/salix-codecs-installer:335
+#: src/salix-codecs-installer-gtk:335
 msgid "Retrieving ChangeLog.txt..."
 msgstr "استرداد ChangeLog.txt..."
 
-#: src/salix-codecs-installer:432
+#: src/salix-codecs-installer-gtk:437
 msgid "Updating local package cache"
 msgstr "تحديث ذاكرة التخزين للحزم المحلية"
 
-#: src/salix-codecs-installer:504
+#: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"
 msgstr "تنزيل الحزم"
 
-#: src/salix-codecs-installer:559
+#: src/salix-codecs-installer-gtk:564
 msgid "Installing packages"
 msgstr "تثبيت الحزم"
 
-#: src/salix-codecs-installer:689
+#: src/salix-codecs-installer-gtk:695
 msgid "Install"
 msgstr "تثبيت"
 
-#: src/salix-codecs-installer:691
+#: src/salix-codecs-installer-gtk:697
 msgid "Name"
 msgstr "اسم"
 
-#: src/salix-codecs-installer:693
+#: src/salix-codecs-installer-gtk:699
 msgid "Version"
 msgstr "الإصدار"
 
-#: src/salix-codecs-installer:695
+#: src/salix-codecs-installer-gtk:701
 msgid "Description"
 msgstr "الوصف"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
-msgid "Install codecs required for playing restricted formats"
-msgstr "تثبيت برامج الترميز المطلوبة لتشغيل صيغ مقيدة"
+msgid "Install multimedia codecs"
+msgstr "تثبيت برامج ترميز الوسائط المتعددة"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
-msgid "Install multimedia codecs"
-msgstr "تثبيت برامج ترميز الوسائط المتعددة"
+msgid "Install codecs required for playing restricted formats"
+msgstr "تثبيت برامج الترميز المطلوبة لتشغيل صيغ مقيدة"

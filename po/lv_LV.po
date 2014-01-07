@@ -3,27 +3,24 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# eren <erenlinux@gmail.com>, 2011
-# ismail <ismaildemiral@gmail.com>, 2012
-# Rıza Aksoy <aksoy.rza@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 00:39+0200\n"
-"PO-Revision-Date: 2013-11-26 14:21+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
-"Language-Team: Turkish (http://www.transifex.com/projects/p/salix/language/tr/)\n"
+"PO-Revision-Date: 2014-01-03 10:21+0000\n"
+"Last-Translator: gapan <vlahavas@gmail.com>\n"
+"Language-Team: Latvian (Latvia) (http://www.transifex.com/projects/p/salix/language/lv_LV/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: tr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: lv_LV\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 #: src/salix-codecs-installer.glade:7 src/salix-codecs-installer:33
 #, sh-format
 msgid "Install multimedia codecs?"
-msgstr "Multimedya kodeklerini yüklemek ister misiniz?"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:38 src/salix-codecs-installer:26
 #, sh-format
@@ -35,29 +32,29 @@ msgid ""
 "Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
 "Click Next to update the package cache and receive a list of packages about to be installed."
-msgstr "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n\nYou will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.\n\nPlease check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n\nClick Next to update the package cache and receive a list of packages about to be installed."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr "İlerleme"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
 #: src/salix-codecs-installer.glade:574
 msgid "Error"
-msgstr "Hata"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:210
 msgid ""
 "There was an error connecting to one of the repositories. Make sure you have"
 " a working internet connection and the right sources specified in /etc"
 "/slapt-get/slapt-getrc."
-msgstr "Depoya bağlanırken hata oluştu. İnternet bağlantınızı kontrol ediniz."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:258 src/salix-codecs-installer:121
 #, sh-format
 msgid "List of packages to install"
-msgstr "Yüklenecek paket listesi"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:292 src/salix-codecs-installer:120
 #, sh-format
@@ -65,119 +62,119 @@ msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr "Yüklenecek paketler bunlardır. Lütfen, ülkenizdeki mevcut yasaları göz önünde bulundurarak sadece izin verilen paketleri seçiniz. "
+msgstr ""
 
 #: src/salix-codecs-installer.glade:440
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr "Paketlerden biri yüklenirken hata oluştu. Lütfen, sabit diskinizde yeterli boşluk olduğundan ve sabit diskinizin yazma haklarıyla bağlı olduğundan emin olun ve tekrar deneyin. "
+msgstr ""
 
 #: src/salix-codecs-installer.glade:464 src/salix-codecs-installer:97
 #, sh-format
 msgid "Nothing to install"
-msgstr "Hiçbirşey yükleme"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:469 src/salix-codecs-installer:96
 #, sh-format
 msgid "All codec packages are already installed."
-msgstr "Bütün kodek paketleri yüklendi. "
+msgstr ""
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr "Depo dosyalarına yazma hakkına sahip değilsiniz."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr "Depo checksum bilgileri doğrulanırken hata oluştu. Yanlış bir depo kullanıyor olabilirsiniz. Lütfen, paket kaynaklarınızı kontrol edin."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:582
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr "Paket checksum bilgilerin kontrol edilirken hata oluştu. Bu muhtemelen internet bağlantınızdaki bir sorundan kaynaklanmaktadır. Lütfen internet bağlantınızı kontrol ediniz."
+msgstr ""
 
 #: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
 #, sh-format
 msgid "Done!"
-msgstr "Kabul!"
+msgstr ""
 
 #: src/salix-codecs-installer.glade:613 src/salix-codecs-installer:150
 #, sh-format
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
-msgstr "Kodek yüklemesi başarıyla tamamlandı. Kodek yükleyicisini sisteminizden kaldırmak ister misiniz?"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:50
 msgid "Download rate:"
-msgstr "İndirme hızı:"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:234
 msgid "Reading package lists..."
-msgstr "Paket listesi okunuyor..."
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:263
 msgid "Retrieving package data..."
-msgstr "Paket bilgisi alınıyor..."
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:281
 msgid "Retrieving patch list..."
-msgstr "Yama listesi alınıyor..."
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:299
 msgid "Retrieving checksum list..."
-msgstr "Checksum listesi alınıyor..."
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:316
 msgid "Retrieving checksum signature..."
-msgstr "Checksum imzası alınıyor..."
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:325
 msgid "Verifying checksum signature..."
-msgstr "checksum imzas"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr "ChangeLog.txt alınıyor..."
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:437
 msgid "Updating local package cache"
-msgstr "Yerel paket belleği güncelleniyor"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"
-msgstr "İndirilen paketler"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:564
 msgid "Installing packages"
-msgstr "Yüklenen paketler"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:695
 msgid "Install"
-msgstr "Yükle"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:697
 msgid "Name"
-msgstr "İsim"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:699
 msgid "Version"
-msgstr "Versiyon"
+msgstr ""
 
 #: src/salix-codecs-installer-gtk:701
 msgid "Description"
-msgstr "Açıklama"
+msgstr ""
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install multimedia codecs"
-msgstr "Multimedya codec'leri yükle"
+msgstr ""
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install codecs required for playing restricted formats"
-msgstr "Kodekleri yüklemek kısıtlı formatları oynatmak için gereklidir."
+msgstr ""

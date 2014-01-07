@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-08 23:07+0300\n"
+"POT-Creation-Date: 2014-01-08 00:39+0200\n"
 "PO-Revision-Date: 2013-11-26 14:21+0000\n"
 "Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/salix/language/el/)\n"
@@ -18,11 +18,13 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/salix-codecs-installer.glade:7
+#: src/salix-codecs-installer.glade:7 src/salix-codecs-installer:33
+#, sh-format
 msgid "Install multimedia codecs?"
 msgstr "Εγκατάσταση (απο)κωδικοποιητών πολυμέσων;"
 
-#: src/salix-codecs-installer.glade:38
+#: src/salix-codecs-installer.glade:38 src/salix-codecs-installer:26
+#, sh-format
 msgid ""
 "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n"
 "\n"
@@ -50,11 +52,13 @@ msgid ""
 "/slapt-get/slapt-getrc."
 msgstr "Υπήρξε ένα σφάλμα κατά τη σύνδεση με τουλάχιστον μια αποθήκη λογισμικού. Παρακαλώ ελέγξτε ότι η σύνδεσή σας με το internet λειτουργεί σωστά και οι αποθήκες λογισμικού είναι σωστά ορισμένες στο /etc/slapt-get/slapt-getrc."
 
-#: src/salix-codecs-installer.glade:258
+#: src/salix-codecs-installer.glade:258 src/salix-codecs-installer:121
+#, sh-format
 msgid "List of packages to install"
 msgstr "Λίστα πακέτων προς εγκατάσταση"
 
-#: src/salix-codecs-installer.glade:292
+#: src/salix-codecs-installer.glade:292 src/salix-codecs-installer:120
+#, sh-format
 msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
@@ -68,11 +72,13 @@ msgid ""
 "write permissions and try again."
 msgstr "Υπήρξε ένα σφάλμα κατά τη λήξη των απαιτούμενων πακέτων. Παρακαλώ ελέγξτε αν υπάρχει αρκετός χώρος στο δίσκο αν η σύνδεσή σας με το internet λειτουργεί σωστά και προσπαθήστε ξανά."
 
-#: src/salix-codecs-installer.glade:464
+#: src/salix-codecs-installer.glade:464 src/salix-codecs-installer:97
+#, sh-format
 msgid "Nothing to install"
 msgstr "Τίποτα προς εγκατάσταση"
 
-#: src/salix-codecs-installer.glade:469
+#: src/salix-codecs-installer.glade:469 src/salix-codecs-installer:96
+#, sh-format
 msgid "All codec packages are already installed."
 msgstr "Όλα τα πακέτα (απο)κωδικοποιητών πολυμέσων είναι ήδη εγκατεστημένα."
 
@@ -92,82 +98,84 @@ msgid ""
 "Please, check your internet connection."
 msgstr "Σφάλμα κατά την ταυτοποίηση του αθροίσματος του πακέτου. Αυτό πιθανόν να οφείλεται σε λανθασμένη λήψη του πακέτου. Παρακαλούμε ελέγξτε τη σύνδεσή σας με το internet."
 
-#: src/salix-codecs-installer.glade:606
+#: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
+#, sh-format
 msgid "Done!"
 msgstr "Έτοιμο!"
 
-#: src/salix-codecs-installer.glade:613
+#: src/salix-codecs-installer.glade:613 src/salix-codecs-installer:150
+#, sh-format
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
 msgstr "Η εγκατάσταση των (απο)κωδικοποιητών πολυμέσων ολοκληρώθηκε με επιτυχία. Θέλετε να απεγκατασταθεί η εφαρμογή εγκατάστασης (απο)κωδικοποιητών πολυμέσων από το σύστημα;"
 
-#: src/salix-codecs-installer:50
+#: src/salix-codecs-installer-gtk:50
 msgid "Download rate:"
 msgstr "Ρυθμός λήψης"
 
-#: src/salix-codecs-installer:234
+#: src/salix-codecs-installer-gtk:234
 msgid "Reading package lists..."
 msgstr "Ανάγνωση λίστας πακέτων"
 
-#: src/salix-codecs-installer:263
+#: src/salix-codecs-installer-gtk:263
 msgid "Retrieving package data..."
 msgstr "Ανάκτηση δεδομένων πακέτων..."
 
-#: src/salix-codecs-installer:281
+#: src/salix-codecs-installer-gtk:281
 msgid "Retrieving patch list..."
 msgstr "Ανάκτηση λίστας διορθώσεων"
 
-#: src/salix-codecs-installer:299
+#: src/salix-codecs-installer-gtk:299
 msgid "Retrieving checksum list..."
 msgstr "Ανάκτηση λίστας αθροισμάτων..."
 
-#: src/salix-codecs-installer:316
+#: src/salix-codecs-installer-gtk:316
 msgid "Retrieving checksum signature..."
 msgstr "Ανάκτηση υπογραφής αθροίσματος..."
 
-#: src/salix-codecs-installer:325
+#: src/salix-codecs-installer-gtk:325
 msgid "Verifying checksum signature..."
 msgstr "Επαλήθευση υπογραφής αθροίσματος..."
 
-#: src/salix-codecs-installer:335
+#: src/salix-codecs-installer-gtk:335
 msgid "Retrieving ChangeLog.txt..."
 msgstr "Ανάκτηση του ChangeLog.txt..."
 
-#: src/salix-codecs-installer:432
+#: src/salix-codecs-installer-gtk:437
 msgid "Updating local package cache"
 msgstr "Ανανέωση της τοπικής αποθήκης πακέτων"
 
-#: src/salix-codecs-installer:504
+#: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"
 msgstr "Λήψη πακέτων"
 
-#: src/salix-codecs-installer:559
+#: src/salix-codecs-installer-gtk:564
 msgid "Installing packages"
 msgstr "Εγκατάσταση πακέτων"
 
-#: src/salix-codecs-installer:689
+#: src/salix-codecs-installer-gtk:695
 msgid "Install"
 msgstr "Εγκατάσταση"
 
-#: src/salix-codecs-installer:691
+#: src/salix-codecs-installer-gtk:697
 msgid "Name"
 msgstr "Όνομα"
 
-#: src/salix-codecs-installer:693
+#: src/salix-codecs-installer-gtk:699
 msgid "Version"
 msgstr "Έκδοση"
 
-#: src/salix-codecs-installer:695
+#: src/salix-codecs-installer-gtk:701
 msgid "Description"
 msgstr "Περιγραφή"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
-msgid "Install codecs required for playing restricted formats"
-msgstr "Εγκατάσταση (απο)κωδικοποιητών που απαιτούνται για την αναπαραγωγή και δημιουργία αρχείων πολυμέσων κλειστής αρχιτεκτονικής"
+msgid "Install multimedia codecs"
+msgstr "Εγκατάσταση κωδικοποιητών πολυμέσων"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
-msgid "Install multimedia codecs"
-msgstr "Εγκατάσταση κωδικοποιητών πολυμέσων"
+msgid "Install codecs required for playing restricted formats"
+msgstr "Εγκατάσταση (απο)κωδικοποιητών που απαιτούνται για την αναπαραγωγή και δημιουργία αρχείων πολυμέσων κλειστής αρχιτεκτονικής"

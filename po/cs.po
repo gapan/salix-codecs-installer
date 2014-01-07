@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-08 23:07+0300\n"
+"POT-Creation-Date: 2014-01-08 00:39+0200\n"
 "PO-Revision-Date: 2013-11-26 14:21+0000\n"
 "Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
 "Language-Team: Czech (http://www.transifex.com/projects/p/salix/language/cs/)\n"
@@ -19,11 +19,13 @@ msgstr ""
 "Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/salix-codecs-installer.glade:7
+#: src/salix-codecs-installer.glade:7 src/salix-codecs-installer:33
+#, sh-format
 msgid "Install multimedia codecs?"
 msgstr "Instalovat multimediální kodeky?"
 
-#: src/salix-codecs-installer.glade:38
+#: src/salix-codecs-installer.glade:38 src/salix-codecs-installer:26
+#, sh-format
 msgid ""
 "Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.\n"
 "\n"
@@ -51,11 +53,13 @@ msgid ""
 "/slapt-get/slapt-getrc."
 msgstr "Během připojování na jeden z repozitářů se objevila chyba. Ujistěte se, zda máte fungující internetové připojení a správně nastavené zdroje v /etc/slapt-get/slapt-getrc."
 
-#: src/salix-codecs-installer.glade:258
+#: src/salix-codecs-installer.glade:258 src/salix-codecs-installer:121
+#, sh-format
 msgid "List of packages to install"
 msgstr "Seznam balíčků určených k instalaci"
 
-#: src/salix-codecs-installer.glade:292
+#: src/salix-codecs-installer.glade:292 src/salix-codecs-installer:120
+#, sh-format
 msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
@@ -69,11 +73,13 @@ msgid ""
 "write permissions and try again."
 msgstr "Vyskytla se chyba při instalaci jednoho z balíčků. Prosím ujistěte se, zda je na cílovém disku dostatek volného místa, že je připojen s možností zápisu a zkuste to znovu."
 
-#: src/salix-codecs-installer.glade:464
+#: src/salix-codecs-installer.glade:464 src/salix-codecs-installer:97
+#, sh-format
 msgid "Nothing to install"
 msgstr "Nic k nainstalování"
 
-#: src/salix-codecs-installer.glade:469
+#: src/salix-codecs-installer.glade:469 src/salix-codecs-installer:96
+#, sh-format
 msgid "All codec packages are already installed."
 msgstr "Všechny kodekové balíčky jsou již nainstalovány."
 
@@ -93,82 +99,84 @@ msgid ""
 "Please, check your internet connection."
 msgstr "Chyba při verifikaci kontrolního součtu balíčku. Pravděpodobně se soubor nestáhl celý. Prosím zkontrolujte své internetové připojení."
 
-#: src/salix-codecs-installer.glade:606
+#: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
+#, sh-format
 msgid "Done!"
 msgstr "Hotovo!"
 
-#: src/salix-codecs-installer.glade:613
+#: src/salix-codecs-installer.glade:613 src/salix-codecs-installer:150
+#, sh-format
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
 msgstr "Instalace kodeků byla úspěšná. Přejete si odstranit instalátor kodeků z vašeho systému?"
 
-#: src/salix-codecs-installer:50
+#: src/salix-codecs-installer-gtk:50
 msgid "Download rate:"
 msgstr "Rychlost stahování:"
 
-#: src/salix-codecs-installer:234
+#: src/salix-codecs-installer-gtk:234
 msgid "Reading package lists..."
 msgstr "Načítání seznamu balíčku..."
 
-#: src/salix-codecs-installer:263
+#: src/salix-codecs-installer-gtk:263
 msgid "Retrieving package data..."
 msgstr "Získávání dat o balíčku..."
 
-#: src/salix-codecs-installer:281
+#: src/salix-codecs-installer-gtk:281
 msgid "Retrieving patch list..."
 msgstr "Získávání seznamu oprav..."
 
-#: src/salix-codecs-installer:299
+#: src/salix-codecs-installer-gtk:299
 msgid "Retrieving checksum list..."
 msgstr "Získávání seznamu kontrolních součtů..."
 
-#: src/salix-codecs-installer:316
+#: src/salix-codecs-installer-gtk:316
 msgid "Retrieving checksum signature..."
 msgstr "Získávání podpisu kontrolních součtů..."
 
-#: src/salix-codecs-installer:325
+#: src/salix-codecs-installer-gtk:325
 msgid "Verifying checksum signature..."
 msgstr "Ověřování kontrolního součtu podpisu..."
 
-#: src/salix-codecs-installer:335
+#: src/salix-codecs-installer-gtk:335
 msgid "Retrieving ChangeLog.txt..."
 msgstr "Získávání souboru změn - ChangeLog.txt..."
 
-#: src/salix-codecs-installer:432
+#: src/salix-codecs-installer-gtk:437
 msgid "Updating local package cache"
 msgstr "Aktualizace lokální balíčkovací paměti"
 
-#: src/salix-codecs-installer:504
+#: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"
 msgstr "Stahování balíčků"
 
-#: src/salix-codecs-installer:559
+#: src/salix-codecs-installer-gtk:564
 msgid "Installing packages"
 msgstr "Instalování balíčků"
 
-#: src/salix-codecs-installer:689
+#: src/salix-codecs-installer-gtk:695
 msgid "Install"
 msgstr "Nainstalovat"
 
-#: src/salix-codecs-installer:691
+#: src/salix-codecs-installer-gtk:697
 msgid "Name"
 msgstr "Název"
 
-#: src/salix-codecs-installer:693
+#: src/salix-codecs-installer-gtk:699
 msgid "Version"
 msgstr "Verze"
 
-#: src/salix-codecs-installer:695
+#: src/salix-codecs-installer-gtk:701
 msgid "Description"
 msgstr "Popis"
 
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
-msgid "Install codecs required for playing restricted formats"
-msgstr "Nainstalujte kodeky vyžadované pro přehrávání omezených formátů"
+msgid "Install multimedia codecs"
+msgstr "Instalovat multimediální kodeky"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
-msgid "Install multimedia codecs"
-msgstr "Instalovat multimediální kodeky"
+msgid "Install codecs required for playing restricted formats"
+msgstr "Nainstalujte kodeky vyžadované pro přehrávání omezených formátů"
