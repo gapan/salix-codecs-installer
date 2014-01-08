@@ -9,7 +9,7 @@ GLADEDIR ?= $(DESTDIR)$(PREFIX)/share/salix-codecs-installer
 all: mo desktop
 
 mo:
-	for i in `ls po/*.po`; do \
+	for i in `ls po/*.po`; do
 		msgfmt $$i -o `echo $$i | sed "s/\.po//"`.mo; \
 	done
 
