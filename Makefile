@@ -68,7 +68,7 @@ install-desktop:
 	install -m 644 salix-codecs-installer.desktop $(DESKTOPDIR)/
 	install -m 644 salix-codecs-installer-kde.desktop $(DESKTOPDIR)/
 
-install: install-mo install-desktop
+install: install-icons install-mo install-desktop
 	install -d -m 755 $(BINDIR)
 	install -d -m 755 $(GLADEDIR)
 	install -m 755 src/salix-codecs-installer $(BINDIR)/
