@@ -153,5 +153,5 @@ dialog --title "$( eval_gettext 'Done!' )" \
 	0 0
 retval=$?
 if [ $retval -eq 0 ]; then
-	$SPKG -d salix-codecs-instalelr
+	$SPKG -d salix-codecs-installer
 fi
