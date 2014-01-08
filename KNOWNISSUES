@@ -1,0 +1,6 @@
+* If you are using a local repository mirror and your slapt-getrc file
+  points to file:/// repositories instead of http:// or ftp://
+  repositories, salix-codecs-installer-gtk will not function properly
+  and throw an error saying that you don't have the correct permissions
+  to write to the repositories. The command line versions,
+  salix-codecs-installer will function just fine in this case anyway.
