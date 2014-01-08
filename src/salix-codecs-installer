@@ -136,7 +136,7 @@ fi
 for i in $answer; do
 	pkgs_to_install="$pkgs_to_install $i "
 done
-$SLAPTGET --install $i
+$SLAPTGET --install $pkgs_to_install
 retval=$?
 # if there's a problem somewhere, stop right there and exit with an
 # error
