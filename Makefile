@@ -49,7 +49,7 @@ clean:
 	rm -f salix-codecs-installer.desktop salix-codecs-installer-kde.desktop
 
 install-icons:
-	install -d -m 755 $(ICONSDIR)/hicolor/scalable/apps/
+	install -d -m 755 $(ICONSDIR)/scalable/apps/
 	install -m 644 icons/salix-codecs-installer.svg $(ICONSDIR)/scalable/apps/
 	for i in 32 24 22 16; do \
 		install -d -m 755 $(ICONSDIR)/$${i}x$${i}/apps/; \
