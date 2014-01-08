@@ -9,7 +9,7 @@ GLADEDIR ?= $(DESTDIR)$(PREFIX)/share/salix-codecs-installer
 all: mo desktop
 
 mo:
-	for i in `ls po/*.po`; do
+	for i in `ls po/*.po`; do \
 		msgfmt $$i -o `echo $$i | sed "s/\.po//"`.mo; \
 	done
 
@@ -51,16 +51,16 @@ clean:
 install-icons:
 	install -d -m 755 $(ICONSDIR)/hicolor/scalable/apps/
 	install -m 644 icons/salix-codecs-installer.svg $(ICONSDIR)/scalable/apps/
-	for i in 32 24 22 16; do
-		install -d -m 755 $(ICONSDIR)/$${i}x$${i}/apps/
+	for i in 32 24 22 16; do \
+		install -d -m 755 $(ICONSDIR)/$${i}x$${i}/apps/; \
 		install -m 644 icons/salix-codecs-installer-$$i.png \
-			$(ICONSDIR)/$${i}x$${i}/apps/salix-codecs-installer.png
+			$(ICONSDIR)/$${i}x$${i}/apps/salix-codecs-installer.png; \
 	done
 
 install-mo:
-	for i in `ls po/*.po|sed "s/po\/\(.*\)\.po/\1/"`; do
-		install -d -m 755 $(LOCALEDIR)/$$i/LC_MESSAGES
-		install -m 644 po/$$i.mo $(LOCALEDIR)/$$i/LC_MESSAGES/salix-codecs-installer.mo
+	for i in `ls po/*.po|sed "s/po\/\(.*\)\.po/\1/"`; do \
+		install -d -m 755 $(LOCALEDIR)/$$i/LC_MESSAGES; \
+		install -m 644 po/$$i.mo $(LOCALEDIR)/$$i/LC_MESSAGES/salix-codecs-installer.mo; \
 	done
 
 install-desktop:
