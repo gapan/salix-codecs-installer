@@ -154,7 +154,8 @@ class SalixCodecsInstaller:
         else:
             return False
 
-    def write_package_data_file(self, pkgtxt_file, mirror, priority, checksums_list):
+    def write_package_data_file(self, pkgtxt_file, mirror, priority,
+                                checksums_list):
         working_dir = self.working_dir
         f = open(working_dir + '/package_data', 'a')
         has_mirror_line = False
@@ -248,8 +249,9 @@ class SalixCodecsInstaller:
         sources = self.get_sources()
         working_dir = self.working_dir
         allrepos = []
-        # There are 6 different files to (try to) download for every repo + one final step
-        # for reading the package lists into the package_data file
+        # There are 6 different files to (try to) download for every
+        # repo + one final step for reading the package lists into the
+        # package_data file
         steps = len(sources) * 6.0 + 1
         step = 0
 
@@ -363,7 +365,11 @@ class SalixCodecsInstaller:
         pkgs = []
         for line in output.split('\n'):
             if line.startswith('Package'):
-                for i in line.rpartition('Package Required:')[2].rpartition('Package Suggests:')[2].lstrip(' ').rstrip(' ').replace(' ', ',').replace('|', ' ').split(','):
+                for i in line.rpartition('Package Required:')[2]\
+                                        .rpartition('Package Suggests:')[2]\
+                                        .lstrip(' ').rstrip(' ')\
+                                        .replace(' ', ',')\
+                                        .replace('|', ' ').split(','):
                     if i is not '':
                         pkgs.append(i)
         return pkgs
@@ -434,9 +440,10 @@ class SalixCodecsInstaller:
                     description = line.partition(
                         pkgname + ': ')[2].rstrip('\n')
                     description_found = True
-            if pkgname_match and location_found and md5sum_found and description_found:
-                detailed_list.append(
-                    [pkgname, pkgver, pkgfilename, uri, location, md5sum, description])
+            if pkgname_match and location_found and md5sum_found and \
+                    description_found:
+                detailed_list.append([pkgname, pkgver, pkgfilename, uri,
+                                      location, md5sum, description])
                 pkgname = ''
                 pkgver = ''
                 pkgname_match = False
@@ -472,10 +479,12 @@ class SalixCodecsInstaller:
                 self.dialog_pkglist.show()
                 gtk.gdk.threads_leave()
                 for i in to_be_installed:
-                    # Passing checkbox state (True), changed state (False), pkgname, pkgver, pkgfilename,
+                    # Passing checkbox state (True), changed state (False),
+                    # pkgname, pkgver, pkgfilename,
                     # uri, location, md5sum, descrption
                     self.liststore_pkglist.append(
-                        [True, False, i[0], i[1], i[2], i[3], i[4], i[5], i[6]])
+                        [True, False,
+                         i[0], i[1], i[2], i[3], i[4], i[5], i[6]])
         except KeyboardInterrupt:
             self.dialog_update.hide()
         except IOError:
@@ -677,8 +686,7 @@ class SalixCodecsInstaller:
         if os.path.exists('salix-codecs-installer.glade'):
             builder.add_from_file('salix-codecs-installer.glade')
         elif os.path.exists('/usr/share/salix-codecs-installer/salix-codecs-installer.glade'):
-            builder.add_from_file(
-                '/usr/share/salix-codecs-installer/salix-codecs-installer.glade')
+            builder.add_from_file('/usr/share/salix-codecs-installer/salix-codecs-installer.glade')
         self.window = builder.get_object('salix-codecs-installer')
 
         #
