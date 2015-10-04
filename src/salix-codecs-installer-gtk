@@ -172,7 +172,7 @@ class SalixCodecsInstaller:
                     is_extra = True
                 f.write(line)
             elif line.startswith('PACKAGE LOCATION'):
-                if has_mirror_line is not True:
+                if not has_mirror_line:
                     f.write('PACKAGE MIRROR:  ' + mirror + '\n')
                 f.write('PACKAGE PRIORITY:  ' + str(priority) + '\n')
                 if is_extra:
@@ -287,7 +287,7 @@ class SalixCodecsInstaller:
                 elif self.url_exists(repo_url + 'patches/PACKAGES.TXT'):
                     url = repo_url + 'patches/PACKAGES.TXT'
                     patches = True
-                if patches == True:
+                if patches:
                     self.label_repo_desc.set_text(
                         _('Retrieving patch list...'))
                     self.download_repofile(working_dir, url)
@@ -323,7 +323,7 @@ class SalixCodecsInstaller:
                 elif self.url_exists(repo_url + 'CHECKSUMS.md5.asc'):
                     url = repo_url + 'CHECKSUMS.md5.asc'
                     checksumsig = True
-                if checksumsig == True:
+                if checksumsig:
                     self.label_repo_desc.set_text(
                         _('Retrieving checksum signature...'))
                     self.download_repofile(working_dir, url)
@@ -332,7 +332,7 @@ class SalixCodecsInstaller:
                 self.progressbar_repo_total.set_fraction(step / steps)
             if not canceltask:
                 # Verify checksum
-                if checksumsig == True:
+                if checksumsig:
                     checksum = self.__mangled_url(url.rpartition('.asc')[0])
                     self.label_repo_desc.set_text(
                         _('Verifying checksum signature...'))
@@ -434,7 +434,7 @@ class SalixCodecsInstaller:
                     description = line.partition(
                         pkgname + ': ')[2].rstrip('\n')
                     description_found = True
-            if (pkgname_match is True) and (location_found is True) and (md5sum_found is True) and (description_found is True):
+            if pkgname_match and location_found and md5sum_found and description_found:
                 detailed_list.append(
                     [pkgname, pkgver, pkgfilename, uri, location, md5sum, description])
                 pkgname = ''
