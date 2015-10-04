@@ -14,9 +14,6 @@ import urlgrabber
 import urlgrabber.progress as urlp
 from simpleconfig import SimpleConfig
 
-# Initializing the gtk's thread engine
-gtk.gdk.threads_init()
-
 # Internationalization
 import locale
 import gettext
@@ -25,6 +22,9 @@ locale.bindtextdomain("salix-codecs-installer", "/usr/share/locale")
 gettext.bindtextdomain("salix-codecs-installer", "/usr/share/locale")
 gettext.textdomain("salix-codecs-installer")
 _ = gettext.gettext
+
+# Initializing the gtk's thread engine
+gtk.gdk.threads_init()
 
 spkg = '/sbin/spkg'
 
