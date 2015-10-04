@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# 13K <trzynastak@o2.pl>, 2013
+# Emanuel Borówko <trzynastak@o2.pl>, 2013
 # gapan <vlahavas@gmail.com>, 2011
+# lukkon <lukap93@yahoo.pl>, 2014
 # ink3 <sgasior1@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 00:39+0200\n"
-"PO-Revision-Date: 2013-12-04 21:50+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
-"Language-Team: Polish (http://www.transifex.com/projects/p/salix/language/pl/)\n"
+"PO-Revision-Date: 2015-08-11 11:25+0000\n"
+"Last-Translator: lukkon <lukap93@yahoo.pl>\n"
+"Language-Team: Polish (http://www.transifex.com/gapan/salix/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -86,7 +87,7 @@ msgstr "Wszystkie paczki kodeków zostały zainstalowane."
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr ""
+msgstr "Wygląda na to że nie masz uprawnień by zapisywać w plikach repozytorium"
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
@@ -98,7 +99,7 @@ msgstr ""
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr ""
+msgstr "Błąd weryfikacji sumy kontrolnej pakietu. Prawdopodobnie jest to spowodowane błędem podczas pobieranie. Proszę sprawdzić połączenie internetowe."
 
 #: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
 #, sh-format
@@ -134,7 +135,7 @@ msgstr "Pobieranie listy sum kontrolnych..."
 
 #: src/salix-codecs-installer-gtk:316
 msgid "Retrieving checksum signature..."
-msgstr ""
+msgstr "Pobieranie sumy kontrolnej podpisu"
 
 #: src/salix-codecs-installer-gtk:325
 msgid "Verifying checksum signature..."
@@ -142,11 +143,11 @@ msgstr "Pobieranie listy sum kontrolnych..."
 
 #: src/salix-codecs-installer-gtk:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr ""
+msgstr "Pobieranie ChangeLog.txt..."
 
 #: src/salix-codecs-installer-gtk:437
 msgid "Updating local package cache"
-msgstr ""
+msgstr "Aktualizowanie lokalnej pamięci podręcznej pakietów"
 
 #: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"

@@ -4,14 +4,15 @@
 # 
 # Translators:
 # gapan <vlahavas@gmail.com>, 2011
+# tsuren <hydrangea_and_snail@hotmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 00:39+0200\n"
-"PO-Revision-Date: 2013-11-19 16:35+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/salix/language/ja/)\n"
+"PO-Revision-Date: 2015-08-19 09:20+0000\n"
+"Last-Translator: tsuren <hydrangea_and_snail@hotmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/gapan/salix/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,11 +34,11 @@ msgid ""
 "Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
 "Click Next to update the package cache and receive a list of packages about to be installed."
-msgstr ""
+msgstr "いくつかのムルチメディア・コデックは、パテントからくる規制の関係でSalixにデフォですべてインストールされていません。\nフリーなコデックをつかってエンコードされたファイルは、再生することができますが、市販のDVD、mp3ファイルなどは、これらのコデック無しでは再生することはできません。\nこれらのコデックをインストールする前に、あなたの国では、使用しても法律上問題がないかどうかチェックしてください。\nこれらの追加コデックをインストールしますか。"
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr ""
+msgstr "進行状況"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
@@ -50,12 +51,12 @@ msgid ""
 "There was an error connecting to one of the repositories. Make sure you have"
 " a working internet connection and the right sources specified in /etc"
 "/slapt-get/slapt-getrc."
-msgstr ""
+msgstr "指定されているレポジトリーにコネクトすることができません。インターネットへの接続かされているか、そしてgslapt、又は、/etc/slapt-get/slapt-getrc にリストされているレポジトリーのリストに間違いがないか確認してください。"
 
 #: src/salix-codecs-installer.glade:258 src/salix-codecs-installer:121
 #, sh-format
 msgid "List of packages to install"
-msgstr ""
+msgstr "インストールするパッケージのリスト"
 
 #: src/salix-codecs-installer.glade:292 src/salix-codecs-installer:120
 #, sh-format
@@ -63,40 +64,40 @@ msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr ""
+msgstr "これから選択されたパッケージをインストールします。あなたの国で使用しても法律上問題がないかどうか確認した後に、問題が無い時のみインストールを選択してください。"
 
 #: src/salix-codecs-installer.glade:440
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr ""
+msgstr "パッケージのインストール中にエラーが発生しました。 ハードドライブに十分な空き領域があること、そして書き込み権限でマウントされていることを確認してから、もう一度お試しください。"
 
 #: src/salix-codecs-installer.glade:464 src/salix-codecs-installer:97
 #, sh-format
 msgid "Nothing to install"
-msgstr ""
+msgstr "インストールするパッケージがありません。"
 
 #: src/salix-codecs-installer.glade:469 src/salix-codecs-installer:96
 #, sh-format
 msgid "All codec packages are already installed."
-msgstr ""
+msgstr "コデック用のパッケージは、すべて既にインストールされています。"
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr ""
+msgstr "あなたのアクセスレベルでは、リポジトリファイルに書き込む権限を持っていないようです。"
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr ""
+msgstr "リポジトリのチェックサムを検証中エラーが発生しました。危険なリポジトリを使用している可能性があります。 、あなたのパッケージのソースを確認してください。"
 
 #: src/salix-codecs-installer.glade:582
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr ""
+msgstr "パッケージのチェックサム検証中にエラーが発生しました。破損したファイルのダウンロードが原因の可能性があります。 インターネット接続を確認してください。"
 
 #: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
 #, sh-format
@@ -108,51 +109,51 @@ msgstr "終了"
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
-msgstr ""
+msgstr "コデックのインストールが終了しました。コデック・インストーラーをシステムからアンインストールしますか。"
 
 #: src/salix-codecs-installer-gtk:50
 msgid "Download rate:"
-msgstr ""
+msgstr "ダウンロードスピード："
 
 #: src/salix-codecs-installer-gtk:234
 msgid "Reading package lists..."
-msgstr ""
+msgstr "パッケージのリストを読み出し中です。"
 
 #: src/salix-codecs-installer-gtk:263
 msgid "Retrieving package data..."
-msgstr ""
+msgstr "パッケージの情報を読み出し中です。"
 
 #: src/salix-codecs-installer-gtk:281
 msgid "Retrieving patch list..."
-msgstr ""
+msgstr "パッチのリストを読み出し中です。"
 
 #: src/salix-codecs-installer-gtk:299
 msgid "Retrieving checksum list..."
-msgstr ""
+msgstr "チェックサムリストを読み出し中です。"
 
 #: src/salix-codecs-installer-gtk:316
 msgid "Retrieving checksum signature..."
-msgstr ""
+msgstr "チェックサム署名を読み出し中です。"
 
 #: src/salix-codecs-installer-gtk:325
 msgid "Verifying checksum signature..."
-msgstr ""
+msgstr "チェックサム署名を検証しています。"
 
 #: src/salix-codecs-installer-gtk:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr ""
+msgstr "ChangeLog.txtを読み出し中です。"
 
 #: src/salix-codecs-installer-gtk:437
 msgid "Updating local package cache"
-msgstr ""
+msgstr "ローカル·キャッシュを更新中"
 
 #: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"
-msgstr ""
+msgstr "パッケージをダウンロードしています。"
 
 #: src/salix-codecs-installer-gtk:564
 msgid "Installing packages"
-msgstr ""
+msgstr "パッケージをインストールしています。"
 
 #: src/salix-codecs-installer-gtk:695
 msgid "Install"
