@@ -26,7 +26,7 @@ pot:
 	xgettext --from-code=utf-8 \
 		-L Glade \
 		-o po/salix-codecs-installer.pot \
-		src/salix-codecs-installer.glade
+		src/salix-codecs-installer.ui
 	xgettext --from-code=utf-8 \
 		-j \
 		-L Python \
@@ -73,6 +73,6 @@ install: install-icons install-mo install-desktop
 	install -d -m 755 $(GLADEDIR)
 	install -m 755 src/salix-codecs-installer $(BINDIR)/
 	install -m 755 src/salix-codecs-installer-gtk $(BINDIR)/
-	install -m 644 src/salix-codecs-installer.glade $(GLADEDIR)/
+	install -m 644 src/salix-codecs-installer.ui $(GLADEDIR)/
 	
 .PHONY: all mo desktop updatepo pot clean install-icons install-mo install-desktop install

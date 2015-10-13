@@ -683,10 +683,10 @@ class SalixCodecsInstaller:
     def __init__(self):
         builder = gtk.Builder()
         builder.set_translation_domain("salix-codecs-installer")
-        if os.path.exists('salix-codecs-installer.glade'):
-            builder.add_from_file('salix-codecs-installer.glade')
-        elif os.path.exists('/usr/share/salix-codecs-installer/salix-codecs-installer.glade'):
-            builder.add_from_file('/usr/share/salix-codecs-installer/salix-codecs-installer.glade')
+        if os.path.exists('salix-codecs-installer.ui'):
+            builder.add_from_file('salix-codecs-installer.ui')
+        elif os.path.exists('/usr/share/salix-codecs-installer/salix-codecs-installer.ui'):
+            builder.add_from_file('/usr/share/salix-codecs-installer/salix-codecs-installer.ui')
         self.window = builder.get_object('salix-codecs-installer')
 
         #
