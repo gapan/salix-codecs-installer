@@ -15,7 +15,10 @@ SPKG="/sbin/spkg"
 
 # The following packages + their dependencies + their suggested packages
 # will be installed
-CODEC_PKGS="gstreamer gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly gst-python gst-ffmpeg gstreamer1 gst-plugins-base1 gst-plugins-good1 gst-plugins-bad1 gst-plugins-ugly1 gst-libav libdvdcss flash-plugin"
+CODEC_PKGS="gstreamer gst-plugins-base gst-plugins-good \
+gst-plugins-bad gst-plugins-ugly gst-python gst0-python \
+gst-ffmpeg gstreamer0 gst-plugins-base0 gst-plugins-good0 \
+gst-plugins-bad0 gst-plugins-ugly0 gst-libav libdvdcss flash-plugin"
 
 #
 # First ask if you really want to do this.
