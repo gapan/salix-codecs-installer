@@ -85,3 +85,30 @@ install: install-icons install-mo install-desktop
 	install -m 755 src/salix-codecs-installer-gtk $(BINDIR)/
 	install -m 644 src/salix-codecs-installer.ui $(GLADEDIR)/
 	
+.PHONY: tx-pull
+tx-pull:
+	tx pull -a
+	@for i in `ls po/*.po`; do \
+		msgfmt --statistics $$i 2>&1 | grep "^0 translated" > /dev/null \
+			&& rm $$i || true; \
+	done
+	@rm -f messages.mo
+
+.PHONY: tx-pull-f
+tx-pull-f:
+	tx pull -a -f
+	@for i in `ls po/*.po`; do \
+		msgfmt --statistics $$i 2>&1 | grep "^0 translated" > /dev/null \
+			&& rm $$i || true; \
+	done
+	@rm -f messages.mo
+
+.PHONY: stat
+stat:
+	@for i in `ls po/*.po`; do \
+		echo "Statistics for $$i:"; \
+		msgfmt --statistics $$i 2>&1; \
+		echo; \
+	done
+	@rm -f messages.mo
+
