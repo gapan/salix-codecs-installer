@@ -6,22 +6,27 @@ ICONSDIR ?= $(DESTDIR)$(PREFIX)/share/icons/hicolor
 DESKTOPDIR ?= $(DESTDIR)$(PREFIX)/share/applications
 GLADEDIR ?= $(DESTDIR)$(PREFIX)/share/salix-codecs-installer
 
+.PHONY: all
 all: mo desktop
 
+.PHONY: mo
 mo:
 	for i in `ls po/*.po`; do \
 		msgfmt $$i -o `echo $$i | sed "s/\.po//"`.mo; \
 	done
 
+.PHONY: desktop
 desktop:
 	intltool-merge po/ -d -u salix-codecs-installer.desktop.in salix-codecs-installer.desktop
 	intltool-merge po/ -d -u salix-codecs-installer-kde.desktop.in salix-codecs-installer-kde.desktop
 
+.PHONY: updatepo
 updatepo:
 	for i in `ls po/*.po`; do \
 		msgmerge -UNs $$i po/salix-codecs-installer.pot; \
 	done
 
+.PHONY: pot
 pot:
 	xgettext --from-code=utf-8 \
 		-L Glade \
@@ -43,11 +48,13 @@ pot:
 	xgettext --from-code=utf-8 -j -L C -kN_ -o po/salix-codecs-installer.pot salix-codecs-installer-kde.desktop.in.h
 	rm -f salix-codecs-installer.desktop.in.h salix-codecs-installer-kde.desktop.in.h
 
+.PHONY: clean
 clean:
 	rm -f po/*.mo
 	rm -f po/*.po~
 	rm -f salix-codecs-installer.desktop salix-codecs-installer-kde.desktop
 
+.PHONY: install-icons
 install-icons:
 	install -d -m 755 $(ICONSDIR)/scalable/apps/
 	install -m 644 icons/salix-codecs-installer.svg $(ICONSDIR)/scalable/apps/
@@ -57,17 +64,20 @@ install-icons:
 			$(ICONSDIR)/$${i}x$${i}/apps/salix-codecs-installer.png; \
 	done
 
+.PHONY: install-mo
 install-mo:
 	for i in `ls po/*.po|sed "s/po\/\(.*\)\.po/\1/"`; do \
 		install -d -m 755 $(LOCALEDIR)/$$i/LC_MESSAGES; \
 		install -m 644 po/$$i.mo $(LOCALEDIR)/$$i/LC_MESSAGES/salix-codecs-installer.mo; \
 	done
 
+.PHONY: install-desktop
 install-desktop:
 	install -d m 755 $(DESKTOPDIR)
 	install -m 644 salix-codecs-installer.desktop $(DESKTOPDIR)/
 	install -m 644 salix-codecs-installer-kde.desktop $(DESKTOPDIR)/
 
+.PHONY: install
 install: install-icons install-mo install-desktop
 	install -d -m 755 $(BINDIR)
 	install -d -m 755 $(GLADEDIR)
@@ -75,4 +85,3 @@ install: install-icons install-mo install-desktop
 	install -m 755 src/salix-codecs-installer-gtk $(BINDIR)/
 	install -m 644 src/salix-codecs-installer.ui $(GLADEDIR)/
 	
-.PHONY: all mo desktop updatepo pot clean install-icons install-mo install-desktop install
