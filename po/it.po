@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Antonio Sardei <laplume@libero.it>, 2012
 # gapan <vlahavas@gmail.com>, 2011
 # Antonio Sardei <laplume@libero.it>, 2012
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 00:39+0200\n"
-"PO-Revision-Date: 2015-08-11 11:25+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
+"PO-Revision-Date: 2016-06-09 20:23+0000\n"
+"Last-Translator: Antonio Sardei <laplume@libero.it>\n"
 "Language-Team: Italian (http://www.transifex.com/gapan/salix/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +35,7 @@ msgid ""
 "Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
 "Click Next to update the package cache and receive a list of packages about to be installed."
-msgstr "Alcuni codec multimediali sono gravati da brevetti e pongono problemi di distribuzione in alcuni paesi. Perciò, il supporto per tutti i codec non è incluso di default in Salix.\n\nSarà possibile riprodurre i file codificati con codec liberi, però non potrete riprodurre  DVD commerciali o file mp3 senza questi codec.\n\nA questo propostito controllate la legislazione del vostro paese ed installate tali codec soltanto se potete farlo legalmente.\n\nCliccate su Next per aggiornare la cache dei pacchetti ed ottenere la lista di quelli che saranno installati."
+msgstr "Alcuni codec multimediali sono gravati da brevetti e pongono problemi di distribuzione in alcuni paesi. Perciò, il supporto per tutti i codec non è incluso di default in Salix.\n\nSarà possibile riprodurre i file codificati con codec liberi, però non potrai riprodurre  DVD commerciali o file mp3 senza questi codec.\n\nA tal propostito controlla la legislazione del tuo paese ed installa questi codec soltanto se puoi farlo legalmente.\n\nClicca su Next per aggiornare la cache dei pacchetti ed ottenere la lista di quelli che saranno installati."
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
@@ -51,7 +52,7 @@ msgid ""
 "There was an error connecting to one of the repositories. Make sure you have"
 " a working internet connection and the right sources specified in /etc"
 "/slapt-get/slapt-getrc."
-msgstr "Si è verificato un errore durante la connessione ad uno dei repository. Verificate che la connessione internet sia attiva e che la fonti corrette siano inserite in /etc/slapt-get/slapt-getrc."
+msgstr "Si è verificato un errore durante la connessione ad uno dei repository. Verifica che la connessione internet sia attiva e che la fonti corrette siano inserite in /etc/slapt-get/slapt-getrc."
 
 #: src/salix-codecs-installer.glade:258 src/salix-codecs-installer:121
 #, sh-format
@@ -64,14 +65,14 @@ msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr "Questi sono i pacchetti che stanno per essere installati. Per favore verificate la legislazione del vostro paese e scegliete di installare solo quelli consentiti."
+msgstr "Questi sono i pacchetti che stanno per essere installati. Per favore verifica la legislazione del tuo paese e scegli di installare solo quelli consentiti."
 
 #: src/salix-codecs-installer.glade:440
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr "Si è verificato un errore durante l'installazione di uno dei pacchetti. Per favore verificate che ci sia spazio sufficiente sul disco fisso e che questo sia montato con i permessi di scrittura; poi riprovate."
+msgstr "Si è verificato un errore durante l'installazione di uno dei pacchetti. Per favore verifica che ci sia spazio sufficiente sul disco fisso e che questo sia montato con i permessi di scrittura; poi riprova."
 
 #: src/salix-codecs-installer.glade:464 src/salix-codecs-installer:97
 #, sh-format
@@ -85,19 +86,19 @@ msgstr "Tutti i pacchetti dei codec sono già installati"
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr "Sembra che non abbiate i permessi per scrivere sui file dei repository."
+msgstr "Sembra che tu non abbia i permessi per scrivere i file dei repository."
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr "Errore nella verifica delle somme dei repository. Porabilmente state usando un repository compromesso. Per favore controllare le fonti dei pacchetti."
+msgstr "Errore nella verifica delle somme dei repository. Probabilmente stai usando un repository compromesso. Per favore controlla le fonti dei pacchetti."
 
 #: src/salix-codecs-installer.glade:582
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr "Errore nella verifica delle somme del pacchetto. Ciò è dovuto probabilmente ad uno scaricamento non corretto. Controllate la connessione internet."
+msgstr "Errore nella verifica delle somme del pacchetto. Ciò è dovuto probabilmente ad uno scaricamento non corretto. Verifica la connessione internet."
 
 #: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
 #, sh-format
@@ -109,7 +110,7 @@ msgstr "Fatto!"
 msgid ""
 "Codecs installation was succesfully completed. Would you like to remove the "
 "codecs installer from your system?"
-msgstr "L'installazione dei codec è stata completata con successo. Desiderate rimuovere l'installatore dei codec dal sistema?"
+msgstr "L'installazione dei codec è stata completata con successo. Desideri rimuovere l'installatore dei codec dal sistema?"
 
 #: src/salix-codecs-installer-gtk:50
 msgid "Download rate:"
@@ -149,7 +150,7 @@ msgstr "Cache dei pacchetti locali in aggiornamento"
 
 #: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"
-msgstr "Pacchetti in scarimento"
+msgstr "Pacchetti in scaricamento"
 
 #: src/salix-codecs-installer-gtk:564
 msgid "Installing packages"
