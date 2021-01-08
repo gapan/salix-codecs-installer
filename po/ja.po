@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# ふうせん Fu-sen. | BALLOON a.k.a. Fu-sen., 2016
 # gapan <vlahavas@gmail.com>, 2011
 # tsuren <hydrangea_and_snail@hotmail.com>, 2015
 msgid ""
@@ -10,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 00:39+0200\n"
-"PO-Revision-Date: 2015-08-19 09:20+0000\n"
-"Last-Translator: tsuren <hydrangea_and_snail@hotmail.com>\n"
+"PO-Revision-Date: 2017-09-19 09:12+0000\n"
+"Last-Translator: ふうせん Fu-sen. | BALLOON a.k.a. Fu-sen.\n"
 "Language-Team: Japanese (http://www.transifex.com/gapan/salix/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr ""
 #: src/salix-codecs-installer.glade:7 src/salix-codecs-installer:33
 #, sh-format
 msgid "Install multimedia codecs?"
-msgstr "ムルチメディアのコデックをインストールしますか"
+msgstr "マルチメディアコーデックをインストールしますか？"
 
 #: src/salix-codecs-installer.glade:38 src/salix-codecs-installer:26
 #, sh-format
@@ -34,11 +35,11 @@ msgid ""
 "Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
 "Click Next to update the package cache and receive a list of packages about to be installed."
-msgstr "いくつかのムルチメディア・コデックは、パテントからくる規制の関係でSalixにデフォですべてインストールされていません。\nフリーなコデックをつかってエンコードされたファイルは、再生することができますが、市販のDVD、mp3ファイルなどは、これらのコデック無しでは再生することはできません。\nこれらのコデックをインストールする前に、あなたの国では、使用しても法律上問題がないかどうかチェックしてください。\nこれらの追加コデックをインストールしますか。"
+msgstr "いくつかのマルチメディアコーデックは、特定の国では特許の妨げになり、配信に問題があります。 したがって、すべてのコーデックサポートはSalixではデフォルトで含まれていません。\n\n無料のコーデックでエンコードされたファイルを再生することはできますが、市販の DVD を再生したり、これらのコーデックなしで mp3 ファイルを聴くことはできません。\n\n国の法律を確認し、合法的な場合にのみコーデックをインストールするように選択してください。\n\n次へ をクリックして、パッケージキャッシュを更新し、インストールするパッケージのリストを受け取ります。"
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr "進行状況"
+msgstr "全体の進行"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
@@ -51,12 +52,12 @@ msgid ""
 "There was an error connecting to one of the repositories. Make sure you have"
 " a working internet connection and the right sources specified in /etc"
 "/slapt-get/slapt-getrc."
-msgstr "指定されているレポジトリーにコネクトすることができません。インターネットへの接続かされているか、そしてgslapt、又は、/etc/slapt-get/slapt-getrc にリストされているレポジトリーのリストに間違いがないか確認してください。"
+msgstr "いずれかのリポジトリに接続する際エラーが発生しました。 インターネット接続が正常に動作していること、/etc/slapt-get/slapt-getrc に指定されている正しいソースがあることを確認してください。"
 
 #: src/salix-codecs-installer.glade:258 src/salix-codecs-installer:121
 #, sh-format
 msgid "List of packages to install"
-msgstr "インストールするパッケージのリスト"
+msgstr "インストールパッケージのリスト"
 
 #: src/salix-codecs-installer.glade:292 src/salix-codecs-installer:120
 #, sh-format
@@ -64,45 +65,45 @@ msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr "これから選択されたパッケージをインストールします。あなたの国で使用しても法律上問題がないかどうか確認した後に、問題が無い時のみインストールを選択してください。"
+msgstr "これらはインストールしようとしているパッケージです。 国の法律を確認し、許可されているものだけをインストールするように選択してください。"
 
 #: src/salix-codecs-installer.glade:440
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr "パッケージのインストール中にエラーが発生しました。 ハードドライブに十分な空き領域があること、そして書き込み権限でマウントされていることを確認してから、もう一度お試しください。"
+msgstr "パッケージをインストールする際にエラーが発生しました。 ハードドライブに十分な空き容量があり、書き込み権限でマウントされていることを確認してから、もう一度お試しください。"
 
 #: src/salix-codecs-installer.glade:464 src/salix-codecs-installer:97
 #, sh-format
 msgid "Nothing to install"
-msgstr "インストールするパッケージがありません。"
+msgstr "インストールするものはありません"
 
 #: src/salix-codecs-installer.glade:469 src/salix-codecs-installer:96
 #, sh-format
 msgid "All codec packages are already installed."
-msgstr "コデック用のパッケージは、すべて既にインストールされています。"
+msgstr "すべてのコーデックパッケージは既にインストールされています。"
 
 #: src/salix-codecs-installer.glade:518
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr "あなたのアクセスレベルでは、リポジトリファイルに書き込む権限を持っていないようです。"
+msgstr "リポジトリファイルを書き込む権限がないようです。"
 
 #: src/salix-codecs-installer.glade:550
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr "リポジトリのチェックサムを検証中エラーが発生しました。危険なリポジトリを使用している可能性があります。 、あなたのパッケージのソースを確認してください。"
+msgstr "リポジトリのチェックサム検証中にエラーが発生しました。 壊れたリポジトリを使用している可能性があります。 あなたのパッケージソースを確認してください。"
 
 #: src/salix-codecs-installer.glade:582
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr "パッケージのチェックサム検証中にエラーが発生しました。破損したファイルのダウンロードが原因の可能性があります。 インターネット接続を確認してください。"
+msgstr "パッケージのチェックサム検証中にエラーが発生しました。 これは恐らくダウンロードの状態が悪いためです。 インターネット接続を確認してください。"
 
 #: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
 #, sh-format
 msgid "Done!"
-msgstr "終了"
+msgstr "完了しました！"
 
 #: src/salix-codecs-installer.glade:613 src/salix-codecs-installer:150
 #, sh-format
@@ -113,47 +114,47 @@ msgstr "コデックのインストールが終了しました。コデック・
 
 #: src/salix-codecs-installer-gtk:50
 msgid "Download rate:"
-msgstr "ダウンロードスピード："
+msgstr "ダウンロード速度:"
 
 #: src/salix-codecs-installer-gtk:234
 msgid "Reading package lists..."
-msgstr "パッケージのリストを読み出し中です。"
+msgstr "パッケージのリストを読み込み中..."
 
 #: src/salix-codecs-installer-gtk:263
 msgid "Retrieving package data..."
-msgstr "パッケージの情報を読み出し中です。"
+msgstr "パッケージ情報を受信中..."
 
 #: src/salix-codecs-installer-gtk:281
 msgid "Retrieving patch list..."
-msgstr "パッチのリストを読み出し中です。"
+msgstr "パッチリストを受信中..."
 
 #: src/salix-codecs-installer-gtk:299
 msgid "Retrieving checksum list..."
-msgstr "チェックサムリストを読み出し中です。"
+msgstr "チェックサムリストを受信中..."
 
 #: src/salix-codecs-installer-gtk:316
 msgid "Retrieving checksum signature..."
-msgstr "チェックサム署名を読み出し中です。"
+msgstr "チェックサム署名を受信中..."
 
 #: src/salix-codecs-installer-gtk:325
 msgid "Verifying checksum signature..."
-msgstr "チェックサム署名を検証しています。"
+msgstr "チェックサム署名を検証中..."
 
 #: src/salix-codecs-installer-gtk:335
 msgid "Retrieving ChangeLog.txt..."
-msgstr "ChangeLog.txtを読み出し中です。"
+msgstr "ChangeLog.txt を受信中..."
 
 #: src/salix-codecs-installer-gtk:437
 msgid "Updating local package cache"
-msgstr "ローカル·キャッシュを更新中"
+msgstr "ローカルパッケージキャッシュを更新中"
 
 #: src/salix-codecs-installer-gtk:509
 msgid "Downloading packages"
-msgstr "パッケージをダウンロードしています。"
+msgstr "パッケージをダウンロード中"
 
 #: src/salix-codecs-installer-gtk:564
 msgid "Installing packages"
-msgstr "パッケージをインストールしています。"
+msgstr "パッケージをインストール中"
 
 #: src/salix-codecs-installer-gtk:695
 msgid "Install"
@@ -161,7 +162,7 @@ msgstr "インストール"
 
 #: src/salix-codecs-installer-gtk:697
 msgid "Name"
-msgstr "名"
+msgstr "名前"
 
 #: src/salix-codecs-installer-gtk:699
 msgid "Version"
@@ -174,9 +175,9 @@ msgstr "概要"
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install multimedia codecs"
-msgstr "マルチメディア・コデックをインストールする"
+msgstr "マルチメディアコーデックのインストール"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install codecs required for playing restricted formats"
-msgstr "規制されたフォーマットを再生するためのコデックをインストールする。"
+msgstr "制限付きフォーマットの再生に必要なコーデックをインストールする"

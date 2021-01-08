@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Garratrans112 <inactive+Garratrans112@transifex.com>, 2013
-# Garratrans112 <inactive+Garratrans112@transifex.com>, 2011, 2012
+# fb838fb90678363d4ec2dd7b668cfac6_65891b7 <4d8ae0baddab3f20efb01cabef66bdda_8048>, 2013
+# fb838fb90678363d4ec2dd7b668cfac6_65891b7 <4d8ae0baddab3f20efb01cabef66bdda_8048>, 2011, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 00:39+0200\n"
-"PO-Revision-Date: 2015-08-11 11:25+0000\n"
-"Last-Translator: Garratrans112 <inactive+Garratrans112@transifex.com>\n"
+"PO-Revision-Date: 2017-09-19 10:26+0000\n"
+"Last-Translator: fb838fb90678363d4ec2dd7b668cfac6_65891b7 <4d8ae0baddab3f20efb01cabef66bdda_8048>\n"
 "Language-Team: Gaelic, Scottish (http://www.transifex.com/gapan/salix/language/gd/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

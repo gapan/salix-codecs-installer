@@ -5,14 +5,15 @@
 # Translators:
 # eren <erenlinux@gmail.com>, 2011
 # İsmail DEMİRAL <ismaildemiral@gmail.com>, 2012
+# Onur ÖZDEMİR, 2016
 # Rıza Aksoy <aksoy.rza@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-01-08 00:39+0200\n"
-"PO-Revision-Date: 2015-08-11 11:25+0000\n"
-"Last-Translator: Dimitris Glezos <glezos@transifex.com>\n"
+"PO-Revision-Date: 2017-09-19 10:32+0000\n"
+"Last-Translator: Onur ÖZDEMİR\n"
 "Language-Team: Turkish (http://www.transifex.com/gapan/salix/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -39,7 +40,7 @@ msgstr "Some multimedia codecs are patent encumbered and pose distribution probl
 
 #: src/salix-codecs-installer.glade:125
 msgid "Total progress"
-msgstr "İlerleme"
+msgstr "Toplam ilerleme"
 
 #: src/salix-codecs-installer.glade:202 src/salix-codecs-installer.glade:432
 #: src/salix-codecs-installer.glade:510 src/salix-codecs-installer.glade:542
@@ -103,7 +104,7 @@ msgstr "Paket checksum bilgilerin kontrol edilirken hata oluştu. Bu muhtemelen 
 #: src/salix-codecs-installer.glade:606 src/salix-codecs-installer:151
 #, sh-format
 msgid "Done!"
-msgstr "Kabul!"
+msgstr "Bitti!"
 
 #: src/salix-codecs-installer.glade:613 src/salix-codecs-installer:150
 #, sh-format
@@ -175,7 +176,7 @@ msgstr "Açıklama"
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install multimedia codecs"
-msgstr "Multimedya codec'leri yükle"
+msgstr "Multimedya kodeklerini yükle"
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
