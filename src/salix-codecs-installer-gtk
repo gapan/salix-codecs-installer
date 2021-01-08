@@ -1,18 +1,22 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # vim:et:sta:sts=4:sw=4:ts=8:tw=79:
 
-import gtk
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+from gi.repository import GLib
 import os
 import sys
 import subprocess
 import errno
+import chardet
 import hashlib
 import threading
 import gzip
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import urlgrabber
 import urlgrabber.progress as urlp
-from simpleconfig import SimpleConfig
+from textconfig import TextConfig
 
 # Internationalization
 import locale
@@ -22,9 +26,6 @@ locale.bindtextdomain("salix-codecs-installer", "/usr/share/locale")
 gettext.bindtextdomain("salix-codecs-installer", "/usr/share/locale")
 gettext.textdomain("salix-codecs-installer")
 _ = gettext.gettext
-
-# Initializing the gtk's thread engine
-gtk.gdk.threads_init()
 
 spkg = '/sbin/spkg'
 
@@ -56,12 +57,12 @@ class DownloadMeter(urlp.BaseMeter):
 
 
 class SalixCodecsInstaller:
-    c = SimpleConfig('/etc/slapt-get/slapt-getrc')
+    c = TextConfig('/etc/slapt-get/slapt-getrc')
     working_dir = c.get('WORKINGDIR')
     sources = c.get_all('SOURCE')
 
     def __get_head(self, url):
-        u = urllib2.urlopen(url)
+        u = urllib.request.urlopen(url)
         head = u.headers['last-modified']
         return 'Last-Modified: ' + head
 
@@ -133,9 +134,10 @@ class SalixCodecsInstaller:
 
     def url_exists(self, url):
         try:
-            u = urllib2.urlopen(url)
+            u = urllib.request.urlopen(url)
             return True
-        except urllib2.HTTPError, urllib2.URLError:
+        except urllib.error.HTTPError as xxx_todo_changeme:
+            urllib.error.URLError = xxx_todo_changeme
             return False
 
     def verify_checksum(self, working_dir, file):
@@ -162,35 +164,48 @@ class SalixCodecsInstaller:
         is_extra = False
         pkgname = ''
         for line in pkgtxt_file:
-            if line.startswith('PACKAGE NAME'):
-                pkgname = line.partition('PACKAGE NAME:')[2].strip()
+            try:
+                line_str = line.decode()
+            except UnicodeDecodeError:
+                # sometimes weird characters end up in the package description
+                # and throw an exception with decode(). In that case, we try to
+                # guess the encoding and go with that. If it still doesn't
+                # work, just drop it, it's just a description line, nothing too
+                # important
+                encoding = chardet.detect(line)['encoding']
+                try:
+                    line_str = line.decode(encoding)
+                except UnicodeDecodeError:
+                    continue
+            if line_str.startswith('PACKAGE NAME'):
+                pkgname = line_str.partition('PACKAGE NAME:')[2].strip()
                 has_mirror_line = False
                 is_extra = False
-                f.write(line)
-            elif line.startswith('PACKAGE MIRROR'):
+                f.write(line_str)
+            elif line_str.startswith('PACKAGE MIRROR'):
                 has_mirror_line = True
-                if line.rpartition('\n')[0].rstrip('/').endswith('extra'):
+                if line_str.rpartition('\n')[0].rstrip('/').endswith('extra'):
                     is_extra = True
-                f.write(line)
-            elif line.startswith('PACKAGE LOCATION'):
+                f.write(line_str)
+            elif line_str.startswith('PACKAGE LOCATION'):
                 if not has_mirror_line:
                     f.write('PACKAGE MIRROR:  ' + mirror + '\n')
                 f.write('PACKAGE PRIORITY:  ' + str(priority) + '\n')
                 if is_extra:
                     location = './' + \
-                        line.partition('PACKAGE LOCATION:')[2].lstrip(
+                        line_str.partition('PACKAGE LOCATION:')[2].lstrip(
                             ' ').partition('/extra/')[2]
                     f.write('PACKAGE LOCATION:  ' + location)
                 else:
-                    f.write(line)
-            elif line.startswith('PACKAGE SUGGESTS'):
-                f.write(line)
+                    f.write(line_str)
+            elif line_str.startswith('PACKAGE SUGGESTS'):
+                f.write(line_str)
                 for sum in checksums_list:
                     if sum[1] == pkgname:
                         f.write('PACKAGE MD5SUM:  ' + sum[0] + '\n')
                         break
             else:
-                f.write(line)
+                f.write(line_str)
         f.close()
 
     def create_package_data(self, repos):
@@ -213,9 +228,18 @@ class SalixCodecsInstaller:
                 f = open(checksumspath)
                 checksums_file = f.readlines()
             for line in checksums_file:
-                line = line.rpartition('\n')[0]
-                checksum = line.partition('  ')[0]
-                pkgname = line.partition('  ')[2].rpartition('/')[2]
+                try:
+                    line_str = line.decode()
+                except AttributeError:
+                    # so, line usually comes out as bytes, so decode() is
+                    # needed, but sometimes it comes out as a string, so we
+                    # get an
+                    # AttributeError: 'str' object has no attribute 'decode'
+                    # exception instead.
+                    line_str = line
+                line_str_last = line_str.rpartition('\n')[0]
+                checksum = line_str_last.partition('  ')[0]
+                pkgname = line_str_last.partition('  ')[2].rpartition('/')[2]
                 checksums_list.append([checksum, pkgname])
             mirror = self.__unmangled_url(pkgtxtpath).rpartition('/')[0] + '/'
             # Read PACKAGES.TXT files and add the info to the package_data file
@@ -361,7 +385,7 @@ class SalixCodecsInstaller:
         cmd = ['LANG=C /usr/sbin/slapt-get --show ' + pkgname +
                '|grep "^Package Required:\|^Package Suggests:"']
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-        output = process.communicate()[0]
+        output = process.communicate()[0].decode()
         pkgs = []
         for line in output.split('\n'):
             if line.startswith('Package'):
@@ -370,7 +394,7 @@ class SalixCodecsInstaller:
                                         .lstrip(' ').rstrip(' ')\
                                         .replace(' ', ',')\
                                         .replace('|', ' ').split(','):
-                    if i is not '':
+                    if i != '':
                         pkgs.append(i)
         return pkgs
 
@@ -404,8 +428,9 @@ class SalixCodecsInstaller:
         f.close()
         uri_list = []
         for i in uris:
-            pkgname = i.rpartition('/')[2]
-            uri_list.append([pkgname, i])
+            i_str = i.decode()
+            pkgname = i_str.rpartition('/')[2]
+            uri_list.append([pkgname, i_str])
         pkgfilename = ''
         pkgname = ''
         pkgver = ''
@@ -418,8 +443,24 @@ class SalixCodecsInstaller:
         description_found = False
         detailed_list = []
         for line in package_data:
-            if line.startswith('PACKAGE NAME'):
-                pkgfilename = line.partition('PACKAGE NAME:')[2].strip()
+            try:
+                line_str = line.decode()
+            except AttributeError:
+                # well, this comes out as a string sometimes...
+                line_str = line
+            except UnicodeDecodeError:
+                # sometimes weird characters end up in the package description
+                # and throw an exception with decode(). In that case, we try to
+                # guess the encoding and go with that. If it still doesn't
+                # work, just drop it, it's just a description line, nothing too
+                # important
+                encoding = chardet.detect(line)['encoding']
+                try:
+                    line_str = line.decode(encoding)
+                except UnicodeDecodeError:
+                    continue
+            if line_str.startswith('PACKAGE NAME'):
+                pkgfilename = line_str.partition('PACKAGE NAME:')[2].strip()
                 for i in uri_list:
                     if pkgfilename == i[0]:
                         pkgname = pkgfilename.rpartition(
@@ -429,15 +470,15 @@ class SalixCodecsInstaller:
                         uri = i[1]
                         pkgname_match = True
                         location_found = False
-            elif line.startswith('PACKAGE LOCATION'):
-                location = line.partition('PACKAGE LOCATION:')[2].strip()
+            elif line_str.startswith('PACKAGE LOCATION'):
+                location = line_str.partition('PACKAGE LOCATION:')[2].strip()
                 location_found = True
-            elif line.startswith('PACKAGE MD5SUM'):
-                md5sum = line.partition('PACKAGE MD5SUM:')[2].strip()
+            elif line_str.startswith('PACKAGE MD5SUM'):
+                md5sum = line_str.partition('PACKAGE MD5SUM:')[2].strip()
                 md5sum_found = True
-            elif line.startswith(pkgname + ':'):
+            elif line_str.startswith(pkgname + ':'):
                 if description_found is False:
-                    description = line.partition(
+                    description = line_str.partition(
                         pkgname + ': ')[2].rstrip('\n')
                     description_found = True
             if pkgname_match and location_found and md5sum_found and \
@@ -458,26 +499,20 @@ class SalixCodecsInstaller:
     @threaded
     def on_button_infowindow_yes_clicked(self, widget):
         try:
-            gtk.gdk.threads_enter()
-            self.infowindow.hide()
-            self.dialog_update.show()
-            self.dialog_update.set_title(_('Updating local package cache'))
-            gtk.gdk.threads_leave()
+            GLib.idle_add(self.infowindow.hide)
+            GLib.idle_add(self.dialog_update.show)
+            GLib.idle_add(self.dialog_update.set_title, _('Updating local package cache'))
             repos = self.download_repo_info()
             self.create_package_data(repos)
             pkglist = self.pkglist()
             uris = self.pkg_uris(pkglist)
             to_be_installed = self.pkg_detailed_list(uris)
             if len(to_be_installed) == 0:
-                gtk.gdk.threads_enter()
-                self.dialog_update.hide()
-                self.messagedialog_nopkgs.show()
-                gtk.gdk.threads_leave()
+                GLib.idle_add(self.dialog_update.hide)
+                GLib.idle_add(self.messagedialog_nopkgs.show)
             else:
-                gtk.gdk.threads_enter()
-                self.dialog_update.hide()
-                self.dialog_pkglist.show()
-                gtk.gdk.threads_leave()
+                GLib.idle_add(self.dialog_update.hide)
+                GLib.idle_add(self.dialog_pkglist.show)
                 for i in to_be_installed:
                     # Passing checkbox state (True), changed state (False),
                     # pkgname, pkgver, pkgfilename,
@@ -486,31 +521,27 @@ class SalixCodecsInstaller:
                         [True, False,
                          i[0], i[1], i[2], i[3], i[4], i[5], i[6]])
         except KeyboardInterrupt:
-            self.dialog_update.hide()
+            GLib.idle_add(self.dialog_update.hide)
         except IOError:
-            self.dialog_update.hide()
-            self.messagedialog_dir_error.show()
+            GLib.idle_add(self.dialog_update.hide)
+            GLib.idle_add(self.messagedialog_dir_error.show)
 
     def on_button_infowindow_no_clicked(self, widget):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     @threaded
     def on_button_update_cancel_clicked(self, widget):
         global canceltask
         canceltask = True
-        gtk.gdk.threads_enter()
-        self.dialog_update.hide()
-        gtk.main_quit()
-        gtk.gdk.threads_leave()
+        GLib.idle_add(self.dialog_update.hide)
+        Gtk.main_quit()
 
     @threaded
     def on_dialog_update_delete_event(self, widget, event):
         global canceltask
         canceltask = True
-        gtk.gdk.threads_enter()
-        self.dialog_update.hide()
-        gtk.main_quit()
-        gtk.gdk.threads_leave()
+        GLib.idle_add(self.dialog_update.hide)
+        Gtk.main_quit()
 
     def md5sum_check(self, filename, md5sum):
         md5 = hashlib.md5()
@@ -531,13 +562,11 @@ class SalixCodecsInstaller:
     def on_button_dlg_pkglist_exec_clicked(self, widget):
         try:
             working_dir = self.working_dir
-            gtk.gdk.threads_enter()
-            self.dialog_pkglist.hide()
-            self.dialog_update.show()
-            self.progressbar_repo_total.set_fraction(0)
-            self.progressbar_repo.set_fraction(0)
-            self.dialog_update.set_title(_('Downloading packages'))
-            gtk.gdk.threads_leave()
+            GLib.idle_add(self.dialog_pkglist.hide)
+            GLib.idle_add(self.dialog_update.show)
+            GLib.idle_add(self.progressbar_repo_total.set_fraction, 0)
+            GLib.idle_add(self.progressbar_repo.set_fraction, 0)
+            GLib.idle_add(self.dialog_update.set_title, _('Downloading packages'))
             steps = 0
             step = 0.0
             # count how many packages are to be downloaded/installed
@@ -569,12 +598,10 @@ class SalixCodecsInstaller:
                                 download = True
                         else:
                             download = True
-                        gtk.gdk.threads_enter()
-                        self.label_repo_desc.set_text(pkgfilename)
-                        self.label_repo_name.set_text(pkgdesc)
-                        self.progressbar_repo_total.set_fraction(step / steps)
-                        self.progressbar_repo.set_fraction(0)
-                        gtk.gdk.threads_leave()
+                        GLib.idle_add(self.label_repo_desc.set_text, pkgfilename)
+                        GLib.idle_add(self.label_repo_name.set_text, pkgdesc)
+                        GLib.idle_add(self.progressbar_repo_total.set_fraction, step / steps)
+                        GLib.idle_add(self.progressbar_repo.set_fraction, 0)
                         if download:
                             urlgrabber.urlgrab(
                                 uri, filename=dest, progress_obj=meter)
@@ -583,18 +610,14 @@ class SalixCodecsInstaller:
                                 # check if this actually works right
                                 # I'll need to make a temp repo with a bad pkg
                                 # md5sum
-                                gtk.gdk.threads_enter()
-                                self.dialog_update.hide()
-                                self.messagedialog_pkg_checksum.show()
-                                gtk.gdk.threads_leave()
+                                GLib.idle_add(self.dialog_update.hide)
+                                GLib.idle_add(self.messagedialog_pkg_checksum.show)
                         step += 1
-            gtk.gdk.threads_enter()
-            self.progressbar_repo_total.set_fraction(1)
+            GLib.idle_add(self.progressbar_repo_total.set_fraction, 1)
             # install packages
-            self.progressbar_repo_total.set_fraction(0)
-            self.progressbar_repo.hide()
-            self.dialog_update.set_title(_('Installing packages'))
-            gtk.gdk.threads_leave()
+            GLib.idle_add(self.progressbar_repo_total.set_fraction, 0)
+            GLib.idle_add(self.progressbar_repo.hide)
+            GLib.idle_add(self.dialog_update.set_title, _('Installing packages'))
             success = True
             for i in self.liststore_pkglist:
                 if not canceltask:
@@ -605,46 +628,42 @@ class SalixCodecsInstaller:
                     location = i[6]
                     pkgdesc = i[8]
                     if enabled:
-                        gtk.gdk.threads_enter()
-                        self.label_repo_desc.set_text(pkgfilename)
-                        self.label_repo_name.set_text(pkgdesc)
-                        self.progressbar_repo_total.set_fraction(step / steps)
-                        gtk.gdk.threads_leave()
+                        GLib.idle_add(self.label_repo_desc.set_text, pkgfilename)
+                        GLib.idle_add(self.label_repo_name.set_text, pkgdesc)
+                        GLib.idle_add(self.progressbar_repo_total.set_fraction, step / steps)
                         pkg = working_dir + '/' + location + '/' + pkgfilename
                         retval = subprocess.call(
                             [spkg, '-u', '--install-new', pkg])
-                        if retval is not 0:
+                        if retval != 0:
                             success = False
-                            gtk.gdk.threads_enter()
-                            self.dialog_update.hide()
-                            self.messagedialog_pkginstall_error.show()
-                            gtk.gdk.threads_leave()
+                            GLib.idle_add(self.dialog_update.hide)
+                            GLib.idle_add(self.messagedialog_pkginstall_error.show)
                             break
                     step += 1
             if success:
-                self.dialog_update.hide()
-                self.messagedialog_uninstall.show()
+                GLib.idle_add(self.dialog_update.hide)
+                GLib.idle_add(self.messagedialog_uninstall.show)
             else:
                 # FIXME
                 # check if this actually pops up as it's supposed to, after
                 # a package has been downloaded succesfully, but spkg can't
                 # install it for some reason
-                self.dialog_update.hide()
-                self.messagedialog_pkginstall_error.show()
+                GLib.idle_add(self.dialog_update.hide)
+                GLib.idle_add(self.messagedialog_pkginstall_error.show)
         except KeyboardInterrupt:
-            self.dialog_update.hide()
+            GLib.idle_add(self.dialog_update.hide)
         except OSError:
-            self.dialog_update.hide()
-            self.messagedialog_dir_error.show()
+            GLib.idle_add(self.dialog_update.hide)
+            GLib.idle_add(self.messagedialog_dir_error.show)
         except IOError:
-            self.dialog_update.hide()
-            self.messagedialog_dir_error.show()
+            GLib.idle_add(self.dialog_update.hide)
+            GLib.idle_add(self.messagedialog_dir_error.show)
 
     def on_button_dlg_pkglist_cancel_clicked(self, widget):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def on_dialog_pkglist_delete_event(self, widget, event):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def on_checkbox_toggled(self, widget, data=None):
         selectedpkg = self.treeview_pkglist.get_selection()
@@ -660,28 +679,26 @@ class SalixCodecsInstaller:
 
     @threaded
     def on_button_uninstall_clicked(self, widget):
-        gtk.gdk.threads_enter()
-        self.messagedialog_uninstall.hide()
-        gtk.gdk.threads_leave()
+        GLib.idle_add(self.messagedialog_uninstall.hide)
         cmd = ['/sbin/spkg', '-d', 'salix-codecs-installer']
         process = subprocess.Popen(cmd)
         process.wait()
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def on_messagedialog_delete_event(self, widget, event):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def on_messagedialog_response(self, widget, event):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def on_messagedialog_dir_error_response(self, widget, event):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def gtk_main_quit(self, widget, data=None):
-        gtk.main_quit()
+        Gtk.main_quit()
 
     def __init__(self):
-        builder = gtk.Builder()
+        builder = Gtk.Builder()
         builder.set_translation_domain("salix-codecs-installer")
         if os.path.exists('salix-codecs-installer.ui'):
             builder.add_from_file('salix-codecs-installer.ui')
@@ -696,7 +713,6 @@ class SalixCodecsInstaller:
         self.button_infowindow_yes = builder.get_object(
             'button_infowindow_yes')
         self.button_infowindow_no = builder.get_object('button_infowindow_no')
-        self.button_infowindow_yes.set_flags(gtk.CAN_DEFAULT)
         self.infowindow.set_default(self.button_infowindow_yes)
 
         #
@@ -733,7 +749,6 @@ class SalixCodecsInstaller:
             'button_dlg_pkglist_cancel')
         self.button_dlg_pkglist_cancel = builder.get_object(
             'button_dlg_pkglist_cancel')
-        self.button_dlg_pkglist_exec.set_flags(gtk.CAN_DEFAULT)
         self.treeviewcolumn_checkbox = builder.get_object(
             'treeviewcolumn_checkbox')
         self.treeviewcolumn_checkbox.set_title(_('Install'))
@@ -767,4 +782,5 @@ if __name__ == "__main__":
     app = SalixCodecsInstaller()
     meter = DownloadMeter()
     app.infowindow.show()
-    gtk.main()
+    Gtk.main()
+
