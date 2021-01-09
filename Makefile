@@ -4,7 +4,7 @@ BINDIR ?= $(DESTDIR)$(PREFIX)/sbin
 LOCALEDIR ?= $(DESTDIR)$(PREFIX)/share/locale
 ICONSDIR ?= $(DESTDIR)$(PREFIX)/share/icons/hicolor
 DESKTOPDIR ?= $(DESTDIR)$(PREFIX)/share/applications
-GLADEDIR ?= $(DESTDIR)$(PREFIX)/share/salix-codecs-installer
+SHAREDIR ?= $(DESTDIR)$(PREFIX)/share/salix-codecs-installer
 
 .PHONY: all
 all: mo desktop
@@ -80,10 +80,11 @@ install-desktop:
 .PHONY: install
 install: install-icons install-mo install-desktop
 	install -d -m 755 $(BINDIR)
-	install -d -m 755 $(GLADEDIR)
+	install -d -m 755 $(SHAREDIR)
 	install -m 755 src/salix-codecs-installer $(BINDIR)/
 	install -m 755 src/salix-codecs-installer-gtk $(BINDIR)/
-	install -m 644 src/salix-codecs-installer.ui $(GLADEDIR)/
+	install -m 644 src/salix-codecs-installer.ui $(SHAREDIR)/
+	install -m 644 src/codecs-list.txt $(SHAREDIR)/
 	
 .PHONY: tx-pull
 tx-pull:
