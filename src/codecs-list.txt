@@ -1,0 +1,15 @@
+gstreamer
+gst-plugins-base
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-ugly
+gst-python
+gstreamer0
+gst-plugins-base0
+gst-plugins-good0
+gst-plugins-bad0
+gst-plugins-ugly0
+gst0-python
+gst-libav
+gst-ffmpeg
+libdvdcss"
