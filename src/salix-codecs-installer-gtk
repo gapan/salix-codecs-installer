@@ -710,7 +710,6 @@ class SalixCodecsInstaller:
         self.button_infowindow_yes = builder.get_object(
             'button_infowindow_yes')
         self.button_infowindow_no = builder.get_object('button_infowindow_no')
-        self.infowindow.set_default(self.button_infowindow_yes)
 
         #
         # Update package cache dialog
