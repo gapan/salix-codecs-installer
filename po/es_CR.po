@@ -3,19 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# gapan <vlahavas@gmail.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-14 20:52+0300\n"
 "PO-Revision-Date: 2011-01-08 22:52+0000\n"
-"Last-Translator: gapan <vlahavas@gmail.com>, 2011\n"
-"Language-Team: Finnish (http://www.transifex.com/gapan/salix/language/fi/)\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish (Costa Rica) (http://www.transifex.com/gapan/salix/language/es_CR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi\n"
+"Language: es_CR\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/salix-codecs-installer.ui:27 src/salix-codecs-installer.ui:155
@@ -30,7 +29,7 @@ msgstr ""
 #: src/salix-codecs-installer.ui:135 src/salix-codecs-installer:33
 #, sh-format
 msgid "Install multimedia codecs?"
-msgstr "Asenna multimedia koodekit?"
+msgstr ""
 
 #: src/salix-codecs-installer.ui:169
 msgid "Next"
@@ -87,7 +86,7 @@ msgstr ""
 
 #: src/salix-codecs-installer.ui:521
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: src/salix-codecs-installer.ui:557
 msgid ""
@@ -118,7 +117,7 @@ msgstr ""
 #: src/salix-codecs-installer.ui:693 src/salix-codecs-installer:151
 #, sh-format
 msgid "Done!"
-msgstr "Valmis!"
+msgstr ""
 
 #: src/salix-codecs-installer.ui:700 src/salix-codecs-installer:150
 #, sh-format
@@ -194,9 +193,9 @@ msgstr ""
 #: salix-codecs-installer.desktop.in.h:1
 #: salix-codecs-installer-kde.desktop.in.h:1
 msgid "Install multimedia codecs"
-msgstr "Asenna multimedia koodekit"
+msgstr ""
 
 #: salix-codecs-installer.desktop.in.h:2
 #: salix-codecs-installer-kde.desktop.in.h:2
 msgid "Install codecs required for playing restricted formats"
-msgstr "Asenna rajoitettujen tiedostomuotojen toistamiseen tarvittavat koodekit"
+msgstr ""
