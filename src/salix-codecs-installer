@@ -70,8 +70,7 @@ for i in $CODEC_PKGS; do
 		sed "s/Package Required:[ ]*//" | \
 		sed "s/Package Suggests:[ ]*//" | \
 		sed "s/,/\n/g" | \
-		sed "s/|/\n/g" | \
-		sed "s/ /\n/g" )
+		sed "s/ /\n/g")
 	all_pkgs="$all_pkgs $output"
 done
 all_pkgs=$( echo $all_pkgs | sed "s/ /\n/g" | sort | uniq )
@@ -82,12 +81,27 @@ all_pkgs=$( echo $all_pkgs | sed "s/ /\n/g" | sort | uniq )
 #
 not_installed_pkgs=""
 for i in $all_pkgs; do
-	if echo $installed | grep " $i " 2>&1 >/dev/null; then
-		sleep 0
+	if [[ $i == *"|"* ]]; then
+		found_alternative=0
+		for alternative in `echo $i | tr '|' ' '`; do
+			if echo $installed | grep " $alternative " 2>&1 >/dev/null; then
+				found_alternative=1
+				break
+			fi
+		done
+		# if none of the alternatives are found, install the first one
+		if [[ $found_alternative == 0 ]]; then
+			alt=`echo $i | cut -d'|' -f1`
+			not_installed_pkgs="$not_installed_pkgs $alt "
+		fi
 	else
-		not_installed_pkgs="$not_installed_pkgs $i "
+		if ! echo $installed | grep " $i " 2>&1 >/dev/null; then
+			not_installed_pkgs="$not_installed_pkgs $i "
+		fi
 	fi
 done
+not_installed_pkgs=`echo $not_installed_pkgs | sed "s/ /\n/g" | sort | \
+	uniq | tr '\n' ' '`
 
 #
 # If there is nothing to install, inform the user and exit
