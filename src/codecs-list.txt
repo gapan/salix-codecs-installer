@@ -1,9 +1,11 @@
-gstreamer
+gst-editing-services
+gst-plugins-bad-free
 gst-plugins-base
 gst-plugins-good
-gst-plugins-bad-free
+gst-plugins-libav
 gst-plugins-ugly
 gst-python
-gst-libav
-gst-ffmpeg
+gst-rtsp-server
+gstreamer
+gstreamer-vaapi
 libdvdcss
