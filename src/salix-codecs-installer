@@ -55,7 +55,7 @@ fi
 # it later to check which of the packages that we were going to install
 # are already there
 #
-installed=$( ls /var/log/packages | sed "s/\(.*\)-\(.*\)-\(.*\)-\(.*\)/\1/" )
+installed=$( ls /var/lib/pkgtools/packages/ | sed "s/\(.*\)-\(.*\)-\(.*\)-\(.*\)/\1/" )
 installed=" $installed "
 installed=$( echo $installed | tr '\n' ' ' )
 
