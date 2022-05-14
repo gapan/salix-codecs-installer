@@ -166,7 +166,7 @@
             </child>
             <child>
               <object class="GtkButton" id="button_infowindow_yes">
-                <property name="label" translatable="yes">Next	</property>
+                <property name="label" translatable="yes">Next</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="has-focus">True</property>
