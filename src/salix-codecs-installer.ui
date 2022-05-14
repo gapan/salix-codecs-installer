@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.3 -->
+<!-- Generated with glade 3.38.2 -->
 <interface>
-  <requires lib="gtk+" version="3.12"/>
+  <requires lib="gtk+" version="3.24"/>
   <object class="GtkDialog" id="dialog_update">
-    <property name="width_request">500</property>
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="width-request">500</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">salix-codecs-installer</property>
-    <property name="type_hint">normal</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">salix-codecs-installer</property>
+    <property name="type-hint">normal</property>
     <signal name="delete-event" handler="on_dialog_update_delete_event" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox2">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
-        <property name="spacing">10</property>
+        <property name="spacing">6</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area2">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button_update_cancel">
-                <property name="label">gtk-cancel</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_button_update_cancel_clicked" swapped="no"/>
               </object>
               <packing>
@@ -41,76 +40,80 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkGrid" id="grid2">
+          <object class="GtkBox" id="box1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
-            <property name="row_spacing">10</property>
-            <property name="row_homogeneous">True</property>
+            <property name="spacing">6</property>
             <child>
               <object class="GtkProgressBar" id="progressbar_repo_total">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
                 <property name="text" translatable="yes">Total progress</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkProgressBar" id="progressbar_repo">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">1</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label_repo_rate">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">2</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label_repo_desc">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="hexpand">True</property>
-                <property name="vexpand">True</property>
-              </object>
-              <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">3</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label_repo_name">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">4</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_repo_desc">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
               </packing>
             </child>
           </object>
@@ -127,33 +130,32 @@
     </action-widgets>
   </object>
   <object class="GtkDialog" id="infowindow">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Install multimedia codecs?</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">salix-codecs-installer</property>
-    <property name="type_hint">normal</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">salix-codecs-installer</property>
+    <property name="type-hint">normal</property>
     <signal name="close" handler="gtk_main_quit" swapped="no"/>
     <signal name="delete-event" handler="gtk_main_quit" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
+        <property name="spacing">6</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button_infowindow_no">
-                <property name="label">gtk-cancel</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_button_infowindow_no_clicked" swapped="no"/>
               </object>
               <packing>
@@ -164,13 +166,12 @@
             </child>
             <child>
               <object class="GtkButton" id="button_infowindow_yes">
-                <property name="label">gtk-go-forward</property>
+                <property name="label" translatable="yes">Next	</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="has_focus">True</property>
-                <property name="is_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="can-focus">True</property>
+                <property name="has-focus">True</property>
+                <property name="is-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_button_infowindow_yes_clicked" swapped="no"/>
               </object>
               <packing>
@@ -183,34 +184,34 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkGrid" id="grid1">
+          <object class="GtkBox" id="box2">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="orientation">vertical</property>
-            <property name="column_spacing">10</property>
+            <property name="can-focus">False</property>
+            <property name="spacing">6</property>
             <child>
               <object class="GtkImage" id="image1">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="xalign">0</property>
                 <property name="yalign">0</property>
-                <property name="stock">gtk-dialog-question</property>
+                <property name="icon-name">dialog-information</property>
                 <property name="icon_size">6</property>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
               </packing>
             </child>
             <child>
               <object class="GtkLabel" id="label1">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="label" translatable="yes">Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.
 
 You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.
@@ -219,11 +220,12 @@ Please check the legislation in your country and select to install the codecs on
 
 Click Next to update the package cache and receive a list of packages about to be installed.</property>
                 <property name="wrap">True</property>
-                <property name="max_width_chars">50</property>
+                <property name="max-width-chars">50</property>
               </object>
               <packing>
-                <property name="left_attach">1</property>
-                <property name="top_attach">0</property>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
               </packing>
             </child>
           </object>
@@ -263,33 +265,32 @@ Click Next to update the package cache and receive a list of packages about to b
     </columns>
   </object>
   <object class="GtkDialog" id="dialog_pkglist">
-    <property name="width_request">620</property>
-    <property name="height_request">450</property>
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="width-request">620</property>
+    <property name="height-request">450</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">List of packages to install</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">salix-codecs-installer</property>
-    <property name="type_hint">normal</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">salix-codecs-installer</property>
+    <property name="type-hint">normal</property>
     <signal name="delete-event" handler="on_dialog_pkglist_delete_event" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox5">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area5">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button_dlg_pkglist_cancel">
-                <property name="label">gtk-cancel</property>
+                <property name="label" translatable="yes">Cancel</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_button_dlg_pkglist_cancel_clicked" swapped="no"/>
               </object>
               <packing>
@@ -300,14 +301,14 @@ Click Next to update the package cache and receive a list of packages about to b
             </child>
             <child>
               <object class="GtkButton" id="button_dlg_pkglist_exec">
-                <property name="label">Install codecs</property>
+                <property name="label" translatable="yes">Install codecs</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="has_focus">True</property>
-                <property name="is_focus">True</property>
-                <property name="can_default">True</property>
-                <property name="has_default">True</property>
-                <property name="receives_default">True</property>
+                <property name="can-focus">True</property>
+                <property name="has-focus">True</property>
+                <property name="is-focus">True</property>
+                <property name="can-default">True</property>
+                <property name="has-default">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_button_dlg_pkglist_exec_clicked" swapped="no"/>
               </object>
               <packing>
@@ -320,33 +321,34 @@ Click Next to update the package cache and receive a list of packages about to b
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">2</property>
           </packing>
         </child>
         <child>
+          <!-- n-columns=1 n-rows=2 -->
           <object class="GtkGrid" id="grid3">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="can-focus">False</property>
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
-            <property name="row_spacing">10</property>
+            <property name="row-spacing">6</property>
             <child>
               <object class="GtkScrolledWindow" id="scrolledwindow1">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can-focus">True</property>
                 <property name="hexpand">True</property>
                 <property name="vexpand">True</property>
-                <property name="shadow_type">in</property>
+                <property name="shadow-type">in</property>
                 <child>
                   <object class="GtkTreeView" id="treeview_pkglist">
                     <property name="visible">True</property>
-                    <property name="can_focus">True</property>
+                    <property name="can-focus">True</property>
                     <property name="hexpand">True</property>
                     <property name="vexpand">True</property>
                     <property name="model">liststore_pkglist</property>
-                    <property name="headers_clickable">False</property>
-                    <property name="hover_selection">True</property>
+                    <property name="headers-clickable">False</property>
+                    <property name="hover-selection">True</property>
                     <child internal-child="selection">
                       <object class="GtkTreeSelection" id="treeview-selection1"/>
                     </child>
@@ -400,45 +402,46 @@ Click Next to update the package cache and receive a list of packages about to b
                 </child>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">1</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">1</property>
               </packing>
             </child>
             <child>
+              <!-- n-columns=2 n-rows=1 -->
               <object class="GtkGrid" id="grid4">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                <property name="can-focus">False</property>
                 <property name="orientation">vertical</property>
-                <property name="column_spacing">10</property>
+                <property name="column-spacing">10</property>
                 <child>
                   <object class="GtkImage" id="image2">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="pixel_size">48</property>
-                    <property name="icon_name">salix-codecs-installer</property>
+                    <property name="can-focus">False</property>
+                    <property name="pixel-size">48</property>
+                    <property name="icon-name">salix-codecs-installer</property>
                   </object>
                   <packing>
-                    <property name="left_attach">0</property>
-                    <property name="top_attach">0</property>
+                    <property name="left-attach">0</property>
+                    <property name="top-attach">0</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkLabel" id="label2">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="can-focus">False</property>
                     <property name="label" translatable="yes">These are the packages that are about to be installed. Please check your country's legislation and select to install only the ones that you are allowed to.</property>
                     <property name="wrap">True</property>
-                    <property name="max_width_chars">50</property>
+                    <property name="max-width-chars">50</property>
                   </object>
                   <packing>
-                    <property name="left_attach">1</property>
-                    <property name="top_attach">0</property>
+                    <property name="left-attach">1</property>
+                    <property name="top-attach">0</property>
                   </packing>
                 </child>
               </object>
               <packing>
-                <property name="left_attach">0</property>
-                <property name="top_attach">0</property>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
               </packing>
             </child>
           </object>
@@ -456,15 +459,15 @@ Click Next to update the package cache and receive a list of packages about to b
     </action-widgets>
   </object>
   <object class="GtkMessageDialog" id="messagedialog_dir_error">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Error</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">dialog-error</property>
-    <property name="type_hint">normal</property>
-    <property name="urgency_hint">True</property>
-    <property name="message_type">error</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">dialog-error</property>
+    <property name="type-hint">normal</property>
+    <property name="urgency-hint">True</property>
+    <property name="message-type">error</property>
     <property name="buttons">ok</property>
     <property name="text" translatable="yes">It seems you don't have the permissions to write the repository files.</property>
     <signal name="delete-event" handler="on_messagedialog_delete_event" swapped="no"/>
@@ -472,19 +475,19 @@ Click Next to update the package cache and receive a list of packages about to b
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox11">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area11">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -492,34 +495,33 @@ Click Next to update the package cache and receive a list of packages about to b
     </child>
   </object>
   <object class="GtkMessageDialog" id="messagedialog_nopkgs">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Nothing to install</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="type_hint">normal</property>
-    <property name="urgency_hint">True</property>
+    <property name="window-position">center-always</property>
+    <property name="type-hint">normal</property>
+    <property name="urgency-hint">True</property>
     <property name="text" translatable="yes">All codec packages are already installed.</property>
     <signal name="delete-event" handler="on_messagedialog_delete_event" swapped="no"/>
     <signal name="response" handler="on_messagedialog_response" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox8">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area8">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button_nopkgs_ok">
-                <property name="label">gtk-ok</property>
+                <property name="label" translatable="yes">OK</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -531,7 +533,7 @@ Click Next to update the package cache and receive a list of packages about to b
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -542,15 +544,15 @@ Click Next to update the package cache and receive a list of packages about to b
     </action-widgets>
   </object>
   <object class="GtkMessageDialog" id="messagedialog_pkg_checksum">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Error</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">dialog-error</property>
-    <property name="type_hint">normal</property>
-    <property name="urgency_hint">True</property>
-    <property name="message_type">error</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">dialog-error</property>
+    <property name="type-hint">normal</property>
+    <property name="urgency-hint">True</property>
+    <property name="message-type">error</property>
     <property name="buttons">ok</property>
     <property name="text" translatable="yes">Error verifying package checksum. This is probably due to a bad download. Please, check your internet connection.</property>
     <signal name="delete-event" handler="on_messagedialog_delete_event" swapped="no"/>
@@ -558,19 +560,19 @@ Click Next to update the package cache and receive a list of packages about to b
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox15">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area15">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -578,15 +580,15 @@ Click Next to update the package cache and receive a list of packages about to b
     </child>
   </object>
   <object class="GtkMessageDialog" id="messagedialog_pkginstall_error">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Error</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">dialog-error</property>
-    <property name="type_hint">normal</property>
-    <property name="urgency_hint">True</property>
-    <property name="message_type">error</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">dialog-error</property>
+    <property name="type-hint">normal</property>
+    <property name="urgency-hint">True</property>
+    <property name="message-type">error</property>
     <property name="buttons">ok</property>
     <property name="text" translatable="yes">There was an error installing one of the packages. Please, make sure there is enough available space in your hard drive and that it is mounted with write permissions and try again.</property>
     <signal name="delete-event" handler="on_messagedialog_delete_event" swapped="no"/>
@@ -594,19 +596,19 @@ Click Next to update the package cache and receive a list of packages about to b
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox7">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area7">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">-1</property>
           </packing>
         </child>
@@ -614,15 +616,15 @@ Click Next to update the package cache and receive a list of packages about to b
     </child>
   </object>
   <object class="GtkMessageDialog" id="messagedialog_repo_checksum">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Error</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">dialog-error</property>
-    <property name="type_hint">normal</property>
-    <property name="urgency_hint">True</property>
-    <property name="message_type">error</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">dialog-error</property>
+    <property name="type-hint">normal</property>
+    <property name="urgency-hint">True</property>
+    <property name="message-type">error</property>
     <property name="buttons">ok</property>
     <property name="text" translatable="yes">Error verifying repository checksum. You could be using a compromised repository. Please, check your package sources.</property>
     <signal name="delete-event" handler="on_messagedialog_delete_event" swapped="no"/>
@@ -630,19 +632,19 @@ Click Next to update the package cache and receive a list of packages about to b
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox13">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area13">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -650,15 +652,15 @@ Click Next to update the package cache and receive a list of packages about to b
     </child>
   </object>
   <object class="GtkMessageDialog" id="messagedialog_sources_error">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Error</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">dialog-error</property>
-    <property name="type_hint">normal</property>
-    <property name="urgency_hint">True</property>
-    <property name="message_type">error</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">dialog-error</property>
+    <property name="type-hint">normal</property>
+    <property name="urgency-hint">True</property>
+    <property name="message-type">error</property>
     <property name="buttons">ok</property>
     <property name="text" translatable="yes">There was an error connecting to one of the repositories. Make sure you have a working internet connection and the right sources specified in /etc/slapt-get/slapt-getrc.</property>
     <signal name="delete-event" handler="on_messagedialog_delete_event" swapped="no"/>
@@ -666,19 +668,19 @@ Click Next to update the package cache and receive a list of packages about to b
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox3">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area3">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
@@ -686,35 +688,34 @@ Click Next to update the package cache and receive a list of packages about to b
     </child>
   </object>
   <object class="GtkMessageDialog" id="messagedialog_uninstall">
-    <property name="can_focus">False</property>
-    <property name="border_width">5</property>
+    <property name="can-focus">False</property>
+    <property name="border-width">5</property>
     <property name="title" translatable="yes">Done!</property>
     <property name="resizable">False</property>
-    <property name="window_position">center-always</property>
-    <property name="icon_name">salix-codecs-installer</property>
-    <property name="type_hint">normal</property>
-    <property name="urgency_hint">True</property>
-    <property name="message_type">question</property>
+    <property name="window-position">center-always</property>
+    <property name="icon-name">salix-codecs-installer</property>
+    <property name="type-hint">normal</property>
+    <property name="urgency-hint">True</property>
+    <property name="message-type">question</property>
     <property name="text" translatable="yes">Codecs installation was succesfully completed. Would you like to remove the codecs installer from your system?</property>
     <signal name="delete-event" handler="on_messagedialog_delete_event" swapped="no"/>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox16">
         <property name="visible">True</property>
-        <property name="can_focus">False</property>
+        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
           <object class="GtkButtonBox" id="dialog-action_area16">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
+            <property name="can-focus">False</property>
+            <property name="layout-style">end</property>
             <child>
               <object class="GtkButton" id="button_uninstall_no">
-                <property name="label">gtk-quit</property>
+                <property name="label" translatable="yes">Quit</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="gtk_main_quit" swapped="no"/>
               </object>
               <packing>
@@ -725,11 +726,10 @@ Click Next to update the package cache and receive a list of packages about to b
             </child>
             <child>
               <object class="GtkButton" id="button_uninstall">
-                <property name="label">gtk-remove</property>
+                <property name="label" translatable="yes">Remove</property>
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
+                <property name="can-focus">True</property>
+                <property name="receives-default">True</property>
                 <signal name="clicked" handler="on_button_uninstall_clicked" swapped="no"/>
               </object>
               <packing>
@@ -742,7 +742,7 @@ Click Next to update the package cache and receive a list of packages about to b
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
-            <property name="pack_type">end</property>
+            <property name="pack-type">end</property>
             <property name="position">0</property>
           </packing>
         </child>
