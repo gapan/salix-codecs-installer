@@ -6,4 +6,4 @@ gst-plugins-ugly
 gst-python
 gst-libav
 gst-ffmpeg
-libdvdcss"
+libdvdcss
