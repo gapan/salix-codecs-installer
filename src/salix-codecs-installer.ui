@@ -301,7 +301,7 @@ Click Next to update the package cache and receive a list of packages about to b
             </child>
             <child>
               <object class="GtkButton" id="button_dlg_pkglist_exec">
-                <property name="label" translatable="yes">Install codecs</property>
+                <property name="label" translatable="yes">Install</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="has-focus">True</property>
