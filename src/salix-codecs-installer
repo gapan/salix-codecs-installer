@@ -23,14 +23,14 @@ CODEC_PKGS=$( cat /usr/share/salix-codecs-installer/codecs-list.txt )
 # The message string is a bit ugly, but it has to be this way so that it
 # matches the same string in the GTK counterpart application. That way
 # we can use the same translated strings
-MSG="$( eval_gettext 'Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.
+MSG="$( gettext 'Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.'
 
-You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.
+gettext 'You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.'
 
-Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.
+gettext 'Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.'
 
-Click Next to update the package cache and receive a list of packages about to be installed.')"
-dialog --title "$( eval_gettext 'Install multimedia codecs?')" \
+gettext 'Click Next to update the package cache and receive a list of packages about to be installed.')"
+dialog --title "$( gettext 'Install multimedia codecs?')" \
 	--yesno "$MSG" \
 	0 0
 retval=$?
@@ -107,8 +107,8 @@ not_installed_pkgs=`echo $not_installed_pkgs | sed "s/ /\n/g" | sort | \
 # If there is nothing to install, inform the user and exit
 #
 if [[ x$not_installed_pkgs == x"" ]]; then
-	MSG=$( eval_gettext "All codec packages are already installed." )
-	TITLE=$( eval_gettext "Nothing to install" )
+	MSG=$( gettext "All codec packages are already installed." )
+	TITLE=$( gettext "Nothing to install" )
 	dialog --title "$TITLE" \
 		--msgbox "$MSG" \
 		0 0
@@ -131,8 +131,8 @@ done
 # Present the list of packages to be installed. By default everything is
 # selected.
 #
-MSG=$( eval_gettext "These are the packages that are about to be installed. Please check your country's legislation and select to install only the ones that you are allowed to." )
-TITLE=$( eval_gettext "List of packages to install" )
+MSG=$( gettext "These are the packages that are about to be installed. Please check your country's legislation and select to install only the ones that you are allowed to." )
+TITLE=$( gettext "List of packages to install" )
 answer="$( eval dialog --stdout \
 	--title \"$TITLE\" \
 	--checklist \"$MSG\" \
@@ -161,8 +161,8 @@ fi
 #
 # If everything went well, ask if the package should be removed
 #
-MSG=$( eval_gettext 'Codecs installation was succesfully completed. Would you like to remove the codecs installer from your system?' )
-dialog --title "$( eval_gettext 'Done!' )" \
+MSG=$( gettext 'Codecs installation was succesfully completed. Would you like to remove the codecs installer from your system?' )
+dialog --title "$( gettext 'Done!' )" \
 	--yesno "$MSG" \
 	0 0
 retval=$?
