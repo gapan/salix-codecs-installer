@@ -75,9 +75,8 @@ class SalixCodecsInstaller:
             return None
 
     def __store_head(self, working_dir, filename, head):
-        f = open(working_dir + '/' + filename, 'w')
-        f.write(head)
-        f.close()
+        with open(working_dir + '/' + filename, 'w') as f:
+            f.write(head)
 
     def __mangled_url(self, url):
         mangled = '.' + url.replace('/', '#')
@@ -159,60 +158,59 @@ class SalixCodecsInstaller:
     def write_package_data_file(self, pkgtxt_file, mirror, priority,
                                 checksums_list):
         working_dir = self.working_dir
-        f = open(working_dir + '/package_data', 'a')
-        has_mirror_line = False
-        is_extra = False
-        pkgname = ''
-        for line in pkgtxt_file:
-            try:
-                line_str = line.decode()
-            except UnicodeDecodeError:
-                # sometimes weird characters end up in the package description
-                # and throw an exception with decode(). In that case, we try to
-                # guess the encoding and go with that. If it still doesn't
-                # work, just drop it, it's just a description line, nothing too
-                # important
-                encoding = chardet.detect(line)['encoding']
+        with open(working_dir + '/package_data', 'a') as f:
+            has_mirror_line = False
+            is_extra = False
+            pkgname = ''
+            for line in pkgtxt_file:
                 try:
-                    line_str = line.decode(encoding)
+                    line_str = line.decode()
                 except UnicodeDecodeError:
-                    continue
-            if line_str.startswith('PACKAGE NAME'):
-                pkgname = line_str.partition('PACKAGE NAME:')[2].strip()
-                has_mirror_line = False
-                is_extra = False
-                f.write(line_str)
-            elif line_str.startswith('PACKAGE MIRROR'):
-                has_mirror_line = True
-                if line_str.rpartition('\n')[0].rstrip('/').endswith('extra'):
-                    is_extra = True
-                f.write(line_str)
-            elif line_str.startswith('PACKAGE LOCATION'):
-                if not has_mirror_line:
-                    f.write('PACKAGE MIRROR:  ' + mirror + '\n')
-                f.write('PACKAGE PRIORITY:  ' + str(priority) + '\n')
-                if is_extra:
-                    location = './' + \
-                        line_str.partition('PACKAGE LOCATION:')[2].lstrip(
-                            ' ').partition('/extra/')[2]
-                    f.write('PACKAGE LOCATION:  ' + location)
+                    # sometimes weird characters end up in the package description
+                    # and throw an exception with decode(). In that case, we try to
+                    # guess the encoding and go with that. If it still doesn't
+                    # work, just drop it, it's just a description line, nothing too
+                    # important
+                    encoding = chardet.detect(line)['encoding']
+                    try:
+                        line_str = line.decode(encoding)
+                    except UnicodeDecodeError:
+                        continue
+                if line_str.startswith('PACKAGE NAME'):
+                    pkgname = line_str.partition('PACKAGE NAME:')[2].strip()
+                    has_mirror_line = False
+                    is_extra = False
+                    f.write(line_str)
+                elif line_str.startswith('PACKAGE MIRROR'):
+                    has_mirror_line = True
+                    if line_str.rpartition('\n')[0].rstrip('/').endswith('extra'):
+                        is_extra = True
+                    f.write(line_str)
+                elif line_str.startswith('PACKAGE LOCATION'):
+                    if not has_mirror_line:
+                        f.write('PACKAGE MIRROR:  ' + mirror + '\n')
+                    f.write('PACKAGE PRIORITY:  ' + str(priority) + '\n')
+                    if is_extra:
+                        location = './' + \
+                            line_str.partition('PACKAGE LOCATION:')[2].lstrip(
+                                ' ').partition('/extra/')[2]
+                        f.write('PACKAGE LOCATION:  ' + location)
+                    else:
+                        f.write(line_str)
+                elif line_str.startswith('PACKAGE SUGGESTS'):
+                    f.write(line_str)
+                    for sum in checksums_list:
+                        if sum[1] == pkgname:
+                            f.write('PACKAGE MD5SUM:  ' + sum[0] + '\n')
+                            break
                 else:
                     f.write(line_str)
-            elif line_str.startswith('PACKAGE SUGGESTS'):
-                f.write(line_str)
-                for sum in checksums_list:
-                    if sum[1] == pkgname:
-                        f.write('PACKAGE MD5SUM:  ' + sum[0] + '\n')
-                        break
-            else:
-                f.write(line_str)
-        f.close()
 
     def create_package_data(self, repos):
         working_dir = self.working_dir
         # Make sure the package_data file is empty
-        f = open(working_dir + '/package_data', 'w')
-        f.close()
+        with open(working_dir + '/package_data', 'w') as f:
+            pass
         for i in repos:
             pkgtxtpath = i[0]
             priority = i[1]
@@ -221,12 +219,11 @@ class SalixCodecsInstaller:
             # Read all checksums in a list
             checksums_list = []
             if checksumspath.endswith('.gz'):
-                f = gzip.open(checksumspath, 'rb')
-                checksums_file = f.readlines()
-                f.close()
+                with gzip.open(checksumspath, 'rb') as f:
+                    checksums_file = f.readlines()
             else:
-                f = open(checksumspath)
-                checksums_file = f.readlines()
+                with open(checksumspath) as f:
+                    checksums_file = f.readlines()
             for line in checksums_file:
                 try:
                     line_str = line.decode()
@@ -244,25 +241,21 @@ class SalixCodecsInstaller:
             mirror = self.__unmangled_url(pkgtxtpath).rpartition('/')[0] + '/'
             # Read PACKAGES.TXT files and add the info to the package_data file
             if pkgtxtpath.endswith('.gz'):
-                f = gzip.open(pkgtxtpath, 'rb')
-                pkgtxt_file = f.readlines()
-                f.close()
+                with gzip.open(pkgtxtpath, 'rb') as f:
+                    pkgtxt_file = f.readlines()
             else:
-                f = open(pkgtxtpath)
-                pkgtxt_file = f.readlines()
-                f.close(i)
+                with open(pkgtxtpath) as f:
+                    pkgtxt_file = f.readlines()
             self.write_package_data_file(
                 pkgtxt_file, mirror, priority, checksums_list)
             # Read PACKAGES.TXT from patches dir
             if patchespath is not None:
                 if patchespath.endswith('.gz'):
-                    f = gzip.open(patchespath, 'rb')
-                    pkgtxt_file = f.readlines()
-                    f.close()
+                    with gzip.open(patchespath, 'rb') as f:
+                        pkgtxt_file = f.readlines()
                 else:
-                    f = open(patchespath)
-                    pkgtxt_file = f.readlines()
-                    f.close(i)
+                    with open(patchespath) as f:
+                        pkgtxt_file = f.readlines()
                 self.write_package_data_file(
                     pkgtxt_file, mirror, priority + 1, checksums_list)
         self.progressbar_repo_total.set_fraction(1)
@@ -420,9 +413,8 @@ class SalixCodecsInstaller:
 
     def pkg_detailed_list(self, uris):
         working_dir = self.working_dir
-        f = open(working_dir + '/package_data')
-        package_data = f.readlines()
-        f.close()
+        with open(working_dir + '/package_data') as f:
+            package_data = f.readlines()
         uri_list = []
         for i in uris:
             i_str = i.decode()
@@ -542,18 +534,14 @@ class SalixCodecsInstaller:
 
     def md5sum_check(self, filename, md5sum):
         md5 = hashlib.md5()
-        f = open(filename, 'rb')
-        while True:
-            data = f.read(8192)
-            if not data:
-                break
-            md5.update(data)
-        f.close()
-        local_md5 = md5.hexdigest()
-        if local_md5 == md5sum:
-            return True
-        else:
-            return False
+        with open(filename, 'rb') as f:
+            while True:
+                data = f.read(8192)
+                if not data:
+                    break
+                md5.update(data)
+            local_md5 = md5.hexdigest()
+            return local_md5 == md5sum
 
     @threaded
     def on_button_dlg_pkglist_exec_clicked(self, widget):
