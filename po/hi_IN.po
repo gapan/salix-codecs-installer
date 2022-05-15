@@ -1,159 +1,128 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Panwar108 <caspian7pena@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-15 12:54+0300\n"
+"POT-Creation-Date: 2022-05-15 13:51+0300\n"
 "PO-Revision-Date: 2011-01-08 22:52+0000\n"
 "Last-Translator: Panwar108 <caspian7pena@gmail.com>, 2020\n"
-"Language-Team: Hindi (India) (http://www.transifex.com/gapan/salix/language/"
-"hi_IN/)\n"
-"Language: hi_IN\n"
+"Language-Team: Hindi (India) (http://www.transifex.com/gapan/salix/language/hi_IN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: hi_IN\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/salix-codecs-installer.ui:505 src/salix-codecs-installer:109
-msgid "All codec packages are already installed."
-msgstr "सभी कोडेक्स पैकेज पहले से ही इंस्टॉल हैं।"
-
 #: src/salix-codecs-installer.ui:27 src/salix-codecs-installer.ui:155
-#: src/salix-codecs-installer.ui:290 src/salix-codecs-installer:32
+#: src/salix-codecs-installer.ui:284 src/salix-codecs-installer:32
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: src/salix-codecs-installer:28
-msgid ""
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
-msgstr ""
-"पैकेज कैश अपडेट कर इंस्टॉल होने वाले पैकेज की सूची प्राप्त करने हेतु 'आगे' पर क्लिक करें।"
-
-#: src/salix-codecs-installer.ui:700 src/salix-codecs-installer:163
-msgid ""
-"Codecs installation was succesfully completed. Would you like to remove the "
-"codecs installer from your system?"
-msgstr "कोडेक्स इंस्टॉल सफल रहा। क्या आप सिस्टम से कोडेक्स इंस्टॉलर हटाना चाहते हैं? "
-
-#: src/salix-codecs-installer-gtk:774
-msgid "Description"
-msgstr "विवरण"
-
-#: src/salix-codecs-installer.ui:693 src/salix-codecs-installer:164
-msgid "Done!"
-msgstr "पूर्ण हुआ!"
-
-#: src/salix-codecs-installer-gtk:72
-msgid "Download rate:"
-msgstr "डाउनलोड गति :"
-
-#: src/salix-codecs-installer-gtk:581
-msgid "Downloading packages"
-msgstr "पैकेज डाउनलोड हो रहे हैं"
-
-#: src/salix-codecs-installer.ui:464 src/salix-codecs-installer.ui:549
-#: src/salix-codecs-installer.ui:585 src/salix-codecs-installer.ui:621
-#: src/salix-codecs-installer.ui:657
-msgid "Error"
-msgstr "त्रुटि"
-
-#: src/salix-codecs-installer.ui:557
-msgid ""
-"Error verifying package checksum. This is probably due to a bad download. "
-"Please, check your internet connection."
-msgstr "पैकेज चेकसम पुष्टिकरण त्रुटि। संभवतः डाउनलोड विफल रहा। कृपया इंटरनेट कनेक्शन जाँचें।"
-
-#: src/salix-codecs-installer.ui:629
-msgid ""
-"Error verifying repository checksum. You could be using a compromised "
-"repository. Please, check your package sources."
-msgstr ""
-"पैकेज-संग्रह पुष्टिकरण त्रुटि। संभवतः आप कोई निरर्थक पैकेज-संग्रह उपयोग कर रहे हैं। कृपया पैकेज "
-"स्रोत जाँचें।"
-
-#: src/salix-codecs-installer.ui:304 src/salix-codecs-installer-gtk:765
-msgid "Install"
-msgstr "इंस्टॉल करें"
-
-#: salix-codecs-installer.desktop.in.h:2
-#: salix-codecs-installer-kde.desktop.in.h:2
-msgid "Install codecs required for playing restricted formats"
-msgstr "वर्जित प्रारूप उपयोग करने हेतु कोडेक्स इंस्टॉल करना आवश्यक है"
-
-#: salix-codecs-installer.desktop.in.h:1
-#: salix-codecs-installer-kde.desktop.in.h:1
-msgid "Install multimedia codecs"
-msgstr "मल्टीमीडिया कोडेक्स इंस्टॉल करें"
+#: src/salix-codecs-installer.ui:59
+msgid "Total progress"
+msgstr "कुल प्रगति"
 
 #: src/salix-codecs-installer.ui:135 src/salix-codecs-installer:30
 msgid "Install multimedia codecs?"
 msgstr "मल्टीमीडिया कोडेक्स इंस्टॉल किए जाए?"
 
-#: src/salix-codecs-installer-gtk:632
-msgid "Installing packages"
-msgstr "पैकेज इंस्टॉल हो रहे हैं"
-
-#: src/salix-codecs-installer.ui:472
-msgid "It seems you don't have the permissions to write the repository files."
-msgstr "प्रतीत होता है, आपके पास पैकेज-संग्रह फ़ाइलों पर राइट करने हेतु अनुमति नहीं है।"
-
-#: src/salix-codecs-installer.ui:272 src/salix-codecs-installer:134
-msgid "List of packages to install"
-msgstr "इंस्टॉल हेतु पैकेज सूची"
-
-#: src/salix-codecs-installer-gtk:768
-msgid "Name"
-msgstr "नाम"
-
 #: src/salix-codecs-installer.ui:169 src/salix-codecs-installer:31
 msgid "Next"
 msgstr ""
 
-#: src/salix-codecs-installer.ui:500 src/salix-codecs-installer:110
+#: src/salix-codecs-installer.ui:266 src/salix-codecs-installer:134
+msgid "List of packages to install"
+msgstr "इंस्टॉल हेतु पैकेज सूची"
+
+#: src/salix-codecs-installer.ui:298 src/salix-codecs-installer-gtk:771
+msgid "Install"
+msgstr "इंस्टॉल करें"
+
+#: src/salix-codecs-installer.ui:426 src/salix-codecs-installer:133
+msgid ""
+"These are the packages that are about to be installed. Please check your "
+"country's legislation and select to install only the ones that you are "
+"allowed to."
+msgstr "निम्नलिखित पैकेज इंस्टॉल होंगे। इंस्टॉल हेतु केवल वे ही पैकेज चयनित करें जो आपके देश के कानूनों के अनुरूप हो।"
+
+#: src/salix-codecs-installer.ui:458 src/salix-codecs-installer.ui:543
+#: src/salix-codecs-installer.ui:579 src/salix-codecs-installer.ui:615
+#: src/salix-codecs-installer.ui:651
+msgid "Error"
+msgstr "त्रुटि"
+
+#: src/salix-codecs-installer.ui:466
+msgid "It seems you don't have the permissions to write the repository files."
+msgstr "प्रतीत होता है, आपके पास पैकेज-संग्रह फ़ाइलों पर राइट करने हेतु अनुमति नहीं है।"
+
+#: src/salix-codecs-installer.ui:494 src/salix-codecs-installer:110
 msgid "Nothing to install"
 msgstr "इंस्टॉल हेतु कुछ नहीं"
 
-#: src/salix-codecs-installer.ui:521
+#: src/salix-codecs-installer.ui:499 src/salix-codecs-installer:109
+msgid "All codec packages are already installed."
+msgstr "सभी कोडेक्स पैकेज पहले से ही इंस्टॉल हैं।"
+
+#: src/salix-codecs-installer.ui:515
 msgid "OK"
 msgstr "ठीक है"
 
-#: src/salix-codecs-installer:27
+#: src/salix-codecs-installer.ui:551
 msgid ""
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so."
-msgstr ""
-"कृपया सुनिश्चित करें कि आप इंस्टॉल हेतु केवल वे ही पैकेज चयनित करें जो आपके देश के कानूनों के "
-"अनुरूप हो।"
+"Error verifying package checksum. This is probably due to a bad download. "
+"Please, check your internet connection."
+msgstr "पैकेज चेकसम पुष्टिकरण त्रुटि। संभवतः डाउनलोड विफल रहा। कृपया इंटरनेट कनेक्शन जाँचें।"
 
-#: src/salix-codecs-installer.ui:715
+#: src/salix-codecs-installer.ui:587
+msgid ""
+"There was an error installing one of the packages. Please, make sure there "
+"is enough available space in your hard drive and that it is mounted with "
+"write permissions and try again."
+msgstr "पैकेज इंस्टॉल करते समय त्रुटि। सुनिश्चित करें कि हार्ड ड्राइव में पर्याप्त स्पेस है व ड्राइव राइट अनुमति सहित माउंट है और फिर पुनः प्रयास करें।"
+
+#: src/salix-codecs-installer.ui:623
+msgid ""
+"Error verifying repository checksum. You could be using a compromised "
+"repository. Please, check your package sources."
+msgstr "पैकेज-संग्रह पुष्टिकरण त्रुटि। संभवतः आप कोई निरर्थक पैकेज-संग्रह उपयोग कर रहे हैं। कृपया पैकेज स्रोत जाँचें।"
+
+#: src/salix-codecs-installer.ui:659
+msgid ""
+"There was an error connecting to one of the repositories. Make sure you have"
+" a working internet connection and the right sources specified in "
+"/etc/slapt-get/slapt-getrc."
+msgstr "पैकेज-संग्रह से कनेक्ट करते समय त्रुटि। सुनिश्चित करें कि आपका इंटरनेट कनेक्शन सुचारू रूप से कार्य कर रहा है व /etc/slapt-get/slapt-getrc में उचित स्रोत निर्दिष्ट हैं।"
+
+#: src/salix-codecs-installer.ui:687 src/salix-codecs-installer:164
+msgid "Done!"
+msgstr "पूर्ण हुआ!"
+
+#: src/salix-codecs-installer.ui:694 src/salix-codecs-installer:163
+msgid ""
+"Codecs installation was succesfully completed. Would you like to remove the "
+"codecs installer from your system?"
+msgstr "कोडेक्स इंस्टॉल सफल रहा। क्या आप सिस्टम से कोडेक्स इंस्टॉलर हटाना चाहते हैं? "
+
+#: src/salix-codecs-installer.ui:709
 msgid "Quit"
 msgstr ""
+
+#: src/salix-codecs-installer.ui:723
+msgid "Remove"
+msgstr "हटाएँ"
+
+#: src/salix-codecs-installer-gtk:72
+msgid "Download rate:"
+msgstr "डाउनलोड गति :"
 
 #: src/salix-codecs-installer-gtk:280
 msgid "Reading package lists..."
 msgstr "पैकेज सूची रीड की जा रही है..."
-
-#: src/salix-codecs-installer.ui:729
-msgid "Remove"
-msgstr "हटाएँ"
-
-#: src/salix-codecs-installer-gtk:386
-msgid "Retrieving ChangeLog.txt..."
-msgstr "ChangeLog.txt प्राप्त की जा रही है ..."
-
-#: src/salix-codecs-installer-gtk:347
-msgid "Retrieving checksum list..."
-msgstr "चेकसम सूची प्राप्त की जा रही है ..."
-
-#: src/salix-codecs-installer-gtk:365
-msgid "Retrieving checksum signature..."
-msgstr "चेकसम हस्ताक्षर प्राप्त किया जा रहा है ..."
 
 #: src/salix-codecs-installer-gtk:310
 msgid "Retrieving package data..."
@@ -163,87 +132,78 @@ msgstr "पैकेज डाटा प्राप्त किया जा �
 msgid "Retrieving patch list..."
 msgstr "पैच सूची प्राप्त की जा रही है ..."
 
-#: src/salix-codecs-installer:25
-msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix."
-msgstr ""
-"कई देशों में कुछ मल्टीमीडिया कोडेक्स का उपयोग व वितरण पेटेंट द्वारा बाधित होता है।\n"
-"अतः डिफ़ॉल्ट रूप से सेलिक्स सभी कोडेक्स का समर्थन नहीं करता है।"
+#: src/salix-codecs-installer-gtk:347
+msgid "Retrieving checksum list..."
+msgstr "चेकसम सूची प्राप्त की जा रही है ..."
 
-#: src/salix-codecs-installer.ui:215
-msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\n"
-"\n"
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or listen to mp3 files without these codecs.\n"
-"\n"
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so.\n"
-"\n"
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
-msgstr ""
-"कई देशों में कुछ मल्टीमीडिया कोडेक्स का उपयोग व वितरण पेटेंट द्वारा बाधित होता है।\n"
-"अतः डिफ़ॉल्ट रूप से सेलिक्स सभी कोडेक्स का समर्थन नहीं करता है।\n"
-"\n"
-"आप मुक्त कोडेक्स द्वारा एनकोड की गई फ़ाइलें उपयोग कर सकेंगे परंतु इन अमुक्त कोडेक्स के बिना आप "
-"व्यापारिक डीवीडी या एमपी 3 फ़ाइलें उपयोग नहीं कर सकेंगे।\n"
-"\n"
-"कृपया सुनिश्चित करें कि आप इंस्टॉल हेतु केवल वे ही पैकेज चयनित करें जो आपके देश के कानूनों के "
-"अनुरूप हो।\n"
-"\n"
-"पैकेज कैश अपडेट कर इंस्टॉल होने वाले पैकेज की सूची प्राप्त करने हेतु 'आगे' पर क्लिक करें।"
-
-#: src/salix-codecs-installer.ui:665
-msgid ""
-"There was an error connecting to one of the repositories. Make sure you have "
-"a working internet connection and the right sources specified in /etc/slapt-"
-"get/slapt-getrc."
-msgstr ""
-"पैकेज-संग्रह से कनेक्ट करते समय त्रुटि। सुनिश्चित करें कि आपका इंटरनेट कनेक्शन सुचारू रूप से कार्य "
-"कर रहा है व /etc/slapt-get/slapt-getrc में उचित स्रोत निर्दिष्ट हैं।"
-
-#: src/salix-codecs-installer.ui:593
-msgid ""
-"There was an error installing one of the packages. Please, make sure there "
-"is enough available space in your hard drive and that it is mounted with "
-"write permissions and try again."
-msgstr ""
-"पैकेज इंस्टॉल करते समय त्रुटि। सुनिश्चित करें कि हार्ड ड्राइव में पर्याप्त स्पेस है व ड्राइव राइट "
-"अनुमति सहित माउंट है और फिर पुनः प्रयास करें।"
-
-#: src/salix-codecs-installer.ui:432 src/salix-codecs-installer:133
-msgid ""
-"These are the packages that are about to be installed. Please check your "
-"country's legislation and select to install only the ones that you are "
-"allowed to."
-msgstr ""
-"निम्नलिखित पैकेज इंस्टॉल होंगे। इंस्टॉल हेतु केवल वे ही पैकेज चयनित करें जो आपके देश के कानूनों के "
-"अनुरूप हो।"
-
-#: src/salix-codecs-installer.ui:59
-msgid "Total progress"
-msgstr "कुल प्रगति"
-
-#: src/salix-codecs-installer-gtk:520
-msgid "Updating local package cache"
-msgstr "लोकल पैकेज कैश अपडेट हो रही है"
+#: src/salix-codecs-installer-gtk:365
+msgid "Retrieving checksum signature..."
+msgstr "चेकसम हस्ताक्षर प्राप्त किया जा रहा है ..."
 
 #: src/salix-codecs-installer-gtk:375
 msgid "Verifying checksum signature..."
 msgstr "चेकसम हस्ताक्षर की पुष्टि की जा रही है ..."
 
-#: src/salix-codecs-installer-gtk:771
+#: src/salix-codecs-installer-gtk:386
+msgid "Retrieving ChangeLog.txt..."
+msgstr "ChangeLog.txt प्राप्त की जा रही है ..."
+
+#: src/salix-codecs-installer-gtk:520
+msgid "Updating local package cache"
+msgstr "लोकल पैकेज कैश अपडेट हो रही है"
+
+#: src/salix-codecs-installer-gtk:581
+msgid "Downloading packages"
+msgstr "पैकेज डाउनलोड हो रहे हैं"
+
+#: src/salix-codecs-installer-gtk:632
+msgid "Installing packages"
+msgstr "पैकेज इंस्टॉल हो रहे हैं"
+
+#: src/salix-codecs-installer-gtk:729 src/salix-codecs-installer:25
+msgid ""
+"Some multimedia codecs are patent encumbered and pose distribution problems "
+"in certain countries. Therefore, support for all codecs is not included by "
+"default in Salix."
+msgstr "कई देशों में कुछ मल्टीमीडिया कोडेक्स का उपयोग व वितरण पेटेंट द्वारा बाधित होता है।\nअतः डिफ़ॉल्ट रूप से सेलिक्स सभी कोडेक्स का समर्थन नहीं करता है।"
+
+#: src/salix-codecs-installer-gtk:730 src/salix-codecs-installer:26
+msgid ""
+"You will be able to play files encoded with free codecs, but you will not be"
+" able to play commercial DVDs or use some proprietary formats without these "
+"codecs."
+msgstr ""
+
+#: src/salix-codecs-installer-gtk:731 src/salix-codecs-installer:27
+msgid ""
+"Please check the legislation in your country and select to install the "
+"codecs only if it is legal for you to do so."
+msgstr "कृपया सुनिश्चित करें कि आप इंस्टॉल हेतु केवल वे ही पैकेज चयनित करें जो आपके देश के कानूनों के अनुरूप हो।"
+
+#: src/salix-codecs-installer-gtk:732 src/salix-codecs-installer:28
+msgid ""
+"Click Next to update the package cache and receive a list of packages about "
+"to be installed."
+msgstr "पैकेज कैश अपडेट कर इंस्टॉल होने वाले पैकेज की सूची प्राप्त करने हेतु 'आगे' पर क्लिक करें।"
+
+#: src/salix-codecs-installer-gtk:774
+msgid "Name"
+msgstr "नाम"
+
+#: src/salix-codecs-installer-gtk:777
 msgid "Version"
 msgstr "संस्करण"
 
-#: src/salix-codecs-installer:26
-msgid ""
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or use some proprietary formats without these "
-"codecs."
-msgstr ""
+#: src/salix-codecs-installer-gtk:780
+msgid "Description"
+msgstr "विवरण"
+
+#: salix-codecs-installer.desktop.in.h:1
+#: salix-codecs-installer-kde.desktop.in.h:1
+msgid "Install multimedia codecs"
+msgstr "मल्टीमीडिया कोडेक्स इंस्टॉल करें"
+
+#: salix-codecs-installer.desktop.in.h:2
+#: salix-codecs-installer-kde.desktop.in.h:2
+msgid "Install codecs required for playing restricted formats"
+msgstr "वर्जित प्रारूप उपयोग करने हेतु कोडेक्स इंस्टॉल करना आवश्यक है"

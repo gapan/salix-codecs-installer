@@ -1,163 +1,134 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # eren <erenlinux@gmail.com>, 2011
+# eren <erenlinux@gmail.com>, 2011
 # İsmail DEMİRAL <ismaildemiral@gmail.com>, 2012
+# İsmail DEMİRAL <ismaildemiral@gmail.com>, 2012
+# Onur ÖZDEMİR, 2016
 # Onur ÖZDEMİR, 2016
 # Rıza Aksoy <aksoy.rza@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-15 12:54+0300\n"
+"POT-Creation-Date: 2022-05-15 13:51+0300\n"
 "PO-Revision-Date: 2011-01-08 22:52+0000\n"
-"Last-Translator: Onur ÖZDEMİR, 2016\n"
+"Last-Translator: Rıza Aksoy <aksoy.rza@gmail.com>, 2012\n"
 "Language-Team: Turkish (http://www.transifex.com/gapan/salix/language/tr/)\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/salix-codecs-installer.ui:505 src/salix-codecs-installer:109
-msgid "All codec packages are already installed."
-msgstr "Bütün kodek paketleri yüklendi. "
-
 #: src/salix-codecs-installer.ui:27 src/salix-codecs-installer.ui:155
-#: src/salix-codecs-installer.ui:290 src/salix-codecs-installer:32
+#: src/salix-codecs-installer.ui:284 src/salix-codecs-installer:32
 msgid "Cancel"
 msgstr "Vazgeç"
 
-#: src/salix-codecs-installer:28
-msgid ""
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
-msgstr ""
-
-#: src/salix-codecs-installer.ui:700 src/salix-codecs-installer:163
-msgid ""
-"Codecs installation was succesfully completed. Would you like to remove the "
-"codecs installer from your system?"
-msgstr ""
-"Kodek yüklemesi başarıyla tamamlandı. Kodek yükleyicisini sisteminizden "
-"kaldırmak ister misiniz?"
-
-#: src/salix-codecs-installer-gtk:774
-msgid "Description"
-msgstr "Açıklama"
-
-#: src/salix-codecs-installer.ui:693 src/salix-codecs-installer:164
-msgid "Done!"
-msgstr "Bitti!"
-
-#: src/salix-codecs-installer-gtk:72
-msgid "Download rate:"
-msgstr "İndirme hızı:"
-
-#: src/salix-codecs-installer-gtk:581
-msgid "Downloading packages"
-msgstr "İndirilen paketler"
-
-#: src/salix-codecs-installer.ui:464 src/salix-codecs-installer.ui:549
-#: src/salix-codecs-installer.ui:585 src/salix-codecs-installer.ui:621
-#: src/salix-codecs-installer.ui:657
-msgid "Error"
-msgstr "Hata"
-
-#: src/salix-codecs-installer.ui:557
-msgid ""
-"Error verifying package checksum. This is probably due to a bad download. "
-"Please, check your internet connection."
-msgstr ""
-"Paket checksum bilgilerin kontrol edilirken hata oluştu. Bu muhtemelen "
-"internet bağlantınızdaki bir sorundan kaynaklanmaktadır. Lütfen internet "
-"bağlantınızı kontrol ediniz."
-
-#: src/salix-codecs-installer.ui:629
-msgid ""
-"Error verifying repository checksum. You could be using a compromised "
-"repository. Please, check your package sources."
-msgstr ""
-"Depo checksum bilgileri doğrulanırken hata oluştu. Yanlış bir depo "
-"kullanıyor olabilirsiniz. Lütfen, paket kaynaklarınızı kontrol edin."
-
-#: src/salix-codecs-installer.ui:304 src/salix-codecs-installer-gtk:765
-msgid "Install"
-msgstr "Yükle"
-
-#: salix-codecs-installer.desktop.in.h:2
-#: salix-codecs-installer-kde.desktop.in.h:2
-msgid "Install codecs required for playing restricted formats"
-msgstr "Kodekleri yüklemek kısıtlı formatları oynatmak için gereklidir."
-
-#: salix-codecs-installer.desktop.in.h:1
-#: salix-codecs-installer-kde.desktop.in.h:1
-msgid "Install multimedia codecs"
-msgstr "Multimedya kodeklerini yükle"
+#: src/salix-codecs-installer.ui:59
+msgid "Total progress"
+msgstr "Toplam ilerleme"
 
 #: src/salix-codecs-installer.ui:135 src/salix-codecs-installer:30
 msgid "Install multimedia codecs?"
 msgstr "Multimedya kodeklerini yüklemek ister misiniz?"
 
-#: src/salix-codecs-installer-gtk:632
-msgid "Installing packages"
-msgstr "Yüklenen paketler"
-
-#: src/salix-codecs-installer.ui:472
-msgid "It seems you don't have the permissions to write the repository files."
-msgstr "Depo dosyalarına yazma hakkına sahip değilsiniz."
-
-#: src/salix-codecs-installer.ui:272 src/salix-codecs-installer:134
-msgid "List of packages to install"
-msgstr "Yüklenecek paket listesi"
-
-#: src/salix-codecs-installer-gtk:768
-msgid "Name"
-msgstr "İsim"
-
 #: src/salix-codecs-installer.ui:169 src/salix-codecs-installer:31
 msgid "Next"
 msgstr ""
 
-#: src/salix-codecs-installer.ui:500 src/salix-codecs-installer:110
+#: src/salix-codecs-installer.ui:266 src/salix-codecs-installer:134
+msgid "List of packages to install"
+msgstr "Yüklenecek paket listesi"
+
+#: src/salix-codecs-installer.ui:298 src/salix-codecs-installer-gtk:771
+msgid "Install"
+msgstr "Yükle"
+
+#: src/salix-codecs-installer.ui:426 src/salix-codecs-installer:133
+msgid ""
+"These are the packages that are about to be installed. Please check your "
+"country's legislation and select to install only the ones that you are "
+"allowed to."
+msgstr "Yüklenecek paketler bunlardır. Lütfen, ülkenizdeki mevcut yasaları göz önünde bulundurarak sadece izin verilen paketleri seçiniz. "
+
+#: src/salix-codecs-installer.ui:458 src/salix-codecs-installer.ui:543
+#: src/salix-codecs-installer.ui:579 src/salix-codecs-installer.ui:615
+#: src/salix-codecs-installer.ui:651
+msgid "Error"
+msgstr "Hata"
+
+#: src/salix-codecs-installer.ui:466
+msgid "It seems you don't have the permissions to write the repository files."
+msgstr "Depo dosyalarına yazma hakkına sahip değilsiniz."
+
+#: src/salix-codecs-installer.ui:494 src/salix-codecs-installer:110
 msgid "Nothing to install"
 msgstr "Hiçbirşey yükleme"
 
-#: src/salix-codecs-installer.ui:521
+#: src/salix-codecs-installer.ui:499 src/salix-codecs-installer:109
+msgid "All codec packages are already installed."
+msgstr "Bütün kodek paketleri yüklendi. "
+
+#: src/salix-codecs-installer.ui:515
 msgid "OK"
 msgstr "TAMAM"
 
-#: src/salix-codecs-installer:27
+#: src/salix-codecs-installer.ui:551
 msgid ""
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so."
-msgstr ""
+"Error verifying package checksum. This is probably due to a bad download. "
+"Please, check your internet connection."
+msgstr "Paket checksum bilgilerin kontrol edilirken hata oluştu. Bu muhtemelen internet bağlantınızdaki bir sorundan kaynaklanmaktadır. Lütfen internet bağlantınızı kontrol ediniz."
 
-#: src/salix-codecs-installer.ui:715
+#: src/salix-codecs-installer.ui:587
+msgid ""
+"There was an error installing one of the packages. Please, make sure there "
+"is enough available space in your hard drive and that it is mounted with "
+"write permissions and try again."
+msgstr "Paketlerden biri yüklenirken hata oluştu. Lütfen, sabit diskinizde yeterli boşluk olduğundan ve sabit diskinizin yazma haklarıyla bağlı olduğundan emin olun ve tekrar deneyin. "
+
+#: src/salix-codecs-installer.ui:623
+msgid ""
+"Error verifying repository checksum. You could be using a compromised "
+"repository. Please, check your package sources."
+msgstr "Depo checksum bilgileri doğrulanırken hata oluştu. Yanlış bir depo kullanıyor olabilirsiniz. Lütfen, paket kaynaklarınızı kontrol edin."
+
+#: src/salix-codecs-installer.ui:659
+msgid ""
+"There was an error connecting to one of the repositories. Make sure you have"
+" a working internet connection and the right sources specified in "
+"/etc/slapt-get/slapt-getrc."
+msgstr "Depoya bağlanırken hata oluştu. İnternet bağlantınızı kontrol ediniz."
+
+#: src/salix-codecs-installer.ui:687 src/salix-codecs-installer:164
+msgid "Done!"
+msgstr "Bitti!"
+
+#: src/salix-codecs-installer.ui:694 src/salix-codecs-installer:163
+msgid ""
+"Codecs installation was succesfully completed. Would you like to remove the "
+"codecs installer from your system?"
+msgstr "Kodek yüklemesi başarıyla tamamlandı. Kodek yükleyicisini sisteminizden kaldırmak ister misiniz?"
+
+#: src/salix-codecs-installer.ui:709
 msgid "Quit"
 msgstr ""
+
+#: src/salix-codecs-installer.ui:723
+msgid "Remove"
+msgstr "Kaldır"
+
+#: src/salix-codecs-installer-gtk:72
+msgid "Download rate:"
+msgstr "İndirme hızı:"
 
 #: src/salix-codecs-installer-gtk:280
 msgid "Reading package lists..."
 msgstr "Paket listesi okunuyor..."
-
-#: src/salix-codecs-installer.ui:729
-msgid "Remove"
-msgstr "Kaldır"
-
-#: src/salix-codecs-installer-gtk:386
-msgid "Retrieving ChangeLog.txt..."
-msgstr "ChangeLog.txt alınıyor..."
-
-#: src/salix-codecs-installer-gtk:347
-msgid "Retrieving checksum list..."
-msgstr "Checksum listesi alınıyor..."
-
-#: src/salix-codecs-installer-gtk:365
-msgid "Retrieving checksum signature..."
-msgstr "Checksum imzası alınıyor..."
 
 #: src/salix-codecs-installer-gtk:310
 msgid "Retrieving package data..."
@@ -167,74 +138,78 @@ msgstr "Paket bilgisi alınıyor..."
 msgid "Retrieving patch list..."
 msgstr "Yama listesi alınıyor..."
 
-#: src/salix-codecs-installer:25
+#: src/salix-codecs-installer-gtk:347
+msgid "Retrieving checksum list..."
+msgstr "Checksum listesi alınıyor..."
+
+#: src/salix-codecs-installer-gtk:365
+msgid "Retrieving checksum signature..."
+msgstr "Checksum imzası alınıyor..."
+
+#: src/salix-codecs-installer-gtk:375
+msgid "Verifying checksum signature..."
+msgstr "checksum imzas"
+
+#: src/salix-codecs-installer-gtk:386
+msgid "Retrieving ChangeLog.txt..."
+msgstr "ChangeLog.txt alınıyor..."
+
+#: src/salix-codecs-installer-gtk:520
+msgid "Updating local package cache"
+msgstr "Yerel paket belleği güncelleniyor"
+
+#: src/salix-codecs-installer-gtk:581
+msgid "Downloading packages"
+msgstr "İndirilen paketler"
+
+#: src/salix-codecs-installer-gtk:632
+msgid "Installing packages"
+msgstr "Yüklenen paketler"
+
+#: src/salix-codecs-installer-gtk:729 src/salix-codecs-installer:25
 msgid ""
 "Some multimedia codecs are patent encumbered and pose distribution problems "
 "in certain countries. Therefore, support for all codecs is not included by "
 "default in Salix."
 msgstr ""
 
-#: src/salix-codecs-installer.ui:215
+#: src/salix-codecs-installer-gtk:730 src/salix-codecs-installer:26
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\n"
-"\n"
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or listen to mp3 files without these codecs.\n"
-"\n"
+"You will be able to play files encoded with free codecs, but you will not be"
+" able to play commercial DVDs or use some proprietary formats without these "
+"codecs."
+msgstr ""
+
+#: src/salix-codecs-installer-gtk:731 src/salix-codecs-installer:27
+msgid ""
 "Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so.\n"
-"\n"
+"codecs only if it is legal for you to do so."
+msgstr ""
+
+#: src/salix-codecs-installer-gtk:732 src/salix-codecs-installer:28
+msgid ""
 "Click Next to update the package cache and receive a list of packages about "
 "to be installed."
 msgstr ""
 
-#: src/salix-codecs-installer.ui:665
-msgid ""
-"There was an error connecting to one of the repositories. Make sure you have "
-"a working internet connection and the right sources specified in /etc/slapt-"
-"get/slapt-getrc."
-msgstr "Depoya bağlanırken hata oluştu. İnternet bağlantınızı kontrol ediniz."
+#: src/salix-codecs-installer-gtk:774
+msgid "Name"
+msgstr "İsim"
 
-#: src/salix-codecs-installer.ui:593
-msgid ""
-"There was an error installing one of the packages. Please, make sure there "
-"is enough available space in your hard drive and that it is mounted with "
-"write permissions and try again."
-msgstr ""
-"Paketlerden biri yüklenirken hata oluştu. Lütfen, sabit diskinizde yeterli "
-"boşluk olduğundan ve sabit diskinizin yazma haklarıyla bağlı olduğundan emin "
-"olun ve tekrar deneyin. "
-
-#: src/salix-codecs-installer.ui:432 src/salix-codecs-installer:133
-msgid ""
-"These are the packages that are about to be installed. Please check your "
-"country's legislation and select to install only the ones that you are "
-"allowed to."
-msgstr ""
-"Yüklenecek paketler bunlardır. Lütfen, ülkenizdeki mevcut yasaları göz "
-"önünde bulundurarak sadece izin verilen paketleri seçiniz. "
-
-#: src/salix-codecs-installer.ui:59
-msgid "Total progress"
-msgstr "Toplam ilerleme"
-
-#: src/salix-codecs-installer-gtk:520
-msgid "Updating local package cache"
-msgstr "Yerel paket belleği güncelleniyor"
-
-#: src/salix-codecs-installer-gtk:375
-msgid "Verifying checksum signature..."
-msgstr "checksum imzas"
-
-#: src/salix-codecs-installer-gtk:771
+#: src/salix-codecs-installer-gtk:777
 msgid "Version"
 msgstr "Versiyon"
 
-#: src/salix-codecs-installer:26
-msgid ""
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or use some proprietary formats without these "
-"codecs."
-msgstr ""
+#: src/salix-codecs-installer-gtk:780
+msgid "Description"
+msgstr "Açıklama"
+
+#: salix-codecs-installer.desktop.in.h:1
+#: salix-codecs-installer-kde.desktop.in.h:1
+msgid "Install multimedia codecs"
+msgstr "Multimedya kodeklerini yükle"
+
+#: salix-codecs-installer.desktop.in.h:2
+#: salix-codecs-installer-kde.desktop.in.h:2
+msgid "Install codecs required for playing restricted formats"
+msgstr "Kodekleri yüklemek kısıtlı formatları oynatmak için gereklidir."

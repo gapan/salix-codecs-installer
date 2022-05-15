@@ -1,159 +1,130 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # cobraJoker <cobra.the.joker@gmail.com>, 2011
+# محمد الحرقان <malham1@gmail.com>, 2012
 # محمد الحرقان <malham1@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-15 12:55+0300\n"
+"POT-Creation-Date: 2022-05-15 13:51+0300\n"
 "PO-Revision-Date: 2011-01-08 22:52+0000\n"
 "Last-Translator: محمد الحرقان <malham1@gmail.com>, 2012\n"
 "Language-Team: Arabic (http://www.transifex.com/gapan/salix/language/ar/)\n"
-"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-
-#: src/salix-codecs-installer.ui:505 src/salix-codecs-installer:109
-msgid "All codec packages are already installed."
-msgstr "كافة ترميز الحزم مثبتة بالفعل."
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: src/salix-codecs-installer.ui:27 src/salix-codecs-installer.ui:155
-#: src/salix-codecs-installer.ui:290 src/salix-codecs-installer:32
+#: src/salix-codecs-installer.ui:284 src/salix-codecs-installer:32
 msgid "Cancel"
 msgstr ""
 
-#: src/salix-codecs-installer:28
-msgid ""
-"Click Next to update the package cache and receive a list of packages about "
-"to be installed."
-msgstr ""
-
-#: src/salix-codecs-installer.ui:700 src/salix-codecs-installer:163
-msgid ""
-"Codecs installation was succesfully completed. Would you like to remove the "
-"codecs installer from your system?"
-msgstr "تم تثبيت الترميز بنجاح. هل تريد إزالة مثبت الترميز من النظام؟"
-
-#: src/salix-codecs-installer-gtk:774
-msgid "Description"
-msgstr "الوصف"
-
-#: src/salix-codecs-installer.ui:693 src/salix-codecs-installer:164
-msgid "Done!"
-msgstr "تم!"
-
-#: src/salix-codecs-installer-gtk:72
-msgid "Download rate:"
-msgstr "معدل التحميل:"
-
-#: src/salix-codecs-installer-gtk:581
-msgid "Downloading packages"
-msgstr "تنزيل الحزم"
-
-#: src/salix-codecs-installer.ui:464 src/salix-codecs-installer.ui:549
-#: src/salix-codecs-installer.ui:585 src/salix-codecs-installer.ui:621
-#: src/salix-codecs-installer.ui:657
-msgid "Error"
-msgstr "خطأ"
-
-#: src/salix-codecs-installer.ui:557
-msgid ""
-"Error verifying package checksum. This is probably due to a bad download. "
-"Please, check your internet connection."
-msgstr ""
-"خطأ عند التحقق من المجموع الاختباري للحزم. قد يكون ناتج عن تحميل سيئ. الرجاء "
-"التحقق من اتصال الإنترنت."
-
-#: src/salix-codecs-installer.ui:629
-msgid ""
-"Error verifying repository checksum. You could be using a compromised "
-"repository. Please, check your package sources."
-msgstr ""
-"خطأ عند التحقق من المجموع الاختباري للمستودع. قد يكون ناتج من استخدام مستودع "
-"تالف. الرجاء التحقق من مصادر الحزمة."
-
-#: src/salix-codecs-installer.ui:304 src/salix-codecs-installer-gtk:765
-msgid "Install"
-msgstr "تثبيت"
-
-#: salix-codecs-installer.desktop.in.h:2
-#: salix-codecs-installer-kde.desktop.in.h:2
-msgid "Install codecs required for playing restricted formats"
-msgstr "تثبيت برامج الترميز المطلوبة لتشغيل صيغ مقيدة"
-
-#: salix-codecs-installer.desktop.in.h:1
-#: salix-codecs-installer-kde.desktop.in.h:1
-msgid "Install multimedia codecs"
-msgstr "تثبيت برامج ترميز الوسائط المتعددة"
+#: src/salix-codecs-installer.ui:59
+msgid "Total progress"
+msgstr "التقدم الكلي"
 
 #: src/salix-codecs-installer.ui:135 src/salix-codecs-installer:30
 msgid "Install multimedia codecs?"
 msgstr "تثبيت ترميز الوسائط المتعددة؟"
 
-#: src/salix-codecs-installer-gtk:632
-msgid "Installing packages"
-msgstr "تثبيت الحزم"
-
-#: src/salix-codecs-installer.ui:472
-msgid "It seems you don't have the permissions to write the repository files."
-msgstr "يبدو أنه ليس لديك أذونات لكتابة ملفات المستودع."
-
-#: src/salix-codecs-installer.ui:272 src/salix-codecs-installer:134
-msgid "List of packages to install"
-msgstr "قائمة الحزم المطلوب تثبيتها"
-
-#: src/salix-codecs-installer-gtk:768
-msgid "Name"
-msgstr "اسم"
-
 #: src/salix-codecs-installer.ui:169 src/salix-codecs-installer:31
 msgid "Next"
 msgstr ""
 
-#: src/salix-codecs-installer.ui:500 src/salix-codecs-installer:110
+#: src/salix-codecs-installer.ui:266 src/salix-codecs-installer:134
+msgid "List of packages to install"
+msgstr "قائمة الحزم المطلوب تثبيتها"
+
+#: src/salix-codecs-installer.ui:298 src/salix-codecs-installer-gtk:771
+msgid "Install"
+msgstr "تثبيت"
+
+#: src/salix-codecs-installer.ui:426 src/salix-codecs-installer:133
+msgid ""
+"These are the packages that are about to be installed. Please check your "
+"country's legislation and select to install only the ones that you are "
+"allowed to."
+msgstr "هذه الحزم التي سيتم تثبيتها. الرجاء التحقق من تشريعات بلدكم وحدد خيارات التثبيت التي يسمح لك بتثبيتها فقط."
+
+#: src/salix-codecs-installer.ui:458 src/salix-codecs-installer.ui:543
+#: src/salix-codecs-installer.ui:579 src/salix-codecs-installer.ui:615
+#: src/salix-codecs-installer.ui:651
+msgid "Error"
+msgstr "خطأ"
+
+#: src/salix-codecs-installer.ui:466
+msgid "It seems you don't have the permissions to write the repository files."
+msgstr "يبدو أنه ليس لديك أذونات لكتابة ملفات المستودع."
+
+#: src/salix-codecs-installer.ui:494 src/salix-codecs-installer:110
 msgid "Nothing to install"
 msgstr "لا توجد عناصر لإزالة تثبيتها"
 
-#: src/salix-codecs-installer.ui:521
+#: src/salix-codecs-installer.ui:499 src/salix-codecs-installer:109
+msgid "All codec packages are already installed."
+msgstr "كافة ترميز الحزم مثبتة بالفعل."
+
+#: src/salix-codecs-installer.ui:515
 msgid "OK"
 msgstr ""
 
-#: src/salix-codecs-installer:27
+#: src/salix-codecs-installer.ui:551
 msgid ""
-"Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so."
-msgstr ""
+"Error verifying package checksum. This is probably due to a bad download. "
+"Please, check your internet connection."
+msgstr "خطأ عند التحقق من المجموع الاختباري للحزم. قد يكون ناتج عن تحميل سيئ. الرجاء التحقق من اتصال الإنترنت."
 
-#: src/salix-codecs-installer.ui:715
+#: src/salix-codecs-installer.ui:587
+msgid ""
+"There was an error installing one of the packages. Please, make sure there "
+"is enough available space in your hard drive and that it is mounted with "
+"write permissions and try again."
+msgstr "حدث خطأ أثناء تثبيت إحدى الحزم. من فضلك، تأكد أن هناك مساحة كافية في القرص الثابت الموصل وأن له أذونات الكتابة اللازمة ثم حاول مرة أخرى."
+
+#: src/salix-codecs-installer.ui:623
+msgid ""
+"Error verifying repository checksum. You could be using a compromised "
+"repository. Please, check your package sources."
+msgstr "خطأ عند التحقق من المجموع الاختباري للمستودع. قد يكون ناتج من استخدام مستودع تالف. الرجاء التحقق من مصادر الحزمة."
+
+#: src/salix-codecs-installer.ui:659
+msgid ""
+"There was an error connecting to one of the repositories. Make sure you have"
+" a working internet connection and the right sources specified in "
+"/etc/slapt-get/slapt-getrc."
+msgstr "حدث خطأ أثناء الاتصال بأحد المستودعات. تأكد من اتصال الإنترنت وأن المصادر صحيحة في المسار /etc/slapt-get/slapt-getrc."
+
+#: src/salix-codecs-installer.ui:687 src/salix-codecs-installer:164
+msgid "Done!"
+msgstr "تم!"
+
+#: src/salix-codecs-installer.ui:694 src/salix-codecs-installer:163
+msgid ""
+"Codecs installation was succesfully completed. Would you like to remove the "
+"codecs installer from your system?"
+msgstr "تم تثبيت الترميز بنجاح. هل تريد إزالة مثبت الترميز من النظام؟"
+
+#: src/salix-codecs-installer.ui:709
 msgid "Quit"
 msgstr ""
+
+#: src/salix-codecs-installer.ui:723
+msgid "Remove"
+msgstr "إزالة"
+
+#: src/salix-codecs-installer-gtk:72
+msgid "Download rate:"
+msgstr "معدل التحميل:"
 
 #: src/salix-codecs-installer-gtk:280
 msgid "Reading package lists..."
 msgstr "قراءة قائمة الحزم..."
-
-#: src/salix-codecs-installer.ui:729
-msgid "Remove"
-msgstr "إزالة"
-
-#: src/salix-codecs-installer-gtk:386
-msgid "Retrieving ChangeLog.txt..."
-msgstr "استرداد ChangeLog.txt..."
-
-#: src/salix-codecs-installer-gtk:347
-msgid "Retrieving checksum list..."
-msgstr "استرداد قائمة المجموع الاختباري..."
-
-#: src/salix-codecs-installer-gtk:365
-msgid "Retrieving checksum signature..."
-msgstr "استرداد توقيع المجموع الاختباري..."
 
 #: src/salix-codecs-installer-gtk:310
 msgid "Retrieving package data..."
@@ -163,87 +134,78 @@ msgstr "استرداد بيانات الحزم..."
 msgid "Retrieving patch list..."
 msgstr "استرداد قائمة التصحيح..."
 
-#: src/salix-codecs-installer:25
+#: src/salix-codecs-installer-gtk:347
+msgid "Retrieving checksum list..."
+msgstr "استرداد قائمة المجموع الاختباري..."
+
+#: src/salix-codecs-installer-gtk:365
+msgid "Retrieving checksum signature..."
+msgstr "استرداد توقيع المجموع الاختباري..."
+
+#: src/salix-codecs-installer-gtk:375
+msgid "Verifying checksum signature..."
+msgstr "التحقق من توقيع المجموع الاختباري..."
+
+#: src/salix-codecs-installer-gtk:386
+msgid "Retrieving ChangeLog.txt..."
+msgstr "استرداد ChangeLog.txt..."
+
+#: src/salix-codecs-installer-gtk:520
+msgid "Updating local package cache"
+msgstr "تحديث ذاكرة التخزين للحزم المحلية"
+
+#: src/salix-codecs-installer-gtk:581
+msgid "Downloading packages"
+msgstr "تنزيل الحزم"
+
+#: src/salix-codecs-installer-gtk:632
+msgid "Installing packages"
+msgstr "تثبيت الحزم"
+
+#: src/salix-codecs-installer-gtk:729 src/salix-codecs-installer:25
 msgid ""
 "Some multimedia codecs are patent encumbered and pose distribution problems "
 "in certain countries. Therefore, support for all codecs is not included by "
 "default in Salix."
 msgstr ""
 
-#: src/salix-codecs-installer.ui:215
+#: src/salix-codecs-installer-gtk:730 src/salix-codecs-installer:26
 msgid ""
-"Some multimedia codecs are patent encumbered and pose distribution problems "
-"in certain countries. Therefore, support for all codecs is not included by "
-"default in Salix.\n"
-"\n"
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or listen to mp3 files without these codecs.\n"
-"\n"
+"You will be able to play files encoded with free codecs, but you will not be"
+" able to play commercial DVDs or use some proprietary formats without these "
+"codecs."
+msgstr ""
+
+#: src/salix-codecs-installer-gtk:731 src/salix-codecs-installer:27
+msgid ""
 "Please check the legislation in your country and select to install the "
-"codecs only if it is legal for you to do so.\n"
-"\n"
+"codecs only if it is legal for you to do so."
+msgstr ""
+
+#: src/salix-codecs-installer-gtk:732 src/salix-codecs-installer:28
+msgid ""
 "Click Next to update the package cache and receive a list of packages about "
 "to be installed."
 msgstr ""
-"بعض ملفات ترميز الوسائط المتعددة تخضع لبراءات وحقوق نشر وتنتج مشاكل توزيع في "
-"بعض البلدان. ولذلك، دعم ترميز جميع ملفات الوسائط غير مضمنة بشكل افتراضي في "
-"سلاك.\n"
-"\n"
-"ستكون قادراً على عرض الملفات المشفرة ذات الترميز الحر، ولن تكون قدراً على "
-"قراءة Dvd التجارية أو الاستماع إلى ملفات mp3 بدون هذه الترميز.\n"
-"\n"
-"الرجاء التحقق من التشريع لديكم وحدد هذا الخيار لتثبيت الترميز فقط إذا كانت "
-"قانونية لكي تتمكن من القيام بذلك.\n"
-"\n"
-"انقر فوق التالي لتحديث ذاكرة التخزين المؤقت للحزم وتتلقى قائمة بالحزم بحيث "
-"يتم تثبيتها."
 
-#: src/salix-codecs-installer.ui:665
-msgid ""
-"There was an error connecting to one of the repositories. Make sure you have "
-"a working internet connection and the right sources specified in /etc/slapt-"
-"get/slapt-getrc."
-msgstr ""
-"حدث خطأ أثناء الاتصال بأحد المستودعات. تأكد من اتصال الإنترنت وأن المصادر "
-"صحيحة في المسار /etc/slapt-get/slapt-getrc."
+#: src/salix-codecs-installer-gtk:774
+msgid "Name"
+msgstr "اسم"
 
-#: src/salix-codecs-installer.ui:593
-msgid ""
-"There was an error installing one of the packages. Please, make sure there "
-"is enough available space in your hard drive and that it is mounted with "
-"write permissions and try again."
-msgstr ""
-"حدث خطأ أثناء تثبيت إحدى الحزم. من فضلك، تأكد أن هناك مساحة كافية في القرص "
-"الثابت الموصل وأن له أذونات الكتابة اللازمة ثم حاول مرة أخرى."
-
-#: src/salix-codecs-installer.ui:432 src/salix-codecs-installer:133
-msgid ""
-"These are the packages that are about to be installed. Please check your "
-"country's legislation and select to install only the ones that you are "
-"allowed to."
-msgstr ""
-"هذه الحزم التي سيتم تثبيتها. الرجاء التحقق من تشريعات بلدكم وحدد خيارات "
-"التثبيت التي يسمح لك بتثبيتها فقط."
-
-#: src/salix-codecs-installer.ui:59
-msgid "Total progress"
-msgstr "التقدم الكلي"
-
-#: src/salix-codecs-installer-gtk:520
-msgid "Updating local package cache"
-msgstr "تحديث ذاكرة التخزين للحزم المحلية"
-
-#: src/salix-codecs-installer-gtk:375
-msgid "Verifying checksum signature..."
-msgstr "التحقق من توقيع المجموع الاختباري..."
-
-#: src/salix-codecs-installer-gtk:771
+#: src/salix-codecs-installer-gtk:777
 msgid "Version"
 msgstr "الإصدار"
 
-#: src/salix-codecs-installer:26
-msgid ""
-"You will be able to play files encoded with free codecs, but you will not be "
-"able to play commercial DVDs or use some proprietary formats without these "
-"codecs."
-msgstr ""
+#: src/salix-codecs-installer-gtk:780
+msgid "Description"
+msgstr "الوصف"
+
+#: salix-codecs-installer.desktop.in.h:1
+#: salix-codecs-installer-kde.desktop.in.h:1
+msgid "Install multimedia codecs"
+msgstr "تثبيت برامج ترميز الوسائط المتعددة"
+
+#: salix-codecs-installer.desktop.in.h:2
+#: salix-codecs-installer-kde.desktop.in.h:2
+msgid "Install codecs required for playing restricted formats"
+msgstr "تثبيت برامج الترميز المطلوبة لتشغيل صيغ مقيدة"
