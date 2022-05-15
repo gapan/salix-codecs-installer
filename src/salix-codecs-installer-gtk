@@ -28,6 +28,12 @@ gettext.textdomain("salix-codecs-installer")
 _ = gettext.gettext
 
 spkg = '/sbin/spkg'
+package_dir = '/var/lib/pkgtools/packages/'
+
+installed_pkgs = []
+for i in os.listdir(package_dir):
+    installed_pkgs.append(i.rpartition('-')[0].rpartition('-')[0]
+            .rpartition('-')[0])
 
 canceltask = False
 
@@ -37,6 +43,18 @@ def threaded(f):
         t = threading.Thread(target=f, args=args)
         t.start()
     return wrapper
+
+def pkg_is_installed(pkg):
+    if '|' in pkg:
+        alternatives = pkg.split('|')
+        for alt in alternatives:
+            if alt in installed_pkgs:
+                return True, None
+        return False, alternatives[0]
+    if pkg in installed_pkgs:
+        return True, None
+    return False, pkg
+
 
 
 class DownloadMeter(urlp.BaseMeter):
@@ -384,9 +402,9 @@ class SalixCodecsInstaller:
             if line.startswith('Package'):
                 for i in line.rpartition('Package Required:')[2]\
                                         .rpartition('Package Suggests:')[2]\
-                                        .lstrip(' ').rstrip(' ')\
+                                        .strip(' ')\
                                         .replace(' ', ',')\
-                                        .replace('|', ' ').split(','):
+                                        .split(','):
                     if i != '':
                         pkgs.append(i)
         return pkgs
@@ -401,15 +419,25 @@ class SalixCodecsInstaller:
                 deps.append(i)
         for i in pkgs:
             deps.append(i)
-        return set(deps)
+
+        to_be_installed = []
+        for i in set(deps):
+            installed, name = pkg_is_installed(i)
+            if not installed:
+                to_be_installed.append(name)
+        return set(to_be_installed)
 
     def pkg_uris(self, pkglist):
         pkgstr = ' '.join(pkglist)
-        cmd = ['/usr/sbin/slapt-get --print-uris -s -i ' +
-               pkgstr + '|grep "^http:\|^ftp:\|^file:"']
+        cmd = [ 'LANG=C /usr/sbin/slapt-get --print-uris -s -i ' + pkgstr ]
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-        output = process.communicate()[0].split()
-        return output
+        output = process.communicate()[0].decode().split('\n')
+        uris = []
+        for line in output:
+            line = line.strip()
+            if line.startswith('https:') or line.startswith('http:') or line.startswith('ftp:'):
+                uris.append(line)
+        return uris
 
     def pkg_detailed_list(self, uris):
         working_dir = self.working_dir
@@ -417,9 +445,8 @@ class SalixCodecsInstaller:
             package_data = f.readlines()
         uri_list = []
         for i in uris:
-            i_str = i.decode()
-            pkgname = i_str.rpartition('/')[2]
-            uri_list.append([pkgname, i_str])
+            pkgname = i.rpartition('/')[2]
+            uri_list.append([pkgname, i])
         pkgfilename = ''
         pkgname = ''
         pkgver = ''
