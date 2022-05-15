@@ -209,16 +209,10 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label1">
+              <object class="GtkLabel" id="label_info_message">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="label" translatable="yes">Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.
-
-You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or listen to mp3 files without these codecs.
-
-Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.
-
-Click Next to update the package cache and receive a list of packages about to be installed.</property>
+                <property name="label">Info message</property>
                 <property name="wrap">True</property>
                 <property name="max-width-chars">50</property>
               </object>

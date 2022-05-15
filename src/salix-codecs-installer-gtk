@@ -725,6 +725,12 @@ class SalixCodecsInstaller:
         self.button_infowindow_yes = builder.get_object(
             'button_infowindow_yes')
         self.button_infowindow_no = builder.get_object('button_infowindow_no')
+        self.info_message = builder.get_object('label_info_message')
+        line1=_('Some multimedia codecs are patent encumbered and pose distribution problems in certain countries. Therefore, support for all codecs is not included by default in Salix.')
+        line2=_('You will be able to play files encoded with free codecs, but you will not be able to play commercial DVDs or use some proprietary formats without these codecs.')
+        line3=_('Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.')
+        line4=_('Click Next to update the package cache and receive a list of packages about to be installed.')
+        self.info_message.set_text(line1 + '\n\n' + line2 + '\n\n' + line3 + '\n\n' + line4)
 
         #
         # Update package cache dialog
