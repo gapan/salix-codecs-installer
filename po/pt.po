@@ -4,7 +4,7 @@
 # 
 # Translators:
 # hugo carvalho <hugokarvalho@gmail.com>, 2012
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011-2012
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2011-2012,2022
 # Sérgio Marques <smarquespt@gmail.com>, 2013
 msgid ""
 msgstr ""
@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-14 20:52+0300\n"
 "PO-Revision-Date: 2011-01-08 22:52+0000\n"
-"Last-Translator: Sérgio Marques <smarquespt@gmail.com>, 2013\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2011-2012,2022\n"
 "Language-Team: Portuguese (http://www.transifex.com/gapan/salix/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,7 +36,7 @@ msgstr "Instalar codificadores multimédia?"
 
 #: src/salix-codecs-installer.ui:169
 msgid "Next"
-msgstr ""
+msgstr "Seguinte"
 
 #: src/salix-codecs-installer.ui:215 src/salix-codecs-installer:26
 #, sh-format
@@ -48,7 +48,7 @@ msgid ""
 "Please check the legislation in your country and select to install the codecs only if it is legal for you to do so.\n"
 "\n"
 "Click Next to update the package cache and receive a list of packages about to be installed."
-msgstr "Alguns codificadores multimédia estão  protegidos por patentes e podem gerar problemas de distribuição em alguns países. Assim, os codificadores restritos não estão incluídos inicialmente no Salix.\n\nPode tentar reproduzir os ficheiros com codificadores livres, mas não será capaz de reproduzir DVDs comerciais ou ficheiros mp3 sem estes codificadores.\n\nConsulte a legislação do seu país para saber se a instalação deste codificadores é permitida.\n\nClique em Avançar para atualizar a cache de pacotes e receber uma lista de pacotes que vão ser instalados."
+msgstr "Alguns codificadores multimédia estão  protegidos por patentes e podem gerar problemas de distribuição em alguns países. Assim, os codificadores restritos não estão incluídos inicialmente no Salix.\n\nPode tentar reproduzir os ficheiros com codificadores livres, mas não será capaz de reproduzir DVDs comerciais ou ficheiros mp3 sem estes codificadores.\n\nConsulte a legislação do seu país para saber se a instalação deste codificadores é permitida.\n\nClique em Seguinte para atualizar a cache de pacotes e receber uma lista de pacotes que vão ser instalados."
 
 #: src/salix-codecs-installer.ui:272 src/salix-codecs-installer:121
 #, sh-format
@@ -65,7 +65,7 @@ msgid ""
 "These are the packages that are about to be installed. Please check your "
 "country's legislation and select to install only the ones that you are "
 "allowed to."
-msgstr "Estes são os pacotes que irão ser instalados. Por favor verifique a legislação do seu país e escolha apenas as instalações permitidas."
+msgstr "Estes são os pacotes que irão ser instalados. Verifique a legislação do seu país e escolha apenas as instalações permitidas."
 
 #: src/salix-codecs-installer.ui:464 src/salix-codecs-installer.ui:549
 #: src/salix-codecs-installer.ui:585 src/salix-codecs-installer.ui:621
@@ -75,7 +75,7 @@ msgstr "Erro"
 
 #: src/salix-codecs-installer.ui:472
 msgid "It seems you don't have the permissions to write the repository files."
-msgstr "Parece que você não tem as permissões para escrever os ficheiros do repositório."
+msgstr "Parece que não tem as permissões para gravar os ficheiros do repositório."
 
 #: src/salix-codecs-installer.ui:500 src/salix-codecs-installer:97
 #, sh-format
@@ -89,26 +89,26 @@ msgstr "Todos os codificadores já estão instalados."
 
 #: src/salix-codecs-installer.ui:521
 msgid "OK"
-msgstr "OK"
+msgstr "Aceitar"
 
 #: src/salix-codecs-installer.ui:557
 msgid ""
 "Error verifying package checksum. This is probably due to a bad download. "
 "Please, check your internet connection."
-msgstr "Erro ao verificar o checksum do pacote. É possível que o pacote esteja danificado. Por favor verifique se tem uma ligação à Internet."
+msgstr "Erro ao verificar o checksum do pacote. É possível que o pacote esteja corrompido. Verifique se tem uma ligação à Internet."
 
 #: src/salix-codecs-installer.ui:593
 msgid ""
 "There was an error installing one of the packages. Please, make sure there "
 "is enough available space in your hard drive and that it is mounted with "
 "write permissions and try again."
-msgstr "Ocorreu um erro ao instalar um dos pacotes. Por favor verifique se tem espaço disponível no disco e que está montado com permissões de escrita e tente novamente."
+msgstr "Ocorreu um erro ao instalar um dos pacotes. Verifique se tem espaço disponível no disco e que está montado com permissões de gravar e tente novamente."
 
 #: src/salix-codecs-installer.ui:629
 msgid ""
 "Error verifying repository checksum. You could be using a compromised "
 "repository. Please, check your package sources."
-msgstr "Erro ao verificar o checksum do repositório. Pode estar a utilizar um repositório inválido. Por favor verifique suas fontes."
+msgstr "Erro ao verificar o checksum do repositório. Pode estar a utilizar um repositório inválido. Verifique as suas fontes."
 
 #: src/salix-codecs-installer.ui:665
 msgid ""
