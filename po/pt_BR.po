@@ -6,19 +6,20 @@
 # Fernando Henrique de Sousa <gordoviajao@yahoo.com.br>, 2012
 # gapan <vlahavas@gmail.com>, 2011
 # Fernando Henrique de Sousa <gordoviajao@yahoo.com.br>, 2012
+# The Cat, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-15 13:51+0300\n"
 "PO-Revision-Date: 2011-01-08 22:52+0000\n"
-"Last-Translator: Fernando Henrique de Sousa <gordoviajao@yahoo.com.br>, 2012\n"
+"Last-Translator: The Cat, 2022\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/gapan/salix/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: src/salix-codecs-installer.ui:27 src/salix-codecs-installer.ui:155
 #: src/salix-codecs-installer.ui:284 src/salix-codecs-installer:32
@@ -35,7 +36,7 @@ msgstr "Instalar os codecs multimídia?"
 
 #: src/salix-codecs-installer.ui:169 src/salix-codecs-installer:31
 msgid "Next"
-msgstr ""
+msgstr "Próximo"
 
 #: src/salix-codecs-installer.ui:266 src/salix-codecs-installer:134
 msgid "List of packages to install"
@@ -112,7 +113,7 @@ msgstr "A instalação dos codecs foi concluída com sucesso. Você gostaria de 
 
 #: src/salix-codecs-installer.ui:709
 msgid "Quit"
-msgstr ""
+msgstr "Sair"
 
 #: src/salix-codecs-installer.ui:723
 msgid "Remove"
@@ -174,7 +175,7 @@ msgid ""
 "You will be able to play files encoded with free codecs, but you will not be"
 " able to play commercial DVDs or use some proprietary formats without these "
 "codecs."
-msgstr ""
+msgstr "Você poderá reproduzir arquivos codificados com codecs livres, mas não poderá reproduzir DVDs comerciais ou utilizar alguns formatos proprietários sem estes codecs."
 
 #: src/salix-codecs-installer-gtk:731 src/salix-codecs-installer:27
 msgid ""

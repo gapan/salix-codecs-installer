@@ -168,26 +168,26 @@ msgid ""
 "Some multimedia codecs are patent encumbered and pose distribution problems "
 "in certain countries. Therefore, support for all codecs is not included by "
 "default in Salix."
-msgstr ""
+msgstr "Некоторые мультимедийные кодеки обременены патентами и создают проблемы с распространением в отдельных странах. Поэтому в Salix поддержка всех кодеков не включена по умолчанию."
 
 #: src/salix-codecs-installer-gtk:730 src/salix-codecs-installer:26
 msgid ""
 "You will be able to play files encoded with free codecs, but you will not be"
 " able to play commercial DVDs or use some proprietary formats without these "
 "codecs."
-msgstr ""
+msgstr "Без них вы сможете воспроизводить файлы, закодированные с помощью бесплатных кодеков, но не сможете воспроизводить коммерческие DVD или некоторые проприетарные форматы."
 
 #: src/salix-codecs-installer-gtk:731 src/salix-codecs-installer:27
 msgid ""
 "Please check the legislation in your country and select to install the "
 "codecs only if it is legal for you to do so."
-msgstr ""
+msgstr "Пожалуйста, проверьте законодательство вашей страны и выберите установку кодеков только в том случае, если это разрешено законом."
 
 #: src/salix-codecs-installer-gtk:732 src/salix-codecs-installer:28
 msgid ""
 "Click Next to update the package cache and receive a list of packages about "
 "to be installed."
-msgstr ""
+msgstr "Щёлкните Далее для обновления кэша пакетов и получения списка пакетов."
 
 #: src/salix-codecs-installer-gtk:774
 msgid "Name"
