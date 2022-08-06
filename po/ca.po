@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Davidmp <medipas@gmail.com>, 2016
-# Davidmp <medipas@gmail.com>, 2016
+# Davidmp <medipas@gmail.com>, 2016,2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Salix\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-15 13:51+0300\n"
 "PO-Revision-Date: 2011-01-08 22:52+0000\n"
-"Last-Translator: Davidmp <medipas@gmail.com>, 2016\n"
+"Last-Translator: Davidmp <medipas@gmail.com>, 2016,2022\n"
 "Language-Team: Catalan (http://www.transifex.com/gapan/salix/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,7 @@ msgstr "Voleu instal·lar els còdecs multimèdia?"
 
 #: src/salix-codecs-installer.ui:169 src/salix-codecs-installer:31
 msgid "Next"
-msgstr ""
+msgstr "Següent"
 
 #: src/salix-codecs-installer.ui:266 src/salix-codecs-installer:134
 msgid "List of packages to install"
@@ -111,7 +111,7 @@ msgstr "La instal·lació de còdecs s'ha completat amb èxit. Voleu eliminar l'
 
 #: src/salix-codecs-installer.ui:709
 msgid "Quit"
-msgstr ""
+msgstr "Surt"
 
 #: src/salix-codecs-installer.ui:723
 msgid "Remove"
@@ -173,7 +173,7 @@ msgid ""
 "You will be able to play files encoded with free codecs, but you will not be"
 " able to play commercial DVDs or use some proprietary formats without these "
 "codecs."
-msgstr ""
+msgstr "Podreu reproduir fitxers codificats amb còdecs gratuïts, però no podreu reproduir DVD comercials ni usar alguns formats de propietat sense aquests còdecs."
 
 #: src/salix-codecs-installer-gtk:731 src/salix-codecs-installer:27
 msgid ""
