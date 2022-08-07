@@ -26,7 +26,7 @@
      inkscape:cx="31.955494"
      inkscape:cy="31.955494"
      inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-height="1022"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -38,7 +38,8 @@
      stroke="#40a0a6"
      stroke-width=".529"
      paint-order="stroke markers fill"
-     id="path2" />
+     id="path2"
+     style="fill:#f2793f;fill-opacity:1;stroke:#f27909;stroke-opacity:1" />
   <path
      d="M1.852 2.117a.264.264 0 0 0-.265.264v2.91h13.759v-2.91a.264.264 0 0 0-.265-.264z"
      fill="#333"
@@ -50,7 +51,8 @@
      d="M1.587 5.292v9.26c0 .147.119.265.265.265h13.23a.264.264 0 0 0 .264-.265v-9.26H1.587z"
      fill="#74c9d0"
      paint-order="stroke markers fill"
-     id="path6" />
+     id="path6"
+     style="fill:#f29b3f;fill-opacity:1" />
   <path
      d="M1.852 2.117a.264.264 0 0 0-.265.264v2.91h13.759v-2.91a.264.264 0 0 0-.265-.264z"
      fill="#333"
@@ -67,7 +69,8 @@
      fill-rule="evenodd"
      paint-order="fill markers stroke"
      d="M1.323 5.291H15.61v.265H1.323z"
-     id="path12" />
+     id="path12"
+     style="fill:#f2793f;fill-opacity:0.90196079" />
   <path
      id="path38"
      style="fill:#333333;fill-opacity:1;stroke-width:0.999999"
